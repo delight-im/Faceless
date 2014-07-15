@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_darkest"
+	android:paddingTop="8dp"
+	android:gravity="center">
+	<uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/viewListViewContainer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone">
+		<ListView
+			android:id="@+id/listViewMessages"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/transparent"
+			android:divider="@color/background_darkest"
+			android:dividerHeight="4dp"
+			android:fastScrollEnabled="false"
+			android:filterTouchesWhenObscured="true" />
+	</uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
+	<ProgressBar
+		android:id="@+id/progressBarLoading"
+		style="@style/CircleProgressBar" />
+</FrameLayout>

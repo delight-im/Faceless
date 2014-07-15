@@ -1,0 +1,13 @@
+# Android
+Android/.classpath
+Android/.project
+Android/.settings/
+Android/proguard/
+Android/gen/
+Android/bin/
+Android/src/im/delight/faceless/Config.java
+
+# Server
+Server/.idea/
+Server/config.php
+Server/public_html/internal/phone_to_id.php

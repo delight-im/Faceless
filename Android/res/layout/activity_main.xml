@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/background_darkest">
+		<Spinner
+			android:id="@+id/spinnerMode"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:minHeight="52dp"
+			android:layout_marginRight="4dp"
+			style="@style/Spinner_Readable.Light" />
+        <ImageButton
+            android:id="@+id/buttonSettings"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:minWidth="48dp"
+		    android:minHeight="48dp"
+		    android:src="@drawable/ic_ab_settings"
+		    android:contentDescription="@string/action_settings"
+		    style="@style/Button_ButtonBar" />
+    </LinearLayout>
+    <include layout="@layout/abstract_messages_activity" />
+</LinearLayout>

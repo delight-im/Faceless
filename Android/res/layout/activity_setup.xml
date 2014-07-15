@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+	<include layout="@layout/divider" />
+	<TextView
+		android:id="@+id/textViewSetupIntro"
+		android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/setup_intro"
+		android:background="@color/white_light"
+		style="@style/TextView_LongText" />
+	<include layout="@layout/divider" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="12dp"
+		android:gravity="center_vertical">
+	    <EditText
+	        android:id="@+id/editTextPhoneNumber"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:inputType="phone"
+	        android:hint="@string/setup_phone_number_hint"
+	        android:textSize="@dimen/fontsize_normal"
+	        android:textColor="#000000"
+	        android:background="@android:color/transparent" />
+	    <ProgressBar
+	        android:id="@+id/progressBarChecking"
+	        style="@style/CircleProgressBar.Inline" />
+	</LinearLayout>
+	<include layout="@layout/divider" />
+	<Button
+		android:id="@+id/buttonNext"
+		android:layout_width="match_parent"
+		android:text="@string/next"
+		style="@style/Button_ButtonBar" />
+</LinearLayout>

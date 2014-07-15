@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Custom ActionBar theme -->
+    <style name="ActionBarTextTheme" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white_light</item>
+    </style>
+    <style name="ActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/background_medium</item>
+        <item name="android:titleTextStyle">@style/ActionBarTextTheme</item>
+    </style>
+    
+    <!-- Custom application theme with general styles -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBarTheme</item>
+    </style>
+    <style name="AppTheme.NoBackground">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    
+    <style name="TextView_MessageProperty">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/fontsize_small</item>
+        <item name="android:drawablePadding">2dp</item>
+    </style>
+    <style name="TextView_MessageProperty.Left">
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+    <style name="TextView_MessageProperty.Right">
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+    
+    <style name="Button_ButtonBar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/mode_button</item>
+        <item name="android:textColor">@color/mode_button</item>
+        <item name="android:textSize">@dimen/fontsize_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    
+    <style name="TextView_Message">
+        <item name="android:textSize">@dimen/fontsize_large</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="TextView_Message.Card">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:maxLines">3</item>
+    </style>
+
+	<!-- Theme for horizontal progress bars -->
+	<style name="HorizontalProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+		<item name="android:indeterminate">false</item>
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:max">100</item>
+		<item name="android:progressDrawable">@drawable/horizontal_progress_bar</item>
+	</style>
+	
+	<!-- Theme for circle progress bars -->
+	<style name="CircleProgressBar">
+	    <item name="android:layout_width">48dp</item>
+	    <item name="android:layout_height">48dp</item>
+	    <item name="android:layout_gravity">center</item>
+	</style>
+	<style name="CircleProgressBar.Inline">
+	    <item name="android:layout_width">24dp</item>
+	    <item name="android:layout_height">24dp</item>
+	    <item name="android:visibility">invisible</item>
+	    <item name="android:layout_gravity">center_vertical|right</item>
+	</style>
+	
+	<style name="TextView_CommentProperty">
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">#eeeeee</item>
+	    <item name="android:textSize">@dimen/fontsize_small</item>
+	</style>
+	
+	<style name="Button_Inline" parent="android:Widget.Holo.Light.Button">
+		<item name="android:background">@drawable/inline_btn_default_holo_light</item>
+	</style>
+
+	<style name="ImageButton_Inline" parent="android:Widget.Holo.Light.ImageButton">
+		<item name="android:background">@drawable/inline_btn_default_holo_light</item>
+	</style>
+	
+	<style name="TextView_LongText">
+	    <item name="android:textColor">#000000</item>
+	    <item name="android:textSize">@dimen/fontsize_normal</item>
+	    <item name="android:textStyle">normal</item>
+	    <item name="android:singleLine">false</item>
+	    <item name="android:padding">12dp</item>
+	    <item name="android:scrollbars">vertical</item>
+	</style>
+	
+	<style name="Spinner_Readable">
+	    <item name="android:paddingLeft">12dp</item>
+	    <item name="android:paddingTop">8dp</item>
+	    <item name="android:paddingRight">12dp</item>
+	    <item name="android:paddingBottom">8dp</item>
+	    <item name="android:gravity">center_horizontal</item>
+	    <item name="android:layout_height">wrap_content</item>
+	</style>
+	<style name="Spinner_Readable.Light">
+	    <item name="android:background">@drawable/spinner_light</item>
+	</style>
+	
+	<style name="TextView_Readable">
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">@dimen/fontsize_normal</item>
+	    <item name="android:padding">12dp</item>
+	    <item name="android:background">@android:color/transparent</item>
+	</style>
+</resources>

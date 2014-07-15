@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_darkest">
+		<im.delight.android.keyvaluespinner.KeyValueSpinner
+		    android:id="@+id/spinnerTopic"
+		    android:layout_width="match_parent"
+		    style="@style/Spinner_Readable.Light" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textCursorDrawable="@null"
+        android:inputType="text|textMultiLine|textShortMessage"
+        android:hint="@string/type_here"
+        android:gravity="center"
+        style="@style/TextView_Message" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+	    <TextView
+	        android:id="@+id/textViewDegree"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:textSize="@dimen/fontsize_small"
+		    android:text="@string/anonymous"
+		    android:paddingLeft="4dp"
+		    android:paddingBottom="4dp"
+		    android:gravity="left" />
+	    <TextView
+	        android:id="@+id/textViewCharsLeft"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:textSize="@dimen/fontsize_small"
+		    android:paddingRight="4dp"
+		    android:paddingBottom="4dp"
+		    android:gravity="right" />
+	</LinearLayout>
+	<include layout="@layout/divider" />
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <Button
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:text="@string/write"
+		    android:enabled="false"
+			style="@style/Button_ButtonBar" />
+        <Button
+            android:id="@+id/buttonPublish"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:text="@string/publish"
+		    android:filterTouchesWhenObscured="true"
+			style="@style/Button_ButtonBar" />
+    </LinearLayout>
+</LinearLayout>

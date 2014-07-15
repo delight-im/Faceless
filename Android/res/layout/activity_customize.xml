@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <Button
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:text="@string/background"
+		    android:enabled="false"
+			style="@style/Button_ButtonBar" />
+        <Button
+            android:id="@+id/buttonSave"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:text="@string/save"
+			style="@style/Button_ButtonBar" />
+    </LinearLayout>
+    <include layout="@layout/divider" />
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="@color/background_darkest">
+	<com.larswerkman.holocolorpicker.ColorPicker
+		android:id="@+id/colorPickerBackground"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+    </LinearLayout>
+	<include layout="@layout/divider" />
+	<TextView
+		android:id="@+id/textViewPatternPickerCaption"
+		android:layout_width="match_parent"
+		android:layout_height="84dp"
+		android:gravity="center"
+		android:text="@string/tap_to_change_pattern"
+		android:textSize="@dimen/fontsize_small" />
+</LinearLayout>

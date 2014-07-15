@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fontsize_small">12sp</dimen>
+    <dimen name="fontsize_normal">16sp</dimen>
+    <dimen name="fontsize_large">20sp</dimen>
+    <color name="background_darkest">#07182a</color>
+    <color name="background_dark">#3a4b5d</color>
+    <color name="background_medium">#1f8dd6</color>
+    <color name="background_light">#8697a9</color>
+    <color name="white_dark">#bbbbbb</color>
+    <color name="white_medium">#dddddd</color>
+    <color name="white_light">#f3f3f3</color>
+    <color name="green_dark">#009900</color>
+    <color name="green_light">#00b300</color>
+	<string-array name="meta_open_source_body" translatable="false">
+		<item>+ libphonenumber (Google / Apache License 2.0)</item>
+		<item>+ ActionBar-PullToRefresh (Chris Banes / Apache License 2.0)</item>
+		<item>+ HoloColorPicker (Lars Werkman / Apache License 2.0)</item>
+		<item>+ AppRater (delight.im / Apache License 2.0)</item>
+		<item>+ Emoji (delight.im / Apache License 2.0)</item>
+		<item>+ Android-Countries (delight.im / Apache License 2.0)</item>
+		<item>+ Android-Languages (delight.im / Apache License 2.0)</item>
+		<item>+ Android-BaseLib (delight.im / Apache License 2.0)</item>
+		<item>+ Android-KeyValueSpinner (delight.im / Apache License 2.0)</item>
+		<item>+ Android-WebRequest (delight.im / Apache License 2.0)</item>
+		<item>+ Android-Tasks (delight.im / Apache License 2.0)</item>
+		<item>+ Android-Time (delight.im / Apache License 2.0)</item>
+		<item>+ Android-Progress (delight.im / Apache License 2.0)</item>
+		<item>+ Android-InfiniteScrolling (delight.im / Apache License 2.0)</item>
+		<item>+ SmoothProgressBar (Antoine Merle)</item>
+		<item>+ Android (The Android Open Source Project / Apache License 2.0)</item>
+		<item>+ Windows Icons (Austin Andrews, Jay Zawrotny / Creative Commons BY-ND 3.0)</item>
+		<item>+ Subtle Patterns (subtlepatterns.com / Atle Mo / CC BY-SA 3.0 / www.delight.im/dev/faceless)</item>
+		<item>+ Android Holo Colors (Jérôme Van Der Linden / CC BY 3.0)</item>
+		<item>+ Ubuntu Font (Dalton Maag / Ubuntu Font Licence 1.0)</item>
+	</string-array>
+	<string-array name="subscription_notifications_machine" translatable="false">
+	    <item>frequently</item>
+	    <item>moderately</item>
+	    <item>rarely</item>
+	    <item>off</item>
+	</string-array>
+	<color name="badge_background_active">#cc0000</color>
+	<color name="badge_background_pressed">#ff0000</color>
+	<color name="badge_background_disabled">#40ffffff</color>
+	<string-array name="topics_list_human" translatable="false">
+	    <item>@string/topic_politics</item>
+	    <item>@string/topic_art</item>
+	    <item>@string/topic_business</item>
+	    <item>@string/topic_work</item>
+	    <item>@string/topic_culture</item>
+	    <item>@string/topic_health</item>
+	    <item>@string/topic_science</item>
+	    <item>@string/topic_sports</item>
+	    <item>@string/topic_technology</item>
+	    <item>@string/topic_sex</item>
+	    <item>@string/topic_dating</item>
+	    <item>@string/topic_beauty</item>
+	    <item>@string/topic_books</item>
+	    <item>@string/topic_movies</item>
+	    <item>@string/topic_music</item>
+	    <item>@string/topic_family</item>
+	    <item>@string/topic_food</item>
+	    <item>@string/topic_life</item>
+	    <item>@string/topic_love</item>
+	</string-array>
+	<string-array name="topics_list_machine" translatable="false">
+	    <item>politics</item>
+	    <item>art</item>
+	    <item>business</item>
+	    <item>work</item>
+	    <item>culture</item>
+	    <item>health</item>
+	    <item>science</item>
+	    <item>sports</item>
+	    <item>technology</item>
+	    <item>sex</item>
+	    <item>dating</item>
+	    <item>beauty</item>
+	    <item>books</item>
+	    <item>movies</item>
+	    <item>music</item>
+	    <item>family</item>
+	    <item>food</item>
+	    <item>life</item>
+	    <item>love</item>
+	</string-array>
+	<string-array name="topics_list_default" translatable="false">
+	    <item>politics</item>
+	    <item>art</item>
+	    <item>business</item>
+	    <item>work</item>
+	    <item>culture</item>
+	    <item>health</item>
+	    <item>science</item>
+	    <item>sports</item>
+	    <item>technology</item>
+	    <item>beauty</item>
+	    <item>books</item>
+	    <item>movies</item>
+	    <item>music</item>
+	    <item>family</item>
+	    <item>food</item>
+	    <item>life</item>
+	    <item>love</item>
+	</string-array>
+	<string name="topics_empty_machine" translatable="false"></string>
+	<string name="topics_meta_machine" translatable="false">meta</string>
+</resources>

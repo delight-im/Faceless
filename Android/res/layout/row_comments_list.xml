@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewCommentContainer"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+    <ImageView
+        android:id="@+id/identiconAuthor"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginRight="12dp" />
+    <ImageView
+        android:id="@+id/identiconPrivateRecipient"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginRight="12dp"
+        android:visibility="gone" />
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:descendantFocusability="blocksDescendants">
+		<TextView
+			android:id="@+id/textViewComment"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#ffffff"
+			android:textColorLink="#ffffff"
+			android:textSize="@dimen/fontsize_normal"
+			android:gravity="left"
+			android:autoLink="web|email" />
+		<TextView
+			android:id="@+id/textViewTime"
+			android:layout_width="match_parent"
+			android:gravity="right"
+			style="@style/TextView_CommentProperty" />
+	</LinearLayout>
+</LinearLayout>

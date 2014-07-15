@@ -1,0 +1,30 @@
+html, body {
+	background-color: #1f8dd6;
+	color: #ddd;
+	text-align: center;
+}
+h1 {
+	color: #fff;
+	text-transform: uppercase;
+}
+h2 {
+	color: #eee;
+}
+ul {
+	list-style-type: none;
+}
+.faceless-button {
+	background: #07182a;
+	color: #fff;
+	border-radius: 8px;
+	margin: 6px 12px;
+}
+#faceless-content {
+	margin-bottom: 48px;
+}
+#faceless-footer {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	height: 80px;
+}

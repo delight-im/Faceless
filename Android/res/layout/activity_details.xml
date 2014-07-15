@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <include layout="@layout/divider" />
+    <ScrollView
+        android:id="@+id/viewScreenshotContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:descendantFocusability="blocksDescendants">
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="4dp">
+				<TextView
+					android:id="@+id/textViewTopic"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					style="@style/TextView_MessageProperty.Left" />
+				<TextView
+					android:id="@+id/textViewFavoritesOrTime"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					style="@style/TextView_MessageProperty.Right" />
+		    </LinearLayout>
+		    <TextView
+		        android:id="@+id/textViewMessage"
+		        android:layout_width="match_parent"
+		        android:layout_height="0dp"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:autoLink="web|email"
+		        style="@style/TextView_Message" />
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="4dp">
+				<TextView
+					android:id="@+id/textViewDegree"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					style="@style/TextView_MessageProperty.Left" />
+				<TextView
+					android:id="@+id/textViewComments"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					style="@style/TextView_MessageProperty.Right" />
+		    </LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/viewListViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_darkest"
+        android:visibility="gone">
+		<uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/pullToRefreshLayout"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent">
+			<ListView
+				android:id="@+id/listViewComments"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:divider="@android:color/transparent"
+				android:dividerHeight="12dp"
+				android:fastScrollEnabled="false"
+				android:filterTouchesWhenObscured="true" />
+		</uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
+	    <LinearLayout
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+	        android:paddingLeft="12dp"
+	        android:paddingTop="8dp"
+	        android:paddingRight="12dp"
+	        android:paddingBottom="8dp"
+	        android:layout_marginTop="12dp">
+		    <EditText
+		        android:id="@+id/editTextComment"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:textSize="@dimen/fontsize_normal"
+		        android:textColor="#000000"
+		        android:inputType="text|textShortMessage"
+		        android:hint="@string/comment_add_hint"
+		        android:lines="1"
+		        android:maxLines="1"
+		        android:background="@android:color/transparent" />
+		    <ImageButton
+		        android:id="@+id/imageButtonCommentSubmit"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@color/background_darkest"
+		        android:src="@drawable/ic_ib_send"
+		        android:contentDescription="@string/send"
+		        android:layout_marginLeft="8dp"
+		        android:filterTouchesWhenObscured="true" />
+	    </LinearLayout>
+	</LinearLayout>
+	<include layout="@layout/divider" />
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonMessage"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:text="@string/message"
+		    android:enabled="false"
+			style="@style/Button_ButtonBar" />
+        <Button
+            android:id="@+id/buttonComments"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:text="@string/comments"
+			style="@style/Button_ButtonBar" />
+    </LinearLayout>
+</LinearLayout>

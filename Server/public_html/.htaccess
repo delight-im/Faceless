@@ -1,0 +1,20 @@
+# Disallow all HTTP methods other than GET, POST and HEAD
+RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)
+RewriteRule .* - [R=405,L]
+
+# Enable URL rewriting
+RewriteEngine On
+
+RewriteRule ^messages/list$ messages_list.php
+RewriteRule ^messages/details$ messages_details.php
+RewriteRule ^messages/new$ messages_new.php
+RewriteRule ^favorites/set$ favorites_set.php
+RewriteRule ^comments/list$ comments_list.php
+RewriteRule ^comments/new$ comments_new.php
+RewriteRule ^subscriptions/set$ subscriptions_set.php
+RewriteRule ^subscriptions/clear$ subscriptions_clear.php
+RewriteRule ^connections/friend$ connections_friend.php
+RewriteRule ^connections/friend/count$ connections_friend_count.php
+RewriteRule ^connections/block$ connections_block.php
+RewriteRule ^reports/new$ reports_new.php
+RewriteRule ^verifications/prepare$ verifications_prepare.php

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/you_and_friends">
+        <PreferenceScreen
+            android:title="@string/action_invite"
+            android:summary="@string/action_invite_summary">
+	        <intent
+	            android:action="android.intent.action.VIEW"
+	            android:targetPackage="im.delight.faceless"
+	            android:targetClass="im.delight.faceless.ActivityInvite" />
+		</PreferenceScreen>
+	</PreferenceCategory>
+    <PreferenceCategory android:title="@string/general_settings">
+        <MultiSelectListPreference
+            android:key="topicsList"
+            android:title="@string/topics"
+            android:summary="@string/topics_summary"
+            android:entries="@array/topics_list_human"
+            android:entryValues="@array/topics_list_machine"
+            android:defaultValue="@array/topics_list_default"
+            android:enabled="true"
+            android:selectable="true" />
+        <im.delight.android.languages.LanguagePreference
+            android:key="language"
+            android:title="@string/language"
+            android:enabled="true"
+            android:selectable="true" />
+		<im.delight.android.countries.CountryPreference
+		    android:key="country"
+		    android:title="@string/country"
+		    android:enabled="true"
+		    android:selectable="true" />
+		<im.delight.android.baselib.AutoListPreference
+			android:key="subscription_notifications"
+			android:title="@string/subscription_notifications"
+			android:summary="%s"
+			android:defaultValue="frequently"
+			android:entries="@array/subscription_notifications_human"
+			android:entryValues="@array/subscription_notifications_machine"
+			android:enabled="true"
+			android:selectable="true" />
+	</PreferenceCategory>
+    <PreferenceCategory android:title="@string/this_app">
+        <PreferenceScreen
+            android:title="@string/action_help"
+            android:summary="@string/action_help_summary">
+	        <intent
+	            android:action="android.intent.action.VIEW"
+	            android:targetPackage="im.delight.faceless"
+	            android:targetClass="im.delight.faceless.ActivityAbout" />
+		</PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>
