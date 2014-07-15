@@ -10,6 +10,7 @@ CREATE TABLE `comments` (
   PRIMARY KEY (`id`),
   KEY `selection` (`message_id`,`time_inserted`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `connections` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `from_user` int(10) unsigned NOT NULL,
@@ -20,6 +21,7 @@ CREATE TABLE `connections` (
   UNIQUE KEY `combination` (`from_user`,`to_user`),
   KEY `selection` (`to_user`,`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `favorites` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -30,6 +32,7 @@ CREATE TABLE `favorites` (
   UNIQUE KEY `combination` (`user_id`,`message_id`),
   KEY `selection` (`user_id`,`time_added`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `feeds` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -38,6 +41,7 @@ CREATE TABLE `feeds` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `combination` (`user_id`,`message_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `ids_in_threads` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `content_type` enum('message','comment') NOT NULL,
@@ -47,6 +51,7 @@ CREATE TABLE `ids_in_threads` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `combination` (`content_type`,`content_id`,`private_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `messages` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -71,6 +76,7 @@ CREATE TABLE `messages` (
   KEY `latest_by_language` (`language_iso3`,`time_published`),
   KEY `time_active` (`time_active`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `reports` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -84,6 +90,7 @@ CREATE TABLE `reports` (
   KEY `selection_by_user` (`user_id`,`time_reported`),
   KEY `selection_by_content` (`content_type`,`content_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `subscriptions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `message_id` int(10) unsigned NOT NULL,
@@ -94,6 +101,7 @@ CREATE TABLE `subscriptions` (
   UNIQUE KEY `combination` (`message_id`,`user_id`),
   KEY `selection` (`user_id`,`counter`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `throttling` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
@@ -103,6 +111,7 @@ CREATE TABLE `throttling` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `combination` (`username`,`date_str`,`action_type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
@@ -116,6 +125,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `username` (`username`),
   KEY `login` (`username`(166),`password`(166))
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+-- 
 CREATE TABLE `verifications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
