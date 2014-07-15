@@ -100,7 +100,7 @@ CREATE TABLE `subscriptions` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `combination` (`message_id`,`user_id`),
   KEY `selection` (`user_id`,`counter`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- 
 CREATE TABLE `throttling` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
