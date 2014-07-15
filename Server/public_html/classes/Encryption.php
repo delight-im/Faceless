@@ -46,7 +46,13 @@ class Encryption {
 
         list ($cipherKey, $macKey, $iv) = $this->getKeys($salt, $key);
 
-        if ($mac !== hash_hmac('sha512', $enc, $macKey, true)) {
+        $nonce = mcrypt_create_iv(64, MCRYPT_DEV_URANDOM);
+        //if ($mac !== hash_hmac('sha512', $enc, $macKey, true)) {
+        if (
+            hash_hmac('sha512', $mac, $nonce)
+            !==
+            hash_hmac('sha512', hash_hmac('sha512', $enc, $macKey, true), $nonce)
+        ) {
              return false;
         }
 
