@@ -28,6 +28,20 @@ Faceless is where you can talk freely. Share messages with your friends and the 
 
 [Faceless on Localize](http://www.localize.io/v/36)
 
+## Known issues
+
+### Android
+
+ * The app cannot be installed on devices without telephony features (e.g. tablets). This is because (a) the app is optimized for phones and (b) users would have to enter their phone number manually, otherwise, and (c) the app curently can run on a single device only.
+
+## Similar services
+
+ * [Secret](http://www.secret.ly/)
+ * [Whisper](http://whisper.sh/)
+ * [Yik Yak](http://yikyakapp.com/)
+ * [Experience Project](http://www.experienceproject.com/)
+ * [PostSecret](http://postsecret.com/)
+
 ## License
 
 ```
