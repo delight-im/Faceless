@@ -46,20 +46,7 @@ class Encryption {
 
         list ($cipherKey, $macKey, $iv) = $this->getKeys($salt, $key);
 
-        $nonce = mcrypt_create_iv(64, MCRYPT_DEV_URANDOM);
-        if (
-            hash_hmac(
-                'sha512',
-                $mac, 
-                $nonce
-            ) 
-            !==
-            hash_hmac(
-                'sha512',
-                hash_hmac('sha512', $enc, $macKey, true), 
-                $nonce
-            )
-        ) {
+        if ($this->hash_equals($mac,  hash_hmac('sha512', $enc, $macKey, true))) {
              return false;
         }
 
@@ -152,6 +139,19 @@ class Encryption {
             return false;
         }
         return substr($data, 0, -1 * $last);
+    }
+    /**
+     * Use Double-HMAC with a nonce to compare two hashes in a manner that is
+     * resistant to timing attacks.
+     * 
+     * @param string $a - hash
+     * @param string $b - hash
+     * @return boolean
+     */
+    protected function hash_equals($a, $b)
+    {
+        $nonce = mcrypt_create_iv(64, MCRYPT_DEV_URANDOM);
+        return hash_hmac('sha512', $a, $nonce) === hash_hmac('sha512', $b, $nonce);
     }
 
 }
