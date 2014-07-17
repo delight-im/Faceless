@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="action_add">Scrivere messaggio</string>
-	<string name="action_add_favorite">Aggiungi ai preferiti</string>
-	<string name="action_add_subscription">Iscriviti ai commenti</string>
-	<string name="action_customize">Personalizza</string>
-	<string name="action_help">Aiuto</string>
-	<string name="action_help_summary">Do you have any questions about this app? Read our detailed explanations here.</string>
-	<string name="action_invite">Invita gli amici</string>
+	<string name="action_add">Mesaj yaz</string>
+	<string name="action_add_favorite">Favorilerime ekle</string>
+	<string name="action_add_subscription">Subscribe to comments</string>
+	<string name="action_customize">Özelleştir</string>
+	<string name="action_help">Yardım</string>
+	<string name="action_help_summary">Uygulama hakkında sorularınız var mı? Buradan detaylı açıklamamızı okuyabilirsiniz.</string>
+	<string name="action_invite">Arkadaşlarını davet et</string>
 	<string name="action_invite_promo">Are your friends on Faceless yet?</string>
 	<string name="action_invite_summary">On Faceless, your friends will never see your name. This makes conversations honest and entertaining.</string>
-	<string name="action_loading">Loading &#8230;</string>
-	<string name="action_notification_count">Nuove notifiche</string>
-	<string name="action_remove_favorite">Rimuovi dai preferiti</string>
-	<string name="action_remove_subscription">Cancellati dai commenti</string>
-	<string name="action_report">Segnala il messaggio</string>
-	<string name="action_settings">Settings</string>
-	<string name="action_share_picture">Condividi come immagine</string>
-	<string name="anonymous">Anonimo</string>
+	<string name="action_loading">Yükleniyor &#8230;</string>
+	<string name="action_notification_count">Yeni bildirimler</string>
+	<string name="action_remove_favorite">Favorilerimden kaldır</string>
+	<string name="action_remove_subscription">Unsubscribe from comments</string>
+	<string name="action_report">Report message</string>
+	<string name="action_settings">Ayarlar</string>
+	<string name="action_share_picture">Resim olarak paylaş</string>
+	<string name="anonymous">Anonim</string>
 	<string name="app_name">Faceless</string>
 	<string name="app_rater_explanation">How do you like this app? We would be very happy if you could rate our application on Google Play. Thanks for your support!</string>
-	<string name="app_rater_later">Più tardi</string>
-	<string name="app_rater_never">No, grazie</string>
-	<string name="app_rater_now">Vota ora</string>
-	<string name="app_rater_title">Vota questa app</string>
-	<string name="background">Fondo</string>
+	<string name="app_rater_later">Daha sonra</string>
+	<string name="app_rater_never">Hayır, Teşekkürler</string>
+	<string name="app_rater_now">Şimdi uygulamayı değerlendir</string>
+	<string name="app_rater_title">Bu uygulamayı değerlendir</string>
+	<string name="background">Arka plan</string>
 	<string name="block_user_added">You will no longer receive messages from this user</string>
-	<string name="cancel">Cancellare</string>
-	<string name="choose_recipient">Choose recipient</string>
-	<string name="comment_add_hint">Il tuo commento &#8230;</string>
+	<string name="cancel">İptal et</string>
+	<string name="choose_recipient">Alıcı seç</string>
+	<string name="comment_add_hint">Yorumun &#8230;</string>
 	<string name="comment_confirm_public_body">Do you want to publish this comment for all users?\n\nIf you want to reply to somebody privately instead, please tap on the respective comment.</string>
-	<string name="comment_confirm_public_title">Commento pubblico</string>
-	<string name="comment_options">Comment options</string>
-	<string name="comments">Commenti</string>
-	<string name="continueToPreview">Continue to preview</string>
-	<string name="country">Country</string>
-	<string name="degree_author">Autore</string>
-	<string name="degree_example">Esempio</string>
-	<string name="degree_friend">Amico</string>
-	<string name="degree_friend_of_friend">Amico di un amico</string>
-	<string name="degree_self">Voi</string>
-	<string name="degree_worldwide">Mondiale</string>
+	<string name="comment_confirm_public_title">Herkese açık yorum</string>
+	<string name="comment_options">Yorum seçenekleri</string>
+	<string name="comments">Yorumlar</string>
+	<string name="continueToPreview">Önizleme için devam edin</string>
+	<string name="country">Ülke</string>
+	<string name="degree_author">Yazar</string>
+	<string name="degree_example">Örnek</string>
+	<string name="degree_friend">Arkadaş</string>
+	<string name="degree_friend_of_friend">Friend of a friend</string>
+	<string name="degree_self">Sen</string>
+	<string name="degree_worldwide">Dünya Çapında</string>
 	<string name="error_bad_request">Your request could not be handled by the server</string>
-	<string name="error_maintenance">Faceless is out of service for a short time</string>
-	<string name="error_no_connection">Please check your internet connection</string>
+	<string name="error_maintenance">Faceless kısa bir süreliğine hizmet verememektedir</string>
+	<string name="error_no_connection">Lütfen internet bağlantınızı kontrol edin</string>
 	<string name="error_outdated_client">Please update Faceless to the latest version via Google Play</string>
 	<string name="error_temporarily_banned">You have been temporarily banned due to reports by other persons</string>
 	<string name="example_message_explanation">This is an example: Just start by writing your own message</string>
@@ -51,16 +51,16 @@
 		<item>For the last three weeks, I\'ve slept in my car.</item>
 		<item>Nobody at work knows that I\'ve been in jail.</item>
 		<item>I always eat the food I\'m buying when I\'m still in the supermarket.</item>
-		<item>I\'m in love with my best friend.</item>
-		<item>My hair looks better when not washed for some days.</item>
+		<item>En iyi arkadaşıma aşık oldum.</item>
+		<item>Bir kaç gün saçlarım yıkamadığım zaman daha iyi gözüküyor.</item>
 		<item>Just been on vacation with my wife for the first time.</item>
-		<item>My boyfriend still hasn\'t met my parents.</item>
-		<item>Every day, I consider quitting my job and moving to another city.</item>
+		<item>Erkek arkadaşım henüz ailemle tanışmadı.</item>
+		<item>Her gün işimden ayrılmayı ve başka bir şehre taşınmayı düşünüyorum.</item>
 		<item>Is anybody out there truthfully happy?</item>
 		<item>Whenever I read wedding announcements in the paper, I become jealous.</item>
 	</string-array>
-	<string name="general_settings">General settings</string>
-	<string name="intro">Benvenuto</string>
+	<string name="general_settings">Genel Ayarlar</string>
+	<string name="intro">Hoşgeldin</string>
 	<string-array name="introduction_steps">
 		<item>Faceless is where you can talk freely.\n\nShare messages with your friends and the whole world.</item>
 		<item>You can be open, no matter what you talk about.\n\nNobody will see who you are — it\'s only about your words.</item>
@@ -69,13 +69,13 @@
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
 	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
-	<string name="invitation_title">Ottieni Faceless</string>
-	<string name="language">Language</string>
-	<string name="learn_more">Learn more</string>
+	<string name="invitation_title">Faceless\'i indir</string>
+	<string name="language">Dil</string>
+	<string name="learn_more">Daha fazla öğren</string>
 	<string name="login_throttled_body">There have been too many failed login attempts for your account.\n\nThis may also have been caused by another person who tried to get access to your account.\n\nThus we are now protecting your account and have temporarily locked it.\n\nPlease try again later!</string>
-	<string name="login_throttled_title">Account locked</string>
-	<string name="mark_all_read">Segna tutto come letto</string>
-	<string name="message">Messaggio</string>
+	<string name="login_throttled_title">Hesap kilitlendi</string>
+	<string name="mark_all_read">Hepsini okundu olarak işaretle</string>
+	<string name="message">Mesaj</string>
 	<string-array name="meta_about">
 		<item>Faceless is where you can talk freely, to your friends and the whole world.</item>
 		<item>You can be open, no matter what you talk about. Nobody will see who you are — it\'s only about your message.</item>
@@ -93,13 +93,13 @@
 		<item>+ \"Full network access\": Send/receive messages, comments and favorites.</item>
 		<item>+ \"Run at startup\": Setting up notifications and synchronization again when you had switched off your device.</item>
 	</string-array>
-	<string name="meta_permissions_title"><b>Autorizzazioni di applicazioni:</b></string>
+	<string name="meta_permissions_title"><b>App permissions:</b></string>
 	<string-array name="meta_privacy_body">
 		<item>+ We only access your phone number and your contacts\' phone numbers. We don\'t access any names, email addresses or other contact details.</item>
 		<item>+ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.</item>
 		<item>+ As you can see, we require only those app permissions that are really necessary. No heavy list of extended permissions as with other apps.</item>
 	</string-array>
-	<string name="meta_privacy_title"><b>Informativa sulla privacy:</b></string>
+	<string name="meta_privacy_title"><b>Güvenlik Politikası:</b></string>
 	<string-array name="meta_questions_answers">
 		<item><b>Do I have to sign up for Faceless?</b></item>
 		<item>No. You don\'t need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.</item>
@@ -128,21 +128,21 @@
 		<item>Popular messages</item>
 		<item>Saved favorites</item>
 	</string-array>
-	<string name="next">Prossimo</string>
-	<string name="ok">Bene</string>
-	<string name="please_choose_topic">Please choose a topic for your message</string>
+	<string name="next">İleri</string>
+	<string name="ok">Tamam</string>
+	<string name="please_choose_topic">Lütfen mesajınız için bir konu seçin</string>
 	<string name="please_enter_message">Please enter a text for your message</string>
-	<string name="preview">Preview</string>
+	<string name="preview">Ön izleme</string>
 	<string name="private_reply">Private reply</string>
-	<string name="publish">Pubblicare</string>
-	<string name="rate_app">Tasso app</string>
-	<string name="read_message">Leggi messaggio</string>
-	<string name="reply_privately">Reply privately</string>
-	<string name="report_comment">Segnala commento</string>
-	<string name="report_confirm_block">Bloccare</string>
-	<string name="report_confirm_report">Segnalare</string>
+	<string name="publish">Yayınla</string>
+	<string name="rate_app">Uygulamaya değerlendir</string>
+	<string name="read_message">Mesajı Oku</string>
+	<string name="reply_privately">Özel olarak cevapla</string>
+	<string name="report_comment">Yorumu şikayet et</string>
+	<string name="report_confirm_block">Engelle</string>
+	<string name="report_confirm_report">Rapor et</string>
 	<string-array name="report_options">
-		<item>Wrong topic</item>
+		<item>Yanlış konu</item>
 		<item>Report bullying / harassment</item>
 		<item>Report violence / threats</item>
 		<item>Report hate speech</item>
@@ -150,65 +150,65 @@
 		<item>Report spam / advertising</item>
 		<item>Report fraud / falsehood</item>
 		<item>Report illegal content</item>
-		<item>Block the author</item>
+		<item>Yazarı Engelle</item>
 	</string-array>
-	<string name="report_sent">Your report has been successfully sent</string>
-	<string name="report_warning_block">Are you sure you want to block the author of this entry?\n\nYou will no longer receive any messages from that person in the future.\n\nThis action cannot be undone later.</string>
+	<string name="report_sent">Raporunuz başarılı şekilde gönderildi</string>
+	<string name="report_warning_block">Bu yazının yazarını engellemek istediğinize emin misiniz?\n\nBir daha bu kişiden herhangi bir mesaj almayacaksınız.\n\nBu işlem daha sonra değiştirilemez.</string>
 	<string name="report_warning_report">Are you sure you want to report this entry as inappropriate?\n\nA report may cause the entry to be deleted and the author to be temporarily banned from Faceless.\n\nIf you are reporting a message, it will be removed from your personal feed immediately.</string>
-	<string name="save">Salvare</string>
-	<string name="send">Inviare</string>
-	<string name="setup">Installazione</string>
+	<string name="save">Kaydet</string>
+	<string name="send">Gönder</string>
+	<string name="setup">Kurulum</string>
 	<string name="setup_intro">Please enter your phone number below to finish setup.\n\nStart with a \"+\" followed by your country code (e.g. +41).\n\nAfter that, just enter your local phone number.\n\nPlease double-check that the number is correct!\n\nIf you don\'t enter your correct number, we won\'t be able to connect you to your friends.\n\nOf course, your phone number is secure with us. We respect your privacy!</string>
-	<string name="setup_phone_number_hint">Esempio: +41 1234 56789</string>
-	<string name="share_image_failed">Could not save and share the message</string>
+	<string name="setup_phone_number_hint">Örnek: +90 1234 56789</string>
+	<string name="share_image_failed">Mesaj kaydedilemedi ve paylaşılamadı</string>
 	<string name="subscription_notifications">Notifications for unread comments</string>
 	<string-array name="subscription_notifications_human">
 		<item>Normal</item>
-		<item>Rarely</item>
-		<item>Very rarely</item>
-		<item>Off</item>
+		<item>Nadiren</item>
+		<item>Çok Nadir</item>
+		<item>Kapalı</item>
 	</string-array>
-	<string name="subscriptions">Commenti non letti</string>
-	<string name="tap_to_change_pattern">Tap to switch the background pattern</string>
-	<string name="this_app">Questa applicazione</string>
-	<string name="topic_art">Art</string>
-	<string name="topic_beauty">Beauty</string>
-	<string name="topic_books">Books</string>
-	<string name="topic_business">Business</string>
-	<string name="topic_culture">Culture</string>
+	<string name="subscriptions">Okunmayan Yorumlar</string>
+	<string name="tap_to_change_pattern">Arka plan deseninin değiştirilmesi için dokunun</string>
+	<string name="this_app">Bu uygulama</string>
+	<string name="topic_art">Sanat</string>
+	<string name="topic_beauty">Güzellik</string>
+	<string name="topic_books">Kitap</string>
+	<string name="topic_business">İş</string>
+	<string name="topic_culture">Kültür</string>
 	<string name="topic_dating">Dating</string>
-	<string name="topic_family">Family</string>
-	<string name="topic_food">Food</string>
-	<string name="topic_health">Health</string>
-	<string name="topic_life">Life</string>
-	<string name="topic_love">Love</string>
-	<string name="topic_movies">Movies</string>
-	<string name="topic_music">Music</string>
-	<string name="topic_politics">Politics</string>
-	<string name="topic_science">Science</string>
-	<string name="topic_sex">Sex</string>
-	<string name="topic_sports">Sports</string>
-	<string name="topic_technology">Technology</string>
+	<string name="topic_family">Aile</string>
+	<string name="topic_food">Yiyecek</string>
+	<string name="topic_health">Sağlık</string>
+	<string name="topic_life">Hayat</string>
+	<string name="topic_love">Aşk</string>
+	<string name="topic_movies">Sinema</string>
+	<string name="topic_music">Müzik</string>
+	<string name="topic_politics">Politika</string>
+	<string name="topic_science">Bilim</string>
+	<string name="topic_sex">Seks</string>
+	<string name="topic_sports">Spor</string>
+	<string name="topic_technology">Teknoloji</string>
 	<string name="topic_work">Work</string>
-	<string name="topics">Topics</string>
-	<string name="topics_empty_human">— Choose a topic —</string>
-	<string name="topics_meta_human">About Faceless</string>
+	<string name="topics">Konular</string>
+	<string name="topics_empty_human">— Konu Seç —</string>
+	<string name="topics_meta_human">Faceless Hakkında</string>
 	<string name="topics_summary">Which topics do you want to see recent and popular messages for?</string>
-	<string name="translate">Tradurre</string>
+	<string name="translate">Çevir</string>
 	<string name="translate_explanation">Do you want to help us translate Faceless to your language?\n\nPlease visit the following website on your computer:\nwww.localize.im/v/36\n\nThank you so much for your support!</string>
-	<string name="type_here">Condividi un pensiero &#8230;\n\nSii gentile e positivo.</string>
-	<string name="verify">Verificare</string>
-	<string name="verify_phone_number">Verificare il numero di telefono</string>
+	<string name="type_here">Ne düşünüyorsun &#8230;\n\nKibar ve olumlu ol.</string>
+	<string name="verify">Doğrula</string>
+	<string name="verify_phone_number">Telefon numarasını doğrula</string>
 	<string name="verify_phone_number_how">In the next step, you\'ll be asked to start your usual app for text messages.\n\nPlease don\'t use WhatsApp or similar apps here, this won\'t work.\n\nWe\'ll have filled in the recipient and the content for your text message already.\n\nPlease don\'t change the text and just press \"Send\" to complete the verification.\n\nA few minutes later, you should be able to open Faceless and use all features as expected.\n\nNote: The normal fees by your carrier for international text messages apply.</string>
 	<string name="verify_phone_number_why">In order to protect you and your friends from fraud, we must verify your phone number.\n\nThis helps us offer a secure and enjoyable service for all users.\n\nDo you want to verify your number now?\n\nNote: You can only use this app on a single device.\n\nNeed help? Get in touch with us at %s</string>
-	<string name="write">Scrivere</string>
+	<string name="write">Yaz</string>
 	<plurals name="x_chars_left">
-		<item quantity="zero">%d caratteri rimanenti</item>
-		<item quantity="one">%d carattere rimanenti</item>
-		<item quantity="two">%d caratteri rimanenti</item>
-		<item quantity="few">%d caratteri rimanenti</item>
-		<item quantity="many">%d caratteri rimanenti</item>
-		<item quantity="other">%d caratteri rimanenti</item>
+		<item quantity="zero">%d chars left</item>
+		<item quantity="one">%d char left</item>
+		<item quantity="two">%d chars left</item>
+		<item quantity="few">%d chars left</item>
+		<item quantity="many">%d chars left</item>
+		<item quantity="other">%d chars left</item>
 	</plurals>
 	<plurals name="x_comments">
 		<item quantity="zero">%d comments</item>
@@ -227,12 +227,12 @@
 		<item quantity="other">%d× favorite</item>
 	</plurals>
 	<plurals name="x_friends_using_app">
-		<item quantity="zero">%d amici stanno utilizzando Faceless</item>
-		<item quantity="one">%d amico sta utilizzando Faceless</item>
-		<item quantity="two">%d amici stanno utilizzando Faceless</item>
-		<item quantity="few">%d amici stanno utilizzando Faceless</item>
-		<item quantity="many">%d amici stanno utilizzando Faceless</item>
-		<item quantity="other">%d amici stanno utilizzando Faceless</item>
+		<item quantity="zero">%d friends of yours are now using Faceless</item>
+		<item quantity="one">%d friend of yours is now using Faceless</item>
+		<item quantity="two">%d friends of yours are now using Faceless</item>
+		<item quantity="few">%d friends of yours are now using Faceless</item>
+		<item quantity="many">%d friends of yours are now using Faceless</item>
+		<item quantity="other">%d friends of yours are now using Faceless</item>
 	</plurals>
 	<plurals name="x_subscription_updates">
 		<item quantity="zero">%d unread comments</item>
@@ -243,12 +243,12 @@
 		<item quantity="other">%d unread comments</item>
 	</plurals>
 	<plurals name="x_unread_messages">
-		<item quantity="zero">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="one">%d messaggio non letti dai tuoi amici</item>
-		<item quantity="two">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="few">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="many">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="other">%d messaggi non letti dai tuoi amici</item>
+		<item quantity="zero">%d unread messages from your friends</item>
+		<item quantity="one">%d unread message from your friends</item>
+		<item quantity="two">%d unread messages from your friends</item>
+		<item quantity="few">%d unread messages from your friends</item>
+		<item quantity="many">%d unread messages from your friends</item>
+		<item quantity="other">%d unread messages from your friends</item>
 	</plurals>
-	<string name="you_and_friends">You and your friends</string>
+	<string name="you_and_friends">Sen ve arkadaşların</string>
 </resources>

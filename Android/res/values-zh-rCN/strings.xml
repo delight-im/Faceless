@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="action_add">Scrivere messaggio</string>
-	<string name="action_add_favorite">Aggiungi ai preferiti</string>
-	<string name="action_add_subscription">Iscriviti ai commenti</string>
-	<string name="action_customize">Personalizza</string>
-	<string name="action_help">Aiuto</string>
+	<string name="action_add">Write message</string>
+	<string name="action_add_favorite">Add to favorites</string>
+	<string name="action_add_subscription">Subscribe to comments</string>
+	<string name="action_customize">Customize</string>
+	<string name="action_help">Help</string>
 	<string name="action_help_summary">Do you have any questions about this app? Read our detailed explanations here.</string>
-	<string name="action_invite">Invita gli amici</string>
+	<string name="action_invite">Invite friends</string>
 	<string name="action_invite_promo">Are your friends on Faceless yet?</string>
 	<string name="action_invite_summary">On Faceless, your friends will never see your name. This makes conversations honest and entertaining.</string>
 	<string name="action_loading">Loading &#8230;</string>
-	<string name="action_notification_count">Nuove notifiche</string>
-	<string name="action_remove_favorite">Rimuovi dai preferiti</string>
-	<string name="action_remove_subscription">Cancellati dai commenti</string>
-	<string name="action_report">Segnala il messaggio</string>
+	<string name="action_notification_count">New notifications</string>
+	<string name="action_remove_favorite">Remove from favorites</string>
+	<string name="action_remove_subscription">Unsubscribe from comments</string>
+	<string name="action_report">Report message</string>
 	<string name="action_settings">Settings</string>
-	<string name="action_share_picture">Condividi come immagine</string>
-	<string name="anonymous">Anonimo</string>
+	<string name="action_share_picture">Share as picture</string>
+	<string name="anonymous">Anonymous</string>
 	<string name="app_name">Faceless</string>
 	<string name="app_rater_explanation">How do you like this app? We would be very happy if you could rate our application on Google Play. Thanks for your support!</string>
-	<string name="app_rater_later">Più tardi</string>
-	<string name="app_rater_never">No, grazie</string>
-	<string name="app_rater_now">Vota ora</string>
-	<string name="app_rater_title">Vota questa app</string>
-	<string name="background">Fondo</string>
+	<string name="app_rater_later">Later</string>
+	<string name="app_rater_never">No, thanks</string>
+	<string name="app_rater_now">Rate now</string>
+	<string name="app_rater_title">Rate this app</string>
+	<string name="background">Background</string>
 	<string name="block_user_added">You will no longer receive messages from this user</string>
-	<string name="cancel">Cancellare</string>
+	<string name="cancel">Cancel</string>
 	<string name="choose_recipient">Choose recipient</string>
-	<string name="comment_add_hint">Il tuo commento &#8230;</string>
+	<string name="comment_add_hint">Your comment &#8230;</string>
 	<string name="comment_confirm_public_body">Do you want to publish this comment for all users?\n\nIf you want to reply to somebody privately instead, please tap on the respective comment.</string>
-	<string name="comment_confirm_public_title">Commento pubblico</string>
+	<string name="comment_confirm_public_title">Public comment</string>
 	<string name="comment_options">Comment options</string>
-	<string name="comments">Commenti</string>
+	<string name="comments">Comments</string>
 	<string name="continueToPreview">Continue to preview</string>
 	<string name="country">Country</string>
-	<string name="degree_author">Autore</string>
-	<string name="degree_example">Esempio</string>
-	<string name="degree_friend">Amico</string>
-	<string name="degree_friend_of_friend">Amico di un amico</string>
-	<string name="degree_self">Voi</string>
-	<string name="degree_worldwide">Mondiale</string>
+	<string name="degree_author">Author</string>
+	<string name="degree_example">Example</string>
+	<string name="degree_friend">Friend</string>
+	<string name="degree_friend_of_friend">Friend of a friend</string>
+	<string name="degree_self">You</string>
+	<string name="degree_worldwide">Worldwide</string>
 	<string name="error_bad_request">Your request could not be handled by the server</string>
 	<string name="error_maintenance">Faceless is out of service for a short time</string>
 	<string name="error_no_connection">Please check your internet connection</string>
@@ -60,7 +60,7 @@
 		<item>Whenever I read wedding announcements in the paper, I become jealous.</item>
 	</string-array>
 	<string name="general_settings">General settings</string>
-	<string name="intro">Benvenuto</string>
+	<string name="intro">Welcome</string>
 	<string-array name="introduction_steps">
 		<item>Faceless is where you can talk freely.\n\nShare messages with your friends and the whole world.</item>
 		<item>You can be open, no matter what you talk about.\n\nNobody will see who you are — it\'s only about your words.</item>
@@ -69,13 +69,13 @@
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
 	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
-	<string name="invitation_title">Ottieni Faceless</string>
+	<string name="invitation_title">Get Faceless</string>
 	<string name="language">Language</string>
 	<string name="learn_more">Learn more</string>
 	<string name="login_throttled_body">There have been too many failed login attempts for your account.\n\nThis may also have been caused by another person who tried to get access to your account.\n\nThus we are now protecting your account and have temporarily locked it.\n\nPlease try again later!</string>
 	<string name="login_throttled_title">Account locked</string>
-	<string name="mark_all_read">Segna tutto come letto</string>
-	<string name="message">Messaggio</string>
+	<string name="mark_all_read">Mark all as read</string>
+	<string name="message">Message</string>
 	<string-array name="meta_about">
 		<item>Faceless is where you can talk freely, to your friends and the whole world.</item>
 		<item>You can be open, no matter what you talk about. Nobody will see who you are — it\'s only about your message.</item>
@@ -93,13 +93,13 @@
 		<item>+ \"Full network access\": Send/receive messages, comments and favorites.</item>
 		<item>+ \"Run at startup\": Setting up notifications and synchronization again when you had switched off your device.</item>
 	</string-array>
-	<string name="meta_permissions_title"><b>Autorizzazioni di applicazioni:</b></string>
+	<string name="meta_permissions_title"><b>App permissions:</b></string>
 	<string-array name="meta_privacy_body">
 		<item>+ We only access your phone number and your contacts\' phone numbers. We don\'t access any names, email addresses or other contact details.</item>
 		<item>+ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.</item>
 		<item>+ As you can see, we require only those app permissions that are really necessary. No heavy list of extended permissions as with other apps.</item>
 	</string-array>
-	<string name="meta_privacy_title"><b>Informativa sulla privacy:</b></string>
+	<string name="meta_privacy_title"><b>Privacy Policy:</b></string>
 	<string-array name="meta_questions_answers">
 		<item><b>Do I have to sign up for Faceless?</b></item>
 		<item>No. You don\'t need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.</item>
@@ -128,19 +128,19 @@
 		<item>Popular messages</item>
 		<item>Saved favorites</item>
 	</string-array>
-	<string name="next">Prossimo</string>
-	<string name="ok">Bene</string>
-	<string name="please_choose_topic">Please choose a topic for your message</string>
-	<string name="please_enter_message">Please enter a text for your message</string>
-	<string name="preview">Preview</string>
-	<string name="private_reply">Private reply</string>
-	<string name="publish">Pubblicare</string>
-	<string name="rate_app">Tasso app</string>
-	<string name="read_message">Leggi messaggio</string>
+	<string name="next">Next</string>
+	<string name="ok">OK</string>
+	<string name="please_choose_topic">请为这条信息选择主题</string>
+	<string name="please_enter_message">请为信息添加内容</string>
+	<string name="preview">预览</string>
+	<string name="private_reply">私信</string>
+	<string name="publish">Publish</string>
+	<string name="rate_app">Rate app</string>
+	<string name="read_message">Read message</string>
 	<string name="reply_privately">Reply privately</string>
-	<string name="report_comment">Segnala commento</string>
-	<string name="report_confirm_block">Bloccare</string>
-	<string name="report_confirm_report">Segnalare</string>
+	<string name="report_comment">Report comment</string>
+	<string name="report_confirm_block">Block</string>
+	<string name="report_confirm_report">Report</string>
 	<string-array name="report_options">
 		<item>Wrong topic</item>
 		<item>Report bullying / harassment</item>
@@ -152,25 +152,25 @@
 		<item>Report illegal content</item>
 		<item>Block the author</item>
 	</string-array>
-	<string name="report_sent">Your report has been successfully sent</string>
-	<string name="report_warning_block">Are you sure you want to block the author of this entry?\n\nYou will no longer receive any messages from that person in the future.\n\nThis action cannot be undone later.</string>
-	<string name="report_warning_report">Are you sure you want to report this entry as inappropriate?\n\nA report may cause the entry to be deleted and the author to be temporarily banned from Faceless.\n\nIf you are reporting a message, it will be removed from your personal feed immediately.</string>
-	<string name="save">Salvare</string>
-	<string name="send">Inviare</string>
-	<string name="setup">Installazione</string>
-	<string name="setup_intro">Please enter your phone number below to finish setup.\n\nStart with a \"+\" followed by your country code (e.g. +41).\n\nAfter that, just enter your local phone number.\n\nPlease double-check that the number is correct!\n\nIf you don\'t enter your correct number, we won\'t be able to connect you to your friends.\n\nOf course, your phone number is secure with us. We respect your privacy!</string>
-	<string name="setup_phone_number_hint">Esempio: +41 1234 56789</string>
-	<string name="share_image_failed">Could not save and share the message</string>
-	<string name="subscription_notifications">Notifications for unread comments</string>
+	<string name="report_sent">你的反馈已成功发送</string>
+	<string name="report_warning_block">你确定要屏蔽这条内容的作者吗？\n\n你将来不会再收到来自这个作者的任何消息。\n\n此项操作不可逆。</string>
+	<string name="report_warning_report">你确定要举报这条不当内容？\n\n这可能会使得这条内容被删除，并且使内容的作者被 Faceless 禁言。\n\n如果你举报某一条消息，这么这条消息会立即从你的时间线移除。</string>
+	<string name="save">保存</string>
+	<string name="send">发送</string>
+	<string name="setup">设置</string>
+	<string name="setup_intro">请输入您的手机号以完成设置。\n\n先输入“+”号和国家代码（示例：+86）\n\n然后输入您的手机号。\n\n请确保您的手机号输入正确！\n\n如果手机号输入错误，我们就无法关联您和您的朋友们。\n\n当然，您的手机号不会被泄露。我们尊重您的隐私！</string>
+	<string name="setup_phone_number_hint">示例：+86 12345678901</string>
+	<string name="share_image_failed">无法保存并分享这条信息</string>
+	<string name="subscription_notifications">未读评论的通知</string>
 	<string-array name="subscription_notifications_human">
-		<item>Normal</item>
-		<item>Rarely</item>
-		<item>Very rarely</item>
-		<item>Off</item>
+		<item>正常</item>
+		<item>很少</item>
+		<item>极少</item>
+		<item>关闭</item>
 	</string-array>
-	<string name="subscriptions">Commenti non letti</string>
-	<string name="tap_to_change_pattern">Tap to switch the background pattern</string>
-	<string name="this_app">Questa applicazione</string>
+	<string name="subscriptions">未读评论</string>
+	<string name="tap_to_change_pattern">点触切换背景图样</string>
+	<string name="this_app">关于本应用</string>
 	<string name="topic_art">Art</string>
 	<string name="topic_beauty">Beauty</string>
 	<string name="topic_books">Books</string>
@@ -190,25 +190,25 @@
 	<string name="topic_sports">Sports</string>
 	<string name="topic_technology">Technology</string>
 	<string name="topic_work">Work</string>
-	<string name="topics">Topics</string>
-	<string name="topics_empty_human">— Choose a topic —</string>
-	<string name="topics_meta_human">About Faceless</string>
-	<string name="topics_summary">Which topics do you want to see recent and popular messages for?</string>
-	<string name="translate">Tradurre</string>
+	<string name="topics">主题</string>
+	<string name="topics_empty_human">— 请选择话题分类 —</string>
+	<string name="topics_meta_human">关于 Faceless</string>
+	<string name="topics_summary">你想在最新信息和最热信息中看到哪些主题呢？</string>
+	<string name="translate">Translate</string>
 	<string name="translate_explanation">Do you want to help us translate Faceless to your language?\n\nPlease visit the following website on your computer:\nwww.localize.im/v/36\n\nThank you so much for your support!</string>
-	<string name="type_here">Condividi un pensiero &#8230;\n\nSii gentile e positivo.</string>
-	<string name="verify">Verificare</string>
-	<string name="verify_phone_number">Verificare il numero di telefono</string>
+	<string name="type_here">Share a thought &#8230;\n\nBe kind and positive.</string>
+	<string name="verify">Verify</string>
+	<string name="verify_phone_number">Verify phone number</string>
 	<string name="verify_phone_number_how">In the next step, you\'ll be asked to start your usual app for text messages.\n\nPlease don\'t use WhatsApp or similar apps here, this won\'t work.\n\nWe\'ll have filled in the recipient and the content for your text message already.\n\nPlease don\'t change the text and just press \"Send\" to complete the verification.\n\nA few minutes later, you should be able to open Faceless and use all features as expected.\n\nNote: The normal fees by your carrier for international text messages apply.</string>
 	<string name="verify_phone_number_why">In order to protect you and your friends from fraud, we must verify your phone number.\n\nThis helps us offer a secure and enjoyable service for all users.\n\nDo you want to verify your number now?\n\nNote: You can only use this app on a single device.\n\nNeed help? Get in touch with us at %s</string>
-	<string name="write">Scrivere</string>
+	<string name="write">Write</string>
 	<plurals name="x_chars_left">
-		<item quantity="zero">%d caratteri rimanenti</item>
-		<item quantity="one">%d carattere rimanenti</item>
-		<item quantity="two">%d caratteri rimanenti</item>
-		<item quantity="few">%d caratteri rimanenti</item>
-		<item quantity="many">%d caratteri rimanenti</item>
-		<item quantity="other">%d caratteri rimanenti</item>
+		<item quantity="zero">%d chars left</item>
+		<item quantity="one">%d char left</item>
+		<item quantity="two">%d chars left</item>
+		<item quantity="few">%d chars left</item>
+		<item quantity="many">%d chars left</item>
+		<item quantity="other">%d chars left</item>
 	</plurals>
 	<plurals name="x_comments">
 		<item quantity="zero">%d comments</item>
@@ -227,12 +227,12 @@
 		<item quantity="other">%d× favorite</item>
 	</plurals>
 	<plurals name="x_friends_using_app">
-		<item quantity="zero">%d amici stanno utilizzando Faceless</item>
-		<item quantity="one">%d amico sta utilizzando Faceless</item>
-		<item quantity="two">%d amici stanno utilizzando Faceless</item>
-		<item quantity="few">%d amici stanno utilizzando Faceless</item>
-		<item quantity="many">%d amici stanno utilizzando Faceless</item>
-		<item quantity="other">%d amici stanno utilizzando Faceless</item>
+		<item quantity="zero">%d friends of yours are now using Faceless</item>
+		<item quantity="one">%d friend of yours is now using Faceless</item>
+		<item quantity="two">%d friends of yours are now using Faceless</item>
+		<item quantity="few">%d friends of yours are now using Faceless</item>
+		<item quantity="many">%d friends of yours are now using Faceless</item>
+		<item quantity="other">%d friends of yours are now using Faceless</item>
 	</plurals>
 	<plurals name="x_subscription_updates">
 		<item quantity="zero">%d unread comments</item>
@@ -243,12 +243,12 @@
 		<item quantity="other">%d unread comments</item>
 	</plurals>
 	<plurals name="x_unread_messages">
-		<item quantity="zero">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="one">%d messaggio non letti dai tuoi amici</item>
-		<item quantity="two">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="few">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="many">%d messaggi non letti dai tuoi amici</item>
-		<item quantity="other">%d messaggi non letti dai tuoi amici</item>
+		<item quantity="zero">%d unread messages from your friends</item>
+		<item quantity="one">%d unread message from your friends</item>
+		<item quantity="two">%d unread messages from your friends</item>
+		<item quantity="few">%d unread messages from your friends</item>
+		<item quantity="many">%d unread messages from your friends</item>
+		<item quantity="other">%d unread messages from your friends</item>
 	</plurals>
 	<string name="you_and_friends">You and your friends</string>
 </resources>

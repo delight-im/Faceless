@@ -28,11 +28,12 @@ Main screen | Message details | Adding messages
 
 ## Security
 
-[Disclose bugs and vulnerabilities](https://www.delight.im/security/faceless) or read more about [security](SECURITY.md).
+ * [Disclose bugs and vulnerabilities](https://www.delight.im/security/faceless) or read more about [security](SECURITY.md).
 
 ## Translations
 
-[Faceless on Localize](https://www.localize.im/v/36)
+ * Help translate by visiting [Faceless on Localize](https://www.localize.im/v/36)
+ * View the full [list of translators](TRANSLATORS.md)
 
 ## Known issues
 
