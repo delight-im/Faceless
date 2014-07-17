@@ -103,13 +103,11 @@ CREATE TABLE `subscriptions` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- 
 CREATE TABLE `throttling` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `date_str` char(8) NOT NULL,
   `action_type` enum('failed_login') NOT NULL,
   `action_count` smallint(8) unsigned NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `combination` (`username`,`date_str`,`action_type`)
+  PRIMARY KEY (`username`,`date_str`,`action_type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- 
 CREATE TABLE `users` (
