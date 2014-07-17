@@ -191,7 +191,7 @@ if (!function_exists('hash_equals')) {
      * @return boolean true if the strings are the same, false otherwise
      */
     function hash_equals($a, $b) {
-        $nonce = mcrypt_create_iv(64, MCRYPT_DEV_URANDOM);
+        $nonce = mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
         return hash_hmac('sha256', $a, $nonce, true) === hash_hmac('sha256', $b, $nonce, true);
     }
 
