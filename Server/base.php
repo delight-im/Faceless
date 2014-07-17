@@ -59,7 +59,7 @@ function init($requestData) {
                             // generate the server signature for this request
                             $signatureServer = base64_encode(hash_hmac(CONFIG_HMAC_ALGORITHM, getRequestIdentifier($requestData), CONFIG_API_SECRET, true));
                             // compare the server signature to the client signature for request verification
-                            if ($signatureClient === $signatureServer) {
+                            if (hash_equals($signatureClient, $signatureServer)) {
                                 // integrity and authenticity of the request have been verified
 
                                 // initialize the database connection
@@ -177,6 +177,24 @@ function getDegree($userID, $messageID) {
         // otherwise default to degree 3 (no direct connection anymore but worldwide)
         return 3;
     }
+}
+
+if (!function_exists('hash_equals')) {
+
+    /**
+     * Use HMAC with a nonce to compare two strings in a manner that is resistant to timing attacks
+     *
+     * Shim for older PHP versions providing support for the PHP >= 5.6.0 built-in function
+     *
+     * @param $a string first hash
+     * @param $b string second hash
+     * @return boolean true if the strings are the same, false otherwise
+     */
+    function hash_equals($a, $b) {
+        $nonce = mcrypt_create_iv(64, MCRYPT_DEV_URANDOM);
+        return hash_hmac('sha256', $a, $nonce, true) === hash_hmac('sha256', $b, $nonce, true);
+    }
+
 }
 
 /**

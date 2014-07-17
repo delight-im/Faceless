@@ -73,7 +73,7 @@ function extractHexHash($text) {
 
 $incomingSignature = isset($_SERVER['HTTP_X_TWILIO_SIGNATURE']) ? $_SERVER['HTTP_X_TWILIO_SIGNATURE'] : '';
 $requiredSignature = getTwilioSignature(getTwilioEndpoint(), CONFIG_TWILIO_AUTH_CODE, $_POST);
-if ($incomingSignature == $requiredSignature) {
+if (hash_equals($incomingSignature, $requiredSignature)) {
     if (isset($_POST['From']) && isset($_POST['Body'])) {
         $incomingCode = extractHexHash($_POST['Body']);
         // try to find an open request with the given verification code

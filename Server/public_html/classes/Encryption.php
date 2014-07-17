@@ -46,7 +46,7 @@ class Encryption {
 
         list ($cipherKey, $macKey, $iv) = $this->getKeys($salt, $key);
 
-        if ($mac !== hash_hmac('sha512', $enc, $macKey, true)) {
+        if (!hash_equals($mac, hash_hmac('sha512', $enc, $macKey, true))) {
              return false;
         }
 
