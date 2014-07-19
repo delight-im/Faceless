@@ -265,3 +265,14 @@
  * An improved "Popular" section is back! This allows you to find exciting topics more quickly, without reading all the messages from "Latest".
  * (The mode tabs (3-4, not really enough place for the 4th tab) have been replaced with a more convenient Spinner view. This allowed for a return of the "Popular" mode as there is now enough place for any number of sections.)
  * (The score algorithm for the "Popular" mode now gives more weight to the popularity (by saved favorites and comments) and less weight to the age of the message. This is to enhance the differentiation between "Latest" and "Popular".)
+
+## Version 2.5.1
+
+ * Translations have been updated for Spanish, Japanese, Turkish and Chinese.
+ * (Timing attacks in hash comparisons on the server have been mitigated.)
+ * (The cipher for the server-side encryption of messages and comments has been changed from Blowfish to AES.)
+ * (Project has been made public on GitHub.)
+ * (The three latest screenshots have been included in the project's README as a preview.)
+ * (The latest release (APK) is now available for download via GitHub (right from the repository) as well.)
+ * (Known issues and a list of similar services have been added to the proejct's README.)
+ * (The database structure has been optimized.)
