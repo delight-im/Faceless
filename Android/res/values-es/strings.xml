@@ -5,20 +5,20 @@
 	<string name="action_add_subscription">Suscribirse a los comentarios</string>
 	<string name="action_customize">Personalizar</string>
 	<string name="action_help">Ayuda</string>
-	<string name="action_help_summary">Do you have any questions about this app? Read our detailed explanations here.</string>
+	<string name="action_help_summary">¿Tienes alguna duda acerca de esta aplicación? Lee nuestras detalladas explicaciones aquí.</string>
 	<string name="action_invite">Invita a tus amigos</string>
-	<string name="action_invite_promo">Are your friends on Faceless yet?</string>
-	<string name="action_invite_summary">On Faceless, your friends will never see your name. This makes conversations honest and entertaining.</string>
+	<string name="action_invite_promo">¿Tus amigos ya son parte de Faceless?</string>
+	<string name="action_invite_summary">En Faceless, tus amigos nunca podrán ver tu nombre. Esto hace las conversaciones honestas y entretenidas.</string>
 	<string name="action_loading">Cargando &#8230;</string>
 	<string name="action_notification_count">Nuevas notificaciones</string>
 	<string name="action_remove_favorite">Eliminar de los favoritos</string>
 	<string name="action_remove_subscription">Cancelar la suscripción a comentarios</string>
-	<string name="action_report">Reportar mensaje</string>
+	<string name="action_report">Denunciar mensaje</string>
 	<string name="action_settings">Configuración</string>
 	<string name="action_share_picture">Compartir como una imagen</string>
 	<string name="anonymous">Anónimo</string>
 	<string name="app_name">Faceless</string>
-	<string name="app_rater_explanation">How do you like this app? We would be very happy if you could rate our application on Google Play. Thanks for your support!</string>
+	<string name="app_rater_explanation">¿Que piensas de esta aplicación? Nos encantaría que calificaras nuestra aplicación en Google Play. ¡Gracias por tu apoyo!</string>
 	<string name="app_rater_later">Más tarde</string>
 	<string name="app_rater_never">No, gracias</string>
 	<string name="app_rater_now">Evaluar ahora</string>
@@ -26,13 +26,13 @@
 	<string name="background">Fondo</string>
 	<string name="block_user_added">Nunca más recibirás mensajes de este usuario</string>
 	<string name="cancel">Cancelar</string>
-	<string name="choose_recipient">Choose recipient</string>
+	<string name="choose_recipient">Elige un receptor</string>
 	<string name="comment_add_hint">Tu comentario &#8230;</string>
-	<string name="comment_confirm_public_body">Do you want to publish this comment for all users?\n\nIf you want to reply to somebody privately instead, please tap on the respective comment.</string>
-	<string name="comment_confirm_public_title">Public comment</string>
-	<string name="comment_options">Comment options</string>
+	<string name="comment_confirm_public_body">¿Deseas publicar este comentario para todos los usuarios?\n\nSi deseas responder a alguien de forma privada, pulsa sobre el respectivo comentario.</string>
+	<string name="comment_confirm_public_title">Comentario público</string>
+	<string name="comment_options">Opciones de comentarios</string>
 	<string name="comments">Comentarios</string>
-	<string name="continueToPreview">Continue to preview</string>
+	<string name="continueToPreview">Continuar a la vista previa</string>
 	<string name="country">País</string>
 	<string name="degree_author">Autor</string>
 	<string name="degree_example">Ejemplo</string>
@@ -40,136 +40,136 @@
 	<string name="degree_friend_of_friend">Amigo de un amigo</string>
 	<string name="degree_self">Tú</string>
 	<string name="degree_worldwide">Global</string>
-	<string name="error_bad_request">Your request could not be handled by the server</string>
+	<string name="error_bad_request">Tu petición no pudo ser procesada por el servidor</string>
 	<string name="error_maintenance">Faceless se encuentra fuera de servicio momentaneamente</string>
 	<string name="error_no_connection">Por favor verifica tu conexión de internet</string>
 	<string name="error_outdated_client">Por favor actualiza Faceless a la última versión via Google Play</string>
 	<string name="error_temporarily_banned">Has sido temporalmente suspendido debido a las denuncias de otras personas</string>
 	<string name="example_message_explanation">Esto es un ejemplo: Solo comienza a escribir tu mensaje</string>
 	<string-array name="example_messages">
-		<item>Have been drawing for years, but never shown to anyone.</item>
-		<item>For the last three weeks, I\'ve slept in my car.</item>
+		<item>He estado dibujando por años, pero nadie lo sabe.</item>
+		<item>Durante las últimas tres semanas, he dormido en mi automovil.</item>
 		<item>Nadie en el trabajo sabe que estuve en prisión.</item>
 		<item>Siempre como la comida que estoy comprando cuando todavía estoy en el supermercado.</item>
 		<item>Estoy enamorada de mi mejor amigo.</item>
 		<item>Mi cabello luce mejor cuando dejo de lavarlo por algunos días.</item>
-		<item>Just been on vacation with my wife for the first time.</item>
+		<item>Por primera vez, acabo de volver de vacaciones con mi esposa.</item>
 		<item>Mi novio aún no ha conocido a mis padres.</item>
-		<item>Cada día pienso en dejar mi trabajo y mudarse a otra ciudad.</item>
+		<item>Cada día pienso en dejar mi trabajo y mudarme a otra ciudad.</item>
 		<item>¿Puede alguien ser realmente feliz?</item>
-		<item>Whenever I read wedding announcements in the paper, I become jealous.</item>
+		<item>Cada vez que leo los anuncios de casamientos en el periódico, me pongo celosa.</item>
 	</string-array>
 	<string name="general_settings">Configuración general</string>
 	<string name="intro">Bienvenido/a</string>
 	<string-array name="introduction_steps">
-		<item>Faceless is where you can talk freely.\n\nShare messages with your friends and the whole world.</item>
-		<item>You can be open, no matter what you talk about.\n\nNobody will see who you are — it\'s only about your words.</item>
-		<item>You won\'t have to manage a friends list on Faceless.\n\nYou will be connected to your contacts automatically.</item>
-		<item>Remember, everything is shared anonymously.\n\nPeople will see your messages, but they won\'t know who you are.</item>
-		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
+		<item>Faceless es donde puedes hablar libremente.\n\nComparte tus mensajes con tus amigos y el mundo entero.</item>
+		<item>Puedes ser abierto, no importa lo que quieras decir.\n\nNadie sabrá quien eres — es solo acerca tus palabras.</item>
+		<item>En Faceless no tienes que manejar ninguna lista de amigos.\n\nSerás conectado con tus contactos automáticamente.</item>
+		<item>Recuerda, todo lo compartido es anónimo.\n\nLas personas verán tus mensajes, pero no sabrán quien eres.</item>
+		<item>Esta aplicación no es lugar para hacer bullying, acosar o ser negativo.\n\nComienza con escribir tu mensaje en la siguiente pantalla.</item>
 	</string-array>
-	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
+	<string name="invitation_howto">Hablar libremente es más divertido con tus amigos.\n\nEn Faceless, ellos nunca podrán ver tu nombre. Solo verán que tu eres un \"Amigo\".\n\nEsto hace que las conversaciones sean lo mas veraz que sea posible.\n\nInvita a tus amigos via correo electrónico o cualquier otra aplicación en tu teléfono.</string>
 	<string name="invitation_title">Obtener Faceless</string>
-	<string name="language">Lenguaje</string>
-	<string name="learn_more">Learn more</string>
-	<string name="login_throttled_body">There have been too many failed login attempts for your account.\n\nThis may also have been caused by another person who tried to get access to your account.\n\nThus we are now protecting your account and have temporarily locked it.\n\nPlease try again later!</string>
-	<string name="login_throttled_title">Account locked</string>
+	<string name="language">Idioma</string>
+	<string name="learn_more">Ver más</string>
+	<string name="login_throttled_body">Ha habido demasiados intentos fallidos de acceso a tu cuenta.\n\nEsto también pudo ser causado por otra persona que intentó tener acceso a tu cuenta.\n\nEs por eso que ahora estamos protegiendo tu cuenta y la hemos bloqueado temporalmente.\n\nPor favor, inténtalo de nuevamente más tarde!</string>
+	<string name="login_throttled_title">Cuenta bloqueada</string>
 	<string name="mark_all_read">Marcar todos como leídos</string>
 	<string name="message">Mensaje</string>
 	<string-array name="meta_about">
-		<item>Faceless is where you can talk freely, to your friends and the whole world.</item>
-		<item>You can be open, no matter what you talk about. Nobody will see who you are — it\'s only about your message.</item>
-		<item>Enjoy openness and kindness. Get truthful responses and honest opinions. Let your ideas spread around the world.</item>
-		<item>You don\'t have a profile to worry about. There\'s no need to brag. It\'s just your words that count.</item>
-		<item>Talk about things that might be embarrassing, and don\'t be afraid to ask a question. Share things without any downsides!</item>
-		<item>You will be connected to your friends automatically. Read their messages and write comments — you will never know exactly who they are.</item>
-		<item>Share stories, ask questions, discuss life or confess things. Just be yourself.</item>
-		<item>Be honest and genuine. Be smart and positive.</item>
+		<item>Faceless es donde puedes hablar libremente, a tus amigos y el mundo entero.</item>
+		<item>Puedes ser abierto, no importa lo que quieras decir. Nadie sabrá quien eres — es solo acerca de tu mensaje.</item>
+		<item>Disfruta de la apertura y la bondad. Obten respuestas veraces y opiniones honestas. Deja que tus ideas se difundan por todo el mundo.</item>
+		<item>No tienes un perfil del que preocuparte. No hay necesidad de que presumir. Son solo tus palabras las que importan.</item>
+		<item>Habla acerca de cosas que pueden ser vergonzosas, y no tengas miedo de preguntar. ¡Comparte cosas sin inconvenientes!</item>
+		<item>Serás conectado con tu amigos automaticamente. Lee sus mensajes y escribe comentarios — ellos nunca sabrán que eres tu realmente.</item>
+		<item>Comparte historias, has preguntas, discute de la vida o has confesiones. Solo se tu mismo/a.</item>
+		<item>Se honesto/a y genuino/a. Se inteligente y positivo/a.</item>
 	</string-array>
-	<string name="meta_open_source_title"><b>This app uses the following third-party components which are available under the terms of open-source licenses:</b></string>
+	<string name="meta_open_source_title"><b>Esta aplicación utiliza los siguientes componentes externos que estan disponibles bajo licensias de código libre:</b></string>
 	<string-array name="meta_permissions_body">
-		<item>+ \"Read phone status and identity\": Get your phone number, securely encrypt it, and use the encrypted number to anonymously connect you with your friends.</item>
-		<item>+ \"Read your contacts\": Get your contacts\' phone numbers, securely encrypt them, and use the encrypted numbers to anonymously connect you with your friends.</item>
-		<item>+ \"Full network access\": Send/receive messages, comments and favorites.</item>
+		<item>+ \"Consultar tu identidad y el estado del teléfono\": obtiene to número de telefono, lo encripta de forma segura, y utiliza el número encriptado para conectarte de forma anónima con tus amigos.</item>
+		<item>+ \"Consultar tus contactos\": consulta los contactos de tu teléfono, los encripta de forma segura, y utiliza los números encriptados para conectarte con tus amigos.</item>
+		<item>+ \"Acceso completo a red\": Enviar/recivir mensajes, comentarios y favoritos.</item>
 		<item>+ \"Run at startup\": Setting up notifications and synchronization again when you had switched off your device.</item>
 	</string-array>
 	<string name="meta_permissions_title"><b>Permisos de la aplicación:</b></string>
 	<string-array name="meta_privacy_body">
-		<item>+ We only access your phone number and your contacts\' phone numbers. We don\'t access any names, email addresses or other contact details.</item>
-		<item>+ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.</item>
-		<item>+ As you can see, we require only those app permissions that are really necessary. No heavy list of extended permissions as with other apps.</item>
+		<item>+ Solo accedemos a tu número de teléfono y tus contactos. No accedemos a ningún nombre, correo electrónico o detalle contacto.</item>
+		<item>+ Los números de teléfonos son encriptados de forma irrevesible (one way encryption, hash function) en tu dispositivo y luego es enviado a nuestros servidores. Tu número de teléfono real nunca abandona tu dispositivo.</item>
+		<item>+ Como puedes ver, solo requerimos aquellos permisos de la app que son realmente necesarios. No una larga lista de permisos como otras apps.</item>
 	</string-array>
 	<string name="meta_privacy_title"><b>Política de privacidad:</b></string>
 	<string-array name="meta_questions_answers">
-		<item><b>Do I have to sign up for Faceless?</b></item>
-		<item>No. You don\'t need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.</item>
-		<item><b>Who can see that I am the author of a message?</b></item>
-		<item>Nobody. People will only see that you are a \"Friend\" or a \"Friend of a friend\". Otherwise, we may show them your country, but never something specific.</item>
-		<item><b>Are comments anonymous as well?</b></item>
-		<item>Yes. The only thing that will be shown is whether a comment has been written by the same person who also wrote the original message.</item>
-		<item><b>Can I see which of my friends are on Faceless already?</b></item>
-		<item>No. This is to protect their privacy. From time to time, we may show you the number of friends, without any names, of course.</item>
-		<item><b>Can I ignore or block a particular person?</b></item>
-		<item>Yes. If you don\'t like what a person posts, you can add them to your block list. This cannot be undone later, however!</item>
-		<item><b>Can I help translate the app?</b></item>
-		<item>Yes, that would be great! Please find your language on: https://www.localize.im/v/36</item>
+		<item><b>¿Debo registrarme para usar Faceless?</b></item>
+		<item>No. No necesitas una cuenta o una dirección de correo o una contraseña. Ni Facebook, ni Google, ni Twitter.</item>
+		<item><b>¿Quién puede ver que soy el autor de un mensaje?</b></item>
+		<item>Nadie. Las personas solo verán que eres \"Amigo\" o \"Amigo de un amigo\". Por otro lado, les mostraremos tu nacionalidad, pero nunca algo específico.</item>
+		<item><b>¿Los comentarios también son anónimos?</b></item>
+		<item>Sí. Lo único que se mostrará será si un comentario fue escrito por la misma persona que escribió el mensaje original.</item>
+		<item><b>¿Puedo ver quien de mis amigos utiliza Faceless?</b></item>
+		<item>No. Esto es para proteger su privacidad. De vez en cuando, te mostraremos el número de amigos, sin los nombres, por supuesto.</item>
+		<item><b>¿Puedo ignorar or bloquearalguna persona en particular?</b></item>
+		<item>Sí. Si no te gusta lo que alguna persona escribe, puedes agregarlas a tu lista de bloqueo. Sin embargo, ¡esto no se puede deshacer!</item>
+		<item><b>¿Puedo ayudar a traducir la aplicación?</b></item>
+		<item>¡Sí, eso sería grandioso! Por favor busca tu idioma en: https://www.localize.im/v/36</item>
 	</string-array>
 	<string-array name="meta_security_body">
-		<item>+ All communication between the app and our servers is encrypted with SSL/TLS. Before your messages and comments are saved on our servers, they are encrypted again.</item>
-		<item>+ No personal information is ever send to any device. Your friends and other users have no way to find out who you are, unless you reveal your identity yourself.</item>
-		<item>+ Messages and comments don\'t stay online forever. They will be destroyed after some time automatically.</item>
-		<item>+ Even if your friends correctly guessed a message that you wrote, they would still not know about any other message of yours.</item>
-		<item>+ Faceless is independent. There is no big company behind and we don\'t try to maximize profits.</item>
+		<item>+ Todas las comunicaciones entre la app y nuestros servidores esta encriptado con SSL/TLS. ANtes de que tus mensajes y comentarios sean guardados en nuestros servidores, estos son encriptados nuevamente.</item>
+		<item>+ Ningun tipo de información personal es enviada a los dispositivos. Tus amigos y otros usuarios no tienen forma de saber quien eres, a menos que reveles tu mismo tu identidad.</item>
+		<item>+ Los mensajes y comentarios no permanecen en línea indefinidamente. Estos serán destruidos cada cierto tiempo de manera automática.</item>
+		<item>+ Incluso si tus amigos descubren un mensaje escrito por tí, no podrán descubrir que otros mensajes te pertenencen.</item>
+		<item>+ Faceless es independiente. No hay ninguna gran compañía detrás y no tratamos de maximizar ingresos.</item>
 	</string-array>
 	<string name="meta_security_title"><b>¿Es Faceless realmente seguro?</b></string>
 	<string-array name="modes_human">
 		<item>Últimos mensajes</item>
-		<item>Friends\' messages</item>
-		<item>Popular messages</item>
-		<item>Saved favorites</item>
+		<item>Mensajes de amigos</item>
+		<item>Mensajes populares</item>
+		<item>Favoritos guardados</item>
 	</string-array>
-	<string name="next">Próximo</string>
+	<string name="next">Siguiente</string>
 	<string name="ok">OK</string>
-	<string name="please_choose_topic">Please choose a topic for your message</string>
-	<string name="please_enter_message">Please enter a text for your message</string>
+	<string name="please_choose_topic">Por favor elige una categoría para tu mensaje</string>
+	<string name="please_enter_message">Por favor ingresa un texto para tu mensaje</string>
 	<string name="preview">Vista previa</string>
-	<string name="private_reply">Private reply</string>
+	<string name="private_reply">Respuesta privada</string>
 	<string name="publish">Publicar</string>
 	<string name="rate_app">Calificar aplicación</string>
 	<string name="read_message">Leer mensaje</string>
-	<string name="reply_privately">Reply privately</string>
-	<string name="report_comment">Reportar comentario</string>
+	<string name="reply_privately">Responder en privado</string>
+	<string name="report_comment">Denunciar comentario</string>
 	<string name="report_confirm_block">Bloquear</string>
 	<string name="report_confirm_report">Denunciar</string>
 	<string-array name="report_options">
-		<item>Wrong topic</item>
+		<item>Categoría equivocada</item>
 		<item>Denunciar bullying / acoso</item>
 		<item>Denunciar violencia / amenazas</item>
-		<item>Report hate speech</item>
+		<item>Denunciar discurso de odio</item>
 		<item>Denunciar contenido obsceno</item>
-		<item>Report spam / advertising</item>
-		<item>Report fraud / falsehood</item>
+		<item>Denunciar spam / publicidad</item>
+		<item>Denunciar fraude / asociación ilicita</item>
 		<item>Denunciar contenido ilegal</item>
 		<item>Bloquear al autor</item>
 	</string-array>
-	<string name="report_sent">Tu denuncia fué enviada satisfactoriamente</string>
-	<string name="report_warning_block">Are you sure you want to block the author of this entry?\n\nYou will no longer receive any messages from that person in the future.\n\nThis action cannot be undone later.</string>
-	<string name="report_warning_report">Are you sure you want to report this entry as inappropriate?\n\nA report may cause the entry to be deleted and the author to be temporarily banned from Faceless.\n\nIf you are reporting a message, it will be removed from your personal feed immediately.</string>
+	<string name="report_sent">Tu denuncia fue enviada satisfactoriamente</string>
+	<string name="report_warning_block">¿Estás seguro/a que deseas bloquar al autor de esta entrada?\n\nYa no podrás recibir mas mensajes de esta persona en un futuro.\n\nEsta acción no se podrá deshacer.</string>
+	<string name="report_warning_report">¿Estas seguro/a que deseas reportar esto como inapropiado?\n\nUna denuncia puede causar que la entrada sea eliminada y el autor suspendido temporalmente de Faceless.\n\nSi decides reportar un mensaje, este será removido inmediatamente.</string>
 	<string name="save">Guardar</string>
 	<string name="send">Enviar</string>
 	<string name="setup">Disposición</string>
-	<string name="setup_intro">Please enter your phone number below to finish setup.\n\nStart with a \"+\" followed by your country code (e.g. +41).\n\nAfter that, just enter your local phone number.\n\nPlease double-check that the number is correct!\n\nIf you don\'t enter your correct number, we won\'t be able to connect you to your friends.\n\nOf course, your phone number is secure with us. We respect your privacy!</string>
+	<string name="setup_intro">Por favor ingrasa tu número telefónico para finalizar la instalación\n\nComienza con un \"+\" seguido del código de tu país (e.j. +41).\n\nDespués de eso, solo ingresa tu número local.\n\n¡Por favor, revisa que tu número sea el correcto!\n\nSi no entras tu número correcto, no podrás conectarte con tus amigos.\n\nPor supuesto, tu número esta seguro con nosotros. ¡Nosotros respetamos tu privacidad!</string>
 	<string name="setup_phone_number_hint">Ejemplo: +41 1234 56789</string>
-	<string name="share_image_failed">Could not save and share the message</string>
-	<string name="subscription_notifications">Notifications for unread comments</string>
+	<string name="share_image_failed">No se pudo guardar y compartir el mensaje</string>
+	<string name="subscription_notifications">Notificaciones para mensajes no leídos</string>
 	<string-array name="subscription_notifications_human">
 		<item>Normal</item>
-		<item>Rarely</item>
-		<item>Very rarely</item>
-		<item>Off</item>
+		<item>Raro</item>
+		<item>Muy raro</item>
+		<item>Desactivar</item>
 	</string-array>
 	<string name="subscriptions">Comentarios no leídos</string>
-	<string name="tap_to_change_pattern">Tap to switch the background pattern</string>
+	<string name="tap_to_change_pattern">Pulsa para cambiar el fondo</string>
 	<string name="this_app">Esta aplicación</string>
 	<string name="topic_art">Arte</string>
 	<string name="topic_beauty">Belleza</string>
@@ -190,17 +190,17 @@
 	<string name="topic_sports">Deportes</string>
 	<string name="topic_technology">Tecnología</string>
 	<string name="topic_work">Trabajo</string>
-	<string name="topics">Topics</string>
-	<string name="topics_empty_human">— Choose a topic —</string>
+	<string name="topics">Categorías</string>
+	<string name="topics_empty_human">— Elige una categoría —</string>
 	<string name="topics_meta_human">Acerca de Faceless</string>
-	<string name="topics_summary">Which topics do you want to see recent and popular messages for?</string>
+	<string name="topics_summary">¿De qué categorías deseas ver los mensajes mas recientes y populaers?</string>
 	<string name="translate">Traducir</string>
-	<string name="translate_explanation">Do you want to help us translate Faceless to your language?\n\nPlease visit the following website on your computer:\nwww.localize.im/v/36\n\nThank you so much for your support!</string>
+	<string name="translate_explanation">¿Deseas ayudarnos a traducir Faceless a tu idioma?\n\nPor favor visita el siguiente sitio desde tu ordenador:\nwww.localize.im/v/36\n\n¡Muchas gracias por tu colaboración!</string>
 	<string name="type_here">Comparte un pensamiento &#8230;\n\nSea amable y positivo.</string>
 	<string name="verify">Verificar</string>
 	<string name="verify_phone_number">Verifique el número de teléfono</string>
-	<string name="verify_phone_number_how">In the next step, you\'ll be asked to start your usual app for text messages.\n\nPlease don\'t use WhatsApp or similar apps here, this won\'t work.\n\nWe\'ll have filled in the recipient and the content for your text message already.\n\nPlease don\'t change the text and just press \"Send\" to complete the verification.\n\nA few minutes later, you should be able to open Faceless and use all features as expected.\n\nNote: The normal fees by your carrier for international text messages apply.</string>
-	<string name="verify_phone_number_why">In order to protect you and your friends from fraud, we must verify your phone number.\n\nThis helps us offer a secure and enjoyable service for all users.\n\nDo you want to verify your number now?\n\nNote: You can only use this app on a single device.\n\nNeed help? Get in touch with us at %s</string>
+	<string name="verify_phone_number_how">En el siguiente paso, se te pedirá que inicies la app que utilizas para los mensajes de texto.\n\nPor favor no selecciones WhatsApp or app similares aquí, no funcionarán.\n\nLlenaremos el destinatario y el contenido del mensaje automaticamente.\n\nPor favor no cambies el mensajes y solo presiona \"Enviar\" para completar la verificación.\n\nLuego de algunos minutos, deberías poder acceder a Faceless y usar todas la funciones.\n\nNota: se aplicarán los costos normales de mensajes de texto internacionales de tu compañía telefónica.</string>
+	<string name="verify_phone_number_why">Con el fin de protegerte a tí y tus amigos de fraude, debemos verificar tu número.\n\nEsto nos ayuda a ofrecer un servicio seguro y agradable para todos los usuarios.\n\n¿Deseas verificar tu número ahora?\n\nNota: solo puedes utilizar esta aplicación en un solo dispositivo.\n\n¿Necesitas ayuda? Contáctanos con nosotros en %s</string>
 	<string name="write">Escribir</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d caracteres dejados</item>

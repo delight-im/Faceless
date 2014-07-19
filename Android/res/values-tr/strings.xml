@@ -2,29 +2,29 @@
 <resources>
 	<string name="action_add">Mesaj yaz</string>
 	<string name="action_add_favorite">Favorilerime ekle</string>
-	<string name="action_add_subscription">Subscribe to comments</string>
+	<string name="action_add_subscription">Yorumlara abone ol</string>
 	<string name="action_customize">Özelleştir</string>
 	<string name="action_help">Yardım</string>
 	<string name="action_help_summary">Uygulama hakkında sorularınız var mı? Buradan detaylı açıklamamızı okuyabilirsiniz.</string>
 	<string name="action_invite">Arkadaşlarını davet et</string>
-	<string name="action_invite_promo">Are your friends on Faceless yet?</string>
-	<string name="action_invite_summary">On Faceless, your friends will never see your name. This makes conversations honest and entertaining.</string>
+	<string name="action_invite_promo">Arkadaşların Faceless\'da yok mu?</string>
+	<string name="action_invite_summary">Faceless\'da, arkadaşlarınız isminizi görmeyecek. Böylelikle sohbetler dürüstçe ve eğlenceli olacak.</string>
 	<string name="action_loading">Yükleniyor &#8230;</string>
 	<string name="action_notification_count">Yeni bildirimler</string>
 	<string name="action_remove_favorite">Favorilerimden kaldır</string>
-	<string name="action_remove_subscription">Unsubscribe from comments</string>
-	<string name="action_report">Report message</string>
+	<string name="action_remove_subscription">Yorumlara abonelikten vazgeç</string>
+	<string name="action_report">Mesajı şikayet et</string>
 	<string name="action_settings">Ayarlar</string>
 	<string name="action_share_picture">Resim olarak paylaş</string>
 	<string name="anonymous">Anonim</string>
 	<string name="app_name">Faceless</string>
-	<string name="app_rater_explanation">How do you like this app? We would be very happy if you could rate our application on Google Play. Thanks for your support!</string>
+	<string name="app_rater_explanation">Uygulamamızı beğendiniz mi? Eğer Google Play\'de uygulamamızı değerlendirirseniz çok mutlu oluruz. Desteğiniz için teşekkürler.</string>
 	<string name="app_rater_later">Daha sonra</string>
 	<string name="app_rater_never">Hayır, Teşekkürler</string>
 	<string name="app_rater_now">Şimdi uygulamayı değerlendir</string>
 	<string name="app_rater_title">Bu uygulamayı değerlendir</string>
 	<string name="background">Arka plan</string>
-	<string name="block_user_added">You will no longer receive messages from this user</string>
+	<string name="block_user_added">Bu kullanıcından bir daha mesaj almayacaksınız</string>
 	<string name="cancel">İptal et</string>
 	<string name="choose_recipient">Alıcı seç</string>
 	<string name="comment_add_hint">Yorumun &#8230;</string>
@@ -37,103 +37,103 @@
 	<string name="degree_author">Yazar</string>
 	<string name="degree_example">Örnek</string>
 	<string name="degree_friend">Arkadaş</string>
-	<string name="degree_friend_of_friend">Friend of a friend</string>
+	<string name="degree_friend_of_friend">Arkadaşımın arkadaşı</string>
 	<string name="degree_self">Sen</string>
 	<string name="degree_worldwide">Dünya Çapında</string>
-	<string name="error_bad_request">Your request could not be handled by the server</string>
+	<string name="error_bad_request">İsteğiniz sunucuya ulaşmamıştır</string>
 	<string name="error_maintenance">Faceless kısa bir süreliğine hizmet verememektedir</string>
 	<string name="error_no_connection">Lütfen internet bağlantınızı kontrol edin</string>
-	<string name="error_outdated_client">Please update Faceless to the latest version via Google Play</string>
-	<string name="error_temporarily_banned">You have been temporarily banned due to reports by other persons</string>
-	<string name="example_message_explanation">This is an example: Just start by writing your own message</string>
+	<string name="error_outdated_client">Lütfen Google Play aracılığıyla Faceless\'i güncelleyin</string>
+	<string name="error_temporarily_banned">Diğer kullanıcılardan gelen şikayetler yüzünden geçici bir süreliğine hesabınız yasaklanmıştır</string>
+	<string name="example_message_explanation">Bu bir örnek : Mesajını yazarak başlayabilirsin</string>
 	<string-array name="example_messages">
-		<item>Have been drawing for years, but never shown to anyone.</item>
-		<item>For the last three weeks, I\'ve slept in my car.</item>
-		<item>Nobody at work knows that I\'ve been in jail.</item>
-		<item>I always eat the food I\'m buying when I\'m still in the supermarket.</item>
+		<item>Yıllardır resim çiziyorum fakat hiç kimseye göstermedim henüz.</item>
+		<item>Son üç haftadır, arabamda uyuyorum.</item>
+		<item>İşyerimden hiç kimse benim hapishanede olduğumu bilmiyor.</item>
+		<item>Süper marketten çıkmadan sepetimdekileri yemeye başlarım.</item>
 		<item>En iyi arkadaşıma aşık oldum.</item>
 		<item>Bir kaç gün saçlarım yıkamadığım zaman daha iyi gözüküyor.</item>
 		<item>Just been on vacation with my wife for the first time.</item>
 		<item>Erkek arkadaşım henüz ailemle tanışmadı.</item>
 		<item>Her gün işimden ayrılmayı ve başka bir şehre taşınmayı düşünüyorum.</item>
 		<item>Is anybody out there truthfully happy?</item>
-		<item>Whenever I read wedding announcements in the paper, I become jealous.</item>
+		<item>Ne zaman gazetelerde nikah duyurularını okusam, kıskançlaşıyorum.</item>
 	</string-array>
 	<string name="general_settings">Genel Ayarlar</string>
 	<string name="intro">Hoşgeldin</string>
 	<string-array name="introduction_steps">
-		<item>Faceless is where you can talk freely.\n\nShare messages with your friends and the whole world.</item>
-		<item>You can be open, no matter what you talk about.\n\nNobody will see who you are — it\'s only about your words.</item>
-		<item>You won\'t have to manage a friends list on Faceless.\n\nYou will be connected to your contacts automatically.</item>
-		<item>Remember, everything is shared anonymously.\n\nPeople will see your messages, but they won\'t know who you are.</item>
-		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
+		<item>Faceless özgürce konuşabildiğiniz yerdir.\n\nMesajlarını arkadaşlarınla ve tüm dünya ile paylaş.</item>
+		<item>Dilediğin gibi konuşabilirsin. Ne konuda konuştuğun hiç önemli değil.\n\nSenin kim olduğunu kimse bilmeyecek — Yazdıklarını görecekler ve onları bilecekler.</item>
+		<item>Faceless\'da arkadaş listeni düzenlemek zorunda olmayacaksın.\n\nRehberindeki insanlara otomatik olarak bağlanacaksın.</item>
+		<item>Her şey anonim olarak paylaşıldığını unutma.\n\nİnsanlar senin mesajlarını görebilir fakat senin kim olduğunu bilmeyecekler.</item>
+		<item>Bu uygulama zorbalığın, tacizin ve olumsuzluğun yeri değildir.\n\nBir sonraki ekranda ilk mesajını yazarak başla.</item>
 	</string-array>
-	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
+	<string name="invitation_howto">Arkadaşlarınla özgürce konuşmak çok daha eğlenceli.\n\nFaceless\'da, arkadaşların senin ismini görmeyecek. Onlar sadece seni \"Arkadaş\" olarak bilecek.\n\nBöylelikle sohbetler olabildiğince daha gerçekçi olacak.\n\nArkadaşlarını e-posta veya telefonundaki diğer uygulamalar ile davet et.</string>
 	<string name="invitation_title">Faceless\'i indir</string>
 	<string name="language">Dil</string>
 	<string name="learn_more">Daha fazla öğren</string>
-	<string name="login_throttled_body">There have been too many failed login attempts for your account.\n\nThis may also have been caused by another person who tried to get access to your account.\n\nThus we are now protecting your account and have temporarily locked it.\n\nPlease try again later!</string>
+	<string name="login_throttled_body">Çok fazla hesabınıza giriş hataları bulunmaktadır.\n\nHesabınıza giriş yapmak isteyen başka biri tarafından dolayı olabilir. \n\nBu nedenle hesabınızı koruma altına alıyoruz ve geçici bir süreliğine hesabını kilitliyoruz.\n\nLütfen daha sonra tekrar deneyiniz!</string>
 	<string name="login_throttled_title">Hesap kilitlendi</string>
 	<string name="mark_all_read">Hepsini okundu olarak işaretle</string>
 	<string name="message">Mesaj</string>
 	<string-array name="meta_about">
-		<item>Faceless is where you can talk freely, to your friends and the whole world.</item>
-		<item>You can be open, no matter what you talk about. Nobody will see who you are — it\'s only about your message.</item>
-		<item>Enjoy openness and kindness. Get truthful responses and honest opinions. Let your ideas spread around the world.</item>
-		<item>You don\'t have a profile to worry about. There\'s no need to brag. It\'s just your words that count.</item>
-		<item>Talk about things that might be embarrassing, and don\'t be afraid to ask a question. Share things without any downsides!</item>
-		<item>You will be connected to your friends automatically. Read their messages and write comments — you will never know exactly who they are.</item>
-		<item>Share stories, ask questions, discuss life or confess things. Just be yourself.</item>
-		<item>Be honest and genuine. Be smart and positive.</item>
+		<item>Faceless arkadaşlarınla ve tüm dünya ile özgürce konuşabileceğin yerdir.</item>
+		<item>Dilediğin gibi konuşabilirsin. Ne konuda konuştuğun hiç önemli değil. Senin kim olduğunu kimse bilmeyecek — Yazdıklarını görecekler ve onları bilecekler.</item>
+		<item>Açık sözlülüğün ve nezaketin keyfini çıkar. Doğru yanıtlar ve dürüst düşünceler elde et. Haydi fikirlerini tüm dünya ile paylaş.</item>
+		<item>Saklamaya çalışacak veya övünmek için bir profilin olmayacak. Sadece kelimelerin olacak.</item>
+		<item>Söylemeye çekindiğin şeyler hakkında konuş, soru sormaktan çekinme. Herhangi bir olumsuzluk düşünmeden düşüncelerini paylaş.</item>
+		<item>Arkadaşlarına otomatik olarak bağlanacaksın. Arkadaşların mesajlarını okuyabilecek ve mesajlarına yorum yazabileceksin — Onların kim olduğunu bilmeyeceksin.</item>
+		<item>Hikayelerini paylaş, sorular sor, hayatını sorgula veya itiraflarda bulun. Sadece kendin ol.</item>
+		<item>Dürüst ve içten ol. Akıllı ve olumlu ol.</item>
 	</string-array>
-	<string name="meta_open_source_title"><b>This app uses the following third-party components which are available under the terms of open-source licenses:</b></string>
+	<string name="meta_open_source_title"><b>Bu uygulama açık kaynak lisansları ile korunan üçüncü parti kütüphaneler kullanmaktadır:</b></string>
 	<string-array name="meta_permissions_body">
-		<item>+ \"Read phone status and identity\": Get your phone number, securely encrypt it, and use the encrypted number to anonymously connect you with your friends.</item>
-		<item>+ \"Read your contacts\": Get your contacts\' phone numbers, securely encrypt them, and use the encrypted numbers to anonymously connect you with your friends.</item>
-		<item>+ \"Full network access\": Send/receive messages, comments and favorites.</item>
-		<item>+ \"Run at startup\": Setting up notifications and synchronization again when you had switched off your device.</item>
+		<item>+ \"Cihazın durumu ve cihazın kimliği\" : Telefon numaranızı alıyoruz, güvenli bir şekilde şifreliyor ve şifrelenmiş olan telefon numarası aracılığıyla seni anonim kalacak şekilde arkadaşlarınla bağlantı kuruyoruz.</item>
+		<item>+ \"Rehberindekiler erişim\": Rehberindekilerin telefon numaralarını alıyor, güvenli bir şekilde şifreliyor ve şifrelenmiş telefon numaralarını seni ve arkadaşlarını bağlantı kurmak için kullanıyoruz.</item>
+		<item>+ \" İnternet Erişimi \" : Mesajlar, yorumlar göndermek ve favoriler için.</item>
+		<item>+ \"Başlangıçta çalıştır\" : Bildirimleri ve senkronizasyonu cihaz açıldığında devam ettir.</item>
 	</string-array>
-	<string name="meta_permissions_title"><b>App permissions:</b></string>
+	<string name="meta_permissions_title"><b>Uygulama İzinleri:</b></string>
 	<string-array name="meta_privacy_body">
-		<item>+ We only access your phone number and your contacts\' phone numbers. We don\'t access any names, email addresses or other contact details.</item>
-		<item>+ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.</item>
-		<item>+ As you can see, we require only those app permissions that are really necessary. No heavy list of extended permissions as with other apps.</item>
+		<item>+ Biz sadece telefon numaranıza ve rehberinizdeki kişilerin telefon numaralarına erişeceğiz. Herhangi bir isme, e-posta adresine veya kişisel diğer bilgilere erişmeyeceğiz.</item>
+		<item>+ Telefon numaraları değiştirilemeyecek şekilde tek taraflı ( hash fonksiyonu ) olarak şifrelendikten sonra sunucularımıza yollanmaktadır. Gerçek telefon numaralarını telefonunuzda saklamıyoruz.</item>
+		<item>+ Gördüğünüz gibi sadece gerekli olan izinleri sizden istiyoruz. Diğer uygulamaların yaptığı gibi uzun bir izin listesi istemiyoruz.</item>
 	</string-array>
 	<string name="meta_privacy_title"><b>Güvenlik Politikası:</b></string>
 	<string-array name="meta_questions_answers">
-		<item><b>Do I have to sign up for Faceless?</b></item>
-		<item>No. You don\'t need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.</item>
-		<item><b>Who can see that I am the author of a message?</b></item>
-		<item>Nobody. People will only see that you are a \"Friend\" or a \"Friend of a friend\". Otherwise, we may show them your country, but never something specific.</item>
-		<item><b>Are comments anonymous as well?</b></item>
-		<item>Yes. The only thing that will be shown is whether a comment has been written by the same person who also wrote the original message.</item>
-		<item><b>Can I see which of my friends are on Faceless already?</b></item>
-		<item>No. This is to protect their privacy. From time to time, we may show you the number of friends, without any names, of course.</item>
-		<item><b>Can I ignore or block a particular person?</b></item>
-		<item>Yes. If you don\'t like what a person posts, you can add them to your block list. This cannot be undone later, however!</item>
-		<item><b>Can I help translate the app?</b></item>
-		<item>Yes, that would be great! Please find your language on: https://www.localize.im/v/36</item>
+		<item><b>Faceless için kayıt olmak zorunda mıyım?</b></item>
+		<item>Bir hesaba, e-posta adresine veya şifreye gerek yoktur. Facebook, Google, Twitter hesaplarınla giriş yapmana da gerek yok.</item>
+		<item><b>Mesajın yazarını kimler görebilir?</b></item>
+		<item>Hiç kimse. İnsanlar seni \" Arkadaş \" veya \" Arkadaşının arkadaşı \" olarak görebilecekler. Senin ülkeni de görebilirler fakat asla özel bir bilgini paylaşmayacağız.</item>
+		<item><b>Yorumlar da anonim mi olacak?</b></item>
+		<item>Evet. Yorumu yazan ile mesajı yazan kişinin aynı olduğu gösterilecek.</item>
+		<item><b>Hangi arkadaşlarımın Faceless\'da olduğunu görebilecek miyim?</b></item>
+		<item>Hayır. Onların özelini korumak için göremezsiniz. Zamanla, arkadaşlarınız sayısını gösterebiliriz fakat onların isimlerini gösteremeyiz.</item>
+		<item><b>Birini engelleyebilir ya da görmezden gelebilir miyim?</b></item>
+		<item>Evet. Eğer birinin yazdıklarını beğenmiyorsan, onu engellenenler listesine ekleyebilirsin.  Engelleme işlemi geri alınamaz bunu unutma.</item>
+		<item><b>Bu uygulamanın çevirisini yapabilir miyim?</b></item>
+		<item>Elbette. Bu harika olur. https://www.localize.im/v/36 bağlantısı aracılığıyla dilini bulabilirsin.</item>
 	</string-array>
 	<string-array name="meta_security_body">
-		<item>+ All communication between the app and our servers is encrypted with SSL/TLS. Before your messages and comments are saved on our servers, they are encrypted again.</item>
-		<item>+ No personal information is ever send to any device. Your friends and other users have no way to find out who you are, unless you reveal your identity yourself.</item>
-		<item>+ Messages and comments don\'t stay online forever. They will be destroyed after some time automatically.</item>
-		<item>+ Even if your friends correctly guessed a message that you wrote, they would still not know about any other message of yours.</item>
-		<item>+ Faceless is independent. There is no big company behind and we don\'t try to maximize profits.</item>
+		<item>+ Uygulama ve sunucularımız arasındaki bütün iletişim SSL/TLS ile şifrelenmektedir. Mesajlarınız ve yorumlarınız sunucularımıza kaydedilmeden önce, şifrelenmektedir.</item>
+		<item>+ Kişisel bilgileriniz kimseye gönderilmemektedir.  Siz söylemedikçe uygulamayı kullanan arkadaşlarınız ve diğer kullanıcılar kim olduğunuzu bilmelerinin imkanı yoktur.</item>
+		<item>+ Mesajlarınız ve yorumlarınız sonsuza dek gözükmeyecektir. Bir süre sonra mesajlarınız ve yorumlarınız silinecektir.</item>
+		<item>+ Arkadaşlarınız yazdığınız mesajları doğru bir şekilde tahmin etseler bile, arkadaşlarınız sizin diğer mesajlarını hakkında hiç bir şey bilmeyeceklerdir.</item>
+		<item>+ Faceless bağımsızdır. Arkasında büyük bir şirket bulunmamaktadır ve biz kazancımızı arttırmak için uğraşmıyoruz.</item>
 	</string-array>
-	<string name="meta_security_title"><b>Is Faceless really secure?</b></string>
+	<string name="meta_security_title"><b>Faceless gerçekten güvenilir mi?</b></string>
 	<string-array name="modes_human">
-		<item>Latest messages</item>
-		<item>Friends\' messages</item>
-		<item>Popular messages</item>
-		<item>Saved favorites</item>
+		<item>En son mesajlar</item>
+		<item>Arkadaşlarının mesajları</item>
+		<item>Popüler mesajlar</item>
+		<item>Kayıtlı favoriler</item>
 	</string-array>
 	<string name="next">İleri</string>
 	<string name="ok">Tamam</string>
 	<string name="please_choose_topic">Lütfen mesajınız için bir konu seçin</string>
-	<string name="please_enter_message">Please enter a text for your message</string>
+	<string name="please_enter_message">Lütfen mesajınız için metin yazınız</string>
 	<string name="preview">Ön izleme</string>
-	<string name="private_reply">Private reply</string>
+	<string name="private_reply">Özelden cevapla</string>
 	<string name="publish">Yayınla</string>
 	<string name="rate_app">Uygulamaya değerlendir</string>
 	<string name="read_message">Mesajı Oku</string>
@@ -143,25 +143,25 @@
 	<string name="report_confirm_report">Rapor et</string>
 	<string-array name="report_options">
 		<item>Yanlış konu</item>
-		<item>Report bullying / harassment</item>
-		<item>Report violence / threats</item>
-		<item>Report hate speech</item>
-		<item>Report obscene content</item>
-		<item>Report spam / advertising</item>
-		<item>Report fraud / falsehood</item>
-		<item>Report illegal content</item>
+		<item>Zorbalık / Taciz olarak şikayeti et</item>
+		<item>Şiddet / Tehdit olarak şikayeti et</item>
+		<item>Nefret söylemi olarak şikayet et</item>
+		<item>Uygun olmayan içerik olarak şikayet et</item>
+		<item>İstenmeyen / Reklam olarak şikayet et</item>
+		<item>Dolandırıcılık / Sahtelik olarak şikayet et</item>
+		<item>Yasadışı içerik olarak şikayet et</item>
 		<item>Yazarı Engelle</item>
 	</string-array>
 	<string name="report_sent">Raporunuz başarılı şekilde gönderildi</string>
 	<string name="report_warning_block">Bu yazının yazarını engellemek istediğinize emin misiniz?\n\nBir daha bu kişiden herhangi bir mesaj almayacaksınız.\n\nBu işlem daha sonra değiştirilemez.</string>
-	<string name="report_warning_report">Are you sure you want to report this entry as inappropriate?\n\nA report may cause the entry to be deleted and the author to be temporarily banned from Faceless.\n\nIf you are reporting a message, it will be removed from your personal feed immediately.</string>
+	<string name="report_warning_report">Bu yazıyı uygun olmayan içerik olarak şikayet edeceğinize emin misiniz?\n\nBir şikayet yazının silinmesine ve yazarın geçici bir süreliğine yasaklanmasına neden olabilir.\n\nEğer bir mesajı şikayet ederseniz, mesaj kişisel sayfanızdan kaldırılacaktır.</string>
 	<string name="save">Kaydet</string>
 	<string name="send">Gönder</string>
 	<string name="setup">Kurulum</string>
-	<string name="setup_intro">Please enter your phone number below to finish setup.\n\nStart with a \"+\" followed by your country code (e.g. +41).\n\nAfter that, just enter your local phone number.\n\nPlease double-check that the number is correct!\n\nIf you don\'t enter your correct number, we won\'t be able to connect you to your friends.\n\nOf course, your phone number is secure with us. We respect your privacy!</string>
+	<string name="setup_intro">Kurulumun tamamlanabilmesi için telefon numaranızı giriniz.\n\nÜlkenizin kodunu yazarken \"+\" ile başlayın. ( Örnek : +90 )\n\nDaha sonra, sadece telefon numaranızı giriniz.\n\nTelefon numaranızın doğru olduğuna emin olunuz.\n\nEğer doğru telefon numarası girmezseniz, size ve arkadaşlarınıza ulaşamayız.\n\nTabii ki, telefon numaranız bizde güvenle korunacaktır. Özelinize saygı duyuyoruz!</string>
 	<string name="setup_phone_number_hint">Örnek: +90 1234 56789</string>
 	<string name="share_image_failed">Mesaj kaydedilemedi ve paylaşılamadı</string>
-	<string name="subscription_notifications">Notifications for unread comments</string>
+	<string name="subscription_notifications">Okunmayan yorumlar için bildirim al</string>
 	<string-array name="subscription_notifications_human">
 		<item>Normal</item>
 		<item>Nadiren</item>
@@ -176,7 +176,7 @@
 	<string name="topic_books">Kitap</string>
 	<string name="topic_business">İş</string>
 	<string name="topic_culture">Kültür</string>
-	<string name="topic_dating">Dating</string>
+	<string name="topic_dating">Flört</string>
 	<string name="topic_family">Aile</string>
 	<string name="topic_food">Yiyecek</string>
 	<string name="topic_health">Sağlık</string>
@@ -189,13 +189,13 @@
 	<string name="topic_sex">Seks</string>
 	<string name="topic_sports">Spor</string>
 	<string name="topic_technology">Teknoloji</string>
-	<string name="topic_work">Work</string>
+	<string name="topic_work">Çalışma</string>
 	<string name="topics">Konular</string>
 	<string name="topics_empty_human">— Konu Seç —</string>
 	<string name="topics_meta_human">Faceless Hakkında</string>
-	<string name="topics_summary">Which topics do you want to see recent and popular messages for?</string>
+	<string name="topics_summary">Hangi konular için yakın zamandaki ve popüler mesajları görmek istersiniz?</string>
 	<string name="translate">Çevir</string>
-	<string name="translate_explanation">Do you want to help us translate Faceless to your language?\n\nPlease visit the following website on your computer:\nwww.localize.im/v/36\n\nThank you so much for your support!</string>
+	<string name="translate_explanation">Faceless uygulamasının çevirisini yapmak ister misiniz?\n\nBilgisayarınızdan sayfasınızı ziyaret ederek çeviri yapabilirsiniz:\nwww.localize.im/v/36\n\nDesteğini için çok teşekkürler!</string>
 	<string name="type_here">Ne düşünüyorsun &#8230;\n\nKibar ve olumlu ol.</string>
 	<string name="verify">Doğrula</string>
 	<string name="verify_phone_number">Telefon numarasını doğrula</string>
@@ -203,44 +203,44 @@
 	<string name="verify_phone_number_why">In order to protect you and your friends from fraud, we must verify your phone number.\n\nThis helps us offer a secure and enjoyable service for all users.\n\nDo you want to verify your number now?\n\nNote: You can only use this app on a single device.\n\nNeed help? Get in touch with us at %s</string>
 	<string name="write">Yaz</string>
 	<plurals name="x_chars_left">
-		<item quantity="zero">%d chars left</item>
-		<item quantity="one">%d char left</item>
-		<item quantity="two">%d chars left</item>
-		<item quantity="few">%d chars left</item>
-		<item quantity="many">%d chars left</item>
-		<item quantity="other">%d chars left</item>
+		<item quantity="zero">%d tane karakter kaldı</item>
+		<item quantity="one">%d tane karakter kaldı</item>
+		<item quantity="two">%d tane karakter kaldı</item>
+		<item quantity="few">%d tane karakter kaldı</item>
+		<item quantity="many">%d tane karakter kaldı</item>
+		<item quantity="other">%d tane karakter kaldı</item>
 	</plurals>
 	<plurals name="x_comments">
 		<item quantity="zero">%d comments</item>
-		<item quantity="one">%d comment</item>
-		<item quantity="two">%d comments</item>
+		<item quantity="one">%d tane yorum</item>
+		<item quantity="two">%d tane yorum</item>
 		<item quantity="few">%d comments</item>
 		<item quantity="many">%d comments</item>
-		<item quantity="other">%d comments</item>
+		<item quantity="other">%d tane yorum</item>
 	</plurals>
 	<plurals name="x_favorites">
-		<item quantity="zero">%d× favorite</item>
-		<item quantity="one">%d× favorite</item>
-		<item quantity="two">%d× favorite</item>
+		<item quantity="zero">%d tane favori</item>
+		<item quantity="one">%d tane favori</item>
+		<item quantity="two">%d tane favori</item>
 		<item quantity="few">%d× favorite</item>
 		<item quantity="many">%d× favorite</item>
-		<item quantity="other">%d× favorite</item>
+		<item quantity="other">%d tane favori</item>
 	</plurals>
 	<plurals name="x_friends_using_app">
-		<item quantity="zero">%d friends of yours are now using Faceless</item>
-		<item quantity="one">%d friend of yours is now using Faceless</item>
-		<item quantity="two">%d friends of yours are now using Faceless</item>
+		<item quantity="zero">%d tane arkadaşınız Faceless kullanıyor</item>
+		<item quantity="one">%d tane arkadaşınız Faceless kullanıyor</item>
+		<item quantity="two">%d tane arkadaşınız Faceless kullanıyor</item>
 		<item quantity="few">%d friends of yours are now using Faceless</item>
 		<item quantity="many">%d friends of yours are now using Faceless</item>
-		<item quantity="other">%d friends of yours are now using Faceless</item>
+		<item quantity="other">%d tane arkadaşınız Faceless kullanıyor</item>
 	</plurals>
 	<plurals name="x_subscription_updates">
 		<item quantity="zero">%d unread comments</item>
-		<item quantity="one">%d unread comment</item>
-		<item quantity="two">%d unread comments</item>
+		<item quantity="one">%d tane okunmayan yorum</item>
+		<item quantity="two">%d tane okunmayan yorum</item>
 		<item quantity="few">%d unread comments</item>
 		<item quantity="many">%d unread comments</item>
-		<item quantity="other">%d unread comments</item>
+		<item quantity="other">%d tane okunmayan yorum</item>
 	</plurals>
 	<plurals name="x_unread_messages">
 		<item quantity="zero">%d unread messages from your friends</item>

@@ -101,11 +101,11 @@
 	</string-array>
 	<string name="meta_privacy_title"><b>Privacy Policy:</b></string>
 	<string-array name="meta_questions_answers">
-		<item><b>Do I have to sign up for Faceless?</b></item>
-		<item>No. You don\'t need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.</item>
-		<item><b>Who can see that I am the author of a message?</b></item>
-		<item>Nobody. People will only see that you are a \"Friend\" or a \"Friend of a friend\". Otherwise, we may show them your country, but never something specific.</item>
-		<item><b>Are comments anonymous as well?</b></item>
+		<item><b>我必须注册一个 Faceless 账号吗？</b></item>
+		<item>不。你不须要注册账号，也不用提供邮箱或密码。不用关联 Facebook, Google 或者 Twitter.</item>
+		<item><b>谁会知道我是某条信息的撰写者？</b></item>
+		<item>没有人会知道。他们只能看到消息来自「朋友」或者「朋友的朋友」。还有种可能，我们会显示你的国家，但决不会涉及特定的信息。</item>
+		<item><b>所有的评论也要匿名吗？</b></item>
 		<item>Yes. The only thing that will be shown is whether a comment has been written by the same person who also wrote the original message.</item>
 		<item><b>Can I see which of my friends are on Faceless already?</b></item>
 		<item>No. This is to protect their privacy. From time to time, we may show you the number of friends, without any names, of course.</item>
@@ -115,18 +115,18 @@
 		<item>Yes, that would be great! Please find your language on: https://www.localize.im/v/36</item>
 	</string-array>
 	<string-array name="meta_security_body">
-		<item>+ All communication between the app and our servers is encrypted with SSL/TLS. Before your messages and comments are saved on our servers, they are encrypted again.</item>
-		<item>+ No personal information is ever send to any device. Your friends and other users have no way to find out who you are, unless you reveal your identity yourself.</item>
-		<item>+ Messages and comments don\'t stay online forever. They will be destroyed after some time automatically.</item>
-		<item>+ Even if your friends correctly guessed a message that you wrote, they would still not know about any other message of yours.</item>
-		<item>+ Faceless is independent. There is no big company behind and we don\'t try to maximize profits.</item>
+		<item>+ 应用中的一切通讯内容和我们的服务器都已经过 SSL/TLS 加密。当你发布的内容和评论存储到我们服务器上的时候，我们会二次加密。</item>
+		<item>+ 你的个人信息不会发送到其他任何设备。你的朋友和其他用户都无法知晓你的真实身份，除非你自己透露了个人信息。</item>
+		<item>+ 发布的内容和评论不会永久保存。每隔一段时间就会自动销毁。</item>
+		<item>+ 即使你的朋友猜到了某一条消息是你写的，他们还是无法得知其他的消息是不是你写的。</item>
+		<item>+ Faceless 是独立运营的。我们并不是某个大公司的下属机构，我们也不是以利润最大化为目的。</item>
 	</string-array>
-	<string name="meta_security_title"><b>Is Faceless really secure?</b></string>
+	<string name="meta_security_title"><b>Faceless 真的安全吗？</b></string>
 	<string-array name="modes_human">
-		<item>Latest messages</item>
-		<item>Friends\' messages</item>
-		<item>Popular messages</item>
-		<item>Saved favorites</item>
+		<item>最新回复</item>
+		<item>朋友的消息</item>
+		<item>热闹消息</item>
+		<item>我的收藏</item>
 	</string-array>
 	<string name="next">Next</string>
 	<string name="ok">OK</string>
