@@ -30,6 +30,11 @@ Main screen | Message details | Adding messages
 
  * [Disclose bugs and vulnerabilities](https://www.delight.im/security/faceless) or read more about [security](SECURITY.md).
 
+### Data center locations
+
+ * Apache/PHP: Europe (AWS `eu-west-1` region)
+ * MySQL: Europe (AWS `eu-west-1` region)
+
 ## Translations
 
  * Help translate by visiting [Faceless on Localize](https://www.localize.im/v/36)
