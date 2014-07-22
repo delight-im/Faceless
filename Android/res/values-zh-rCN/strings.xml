@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="action_add">Write message</string>
-	<string name="action_add_favorite">Add to favorites</string>
+	<string name="action_add">写一条信息</string>
+	<string name="action_add_favorite">添加到收藏</string>
 	<string name="action_add_subscription">Subscribe to comments</string>
 	<string name="action_customize">Customize</string>
-	<string name="action_help">Help</string>
+	<string name="action_help">帮助</string>
 	<string name="action_help_summary">Do you have any questions about this app? Read our detailed explanations here.</string>
-	<string name="action_invite">Invite friends</string>
+	<string name="action_invite">邀请朋友</string>
 	<string name="action_invite_promo">Are your friends on Faceless yet?</string>
 	<string name="action_invite_summary">On Faceless, your friends will never see your name. This makes conversations honest and entertaining.</string>
-	<string name="action_loading">Loading &#8230;</string>
-	<string name="action_notification_count">New notifications</string>
-	<string name="action_remove_favorite">Remove from favorites</string>
+	<string name="action_loading">加载中 &#8230;</string>
+	<string name="action_notification_count">新的通知</string>
+	<string name="action_remove_favorite">从收藏中移除</string>
 	<string name="action_remove_subscription">Unsubscribe from comments</string>
 	<string name="action_report">Report message</string>
-	<string name="action_settings">Settings</string>
-	<string name="action_share_picture">Share as picture</string>
-	<string name="anonymous">Anonymous</string>
-	<string name="app_name">Faceless</string>
+	<string name="action_settings">设置</string>
+	<string name="action_share_picture">已图片分享</string>
+	<string name="anonymous">匿名</string>
+	<string name="app_name">无面者</string>
 	<string name="app_rater_explanation">How do you like this app? We would be very happy if you could rate our application on Google Play. Thanks for your support!</string>
-	<string name="app_rater_later">Later</string>
-	<string name="app_rater_never">No, thanks</string>
-	<string name="app_rater_now">Rate now</string>
-	<string name="app_rater_title">Rate this app</string>
-	<string name="background">Background</string>
-	<string name="block_user_added">You will no longer receive messages from this user</string>
-	<string name="cancel">Cancel</string>
+	<string name="app_rater_later">稍后</string>
+	<string name="app_rater_never">不，谢谢</string>
+	<string name="app_rater_now">现在打分</string>
+	<string name="app_rater_title">给这个应用打分</string>
+	<string name="background">背景</string>
+	<string name="block_user_added">你不会再接受到这个用户的消息</string>
+	<string name="cancel">取消</string>
 	<string name="choose_recipient">Choose recipient</string>
-	<string name="comment_add_hint">Your comment &#8230;</string>
+	<string name="comment_add_hint">你的评论 &#8230;</string>
 	<string name="comment_confirm_public_body">Do you want to publish this comment for all users?\n\nIf you want to reply to somebody privately instead, please tap on the respective comment.</string>
-	<string name="comment_confirm_public_title">Public comment</string>
-	<string name="comment_options">Comment options</string>
-	<string name="comments">Comments</string>
-	<string name="continueToPreview">Continue to preview</string>
-	<string name="country">Country</string>
-	<string name="degree_author">Author</string>
-	<string name="degree_example">Example</string>
-	<string name="degree_friend">Friend</string>
-	<string name="degree_friend_of_friend">Friend of a friend</string>
-	<string name="degree_self">You</string>
-	<string name="degree_worldwide">Worldwide</string>
-	<string name="error_bad_request">Your request could not be handled by the server</string>
-	<string name="error_maintenance">Faceless is out of service for a short time</string>
-	<string name="error_no_connection">Please check your internet connection</string>
-	<string name="error_outdated_client">Please update Faceless to the latest version via Google Play</string>
+	<string name="comment_confirm_public_title">公开的评论</string>
+	<string name="comment_options">评论选项</string>
+	<string name="comments">评论</string>
+	<string name="continueToPreview">继续预览</string>
+	<string name="country">国家</string>
+	<string name="degree_author">作者</string>
+	<string name="degree_example">示例</string>
+	<string name="degree_friend">朋友</string>
+	<string name="degree_friend_of_friend">朋友的朋友</string>
+	<string name="degree_self">你</string>
+	<string name="degree_worldwide">全球</string>
+	<string name="error_bad_request">服务器无法处理你的请求</string>
+	<string name="error_maintenance">无面者暂停服务</string>
+	<string name="error_no_connection">请检查你的网络连接</string>
+	<string name="error_outdated_client">请通过Google Play更新无面者到最新版本</string>
 	<string name="error_temporarily_banned">You have been temporarily banned due to reports by other persons</string>
-	<string name="example_message_explanation">This is an example: Just start by writing your own message</string>
+	<string name="example_message_explanation">这只是一个例子：开始写你自己的信息吧</string>
 	<string-array name="example_messages">
 		<item>Have been drawing for years, but never shown to anyone.</item>
 		<item>For the last three weeks, I\'ve slept in my car.</item>
 		<item>Nobody at work knows that I\'ve been in jail.</item>
 		<item>I always eat the food I\'m buying when I\'m still in the supermarket.</item>
-		<item>I\'m in love with my best friend.</item>
+		<item>我和我最好的朋友相爱了。</item>
 		<item>My hair looks better when not washed for some days.</item>
 		<item>Just been on vacation with my wife for the first time.</item>
-		<item>My boyfriend still hasn\'t met my parents.</item>
+		<item>我的男朋友还没见过我父母。</item>
 		<item>Every day, I consider quitting my job and moving to another city.</item>
 		<item>Is anybody out there truthfully happy?</item>
 		<item>Whenever I read wedding announcements in the paper, I become jealous.</item>
 	</string-array>
-	<string name="general_settings">General settings</string>
-	<string name="intro">Welcome</string>
+	<string name="general_settings">基本设置</string>
+	<string name="intro">欢迎</string>
 	<string-array name="introduction_steps">
 		<item>Faceless is where you can talk freely.\n\nShare messages with your friends and the whole world.</item>
 		<item>You can be open, no matter what you talk about.\n\nNobody will see who you are — it\'s only about your words.</item>
@@ -69,15 +69,15 @@
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
 	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
-	<string name="invitation_title">Get Faceless</string>
-	<string name="language">Language</string>
-	<string name="learn_more">Learn more</string>
+	<string name="invitation_title">获取无面者</string>
+	<string name="language">语言</string>
+	<string name="learn_more">了解更多</string>
 	<string name="login_throttled_body">There have been too many failed login attempts for your account.\n\nThis may also have been caused by another person who tried to get access to your account.\n\nThus we are now protecting your account and have temporarily locked it.\n\nPlease try again later!</string>
-	<string name="login_throttled_title">Account locked</string>
-	<string name="mark_all_read">Mark all as read</string>
-	<string name="message">Message</string>
+	<string name="login_throttled_title">账号被锁定</string>
+	<string name="mark_all_read">标记为已读</string>
+	<string name="message">消息</string>
 	<string-array name="meta_about">
-		<item>Faceless is where you can talk freely, to your friends and the whole world.</item>
+		<item>无面者是一个可以向全世界的朋友畅所欲言的地方。</item>
 		<item>You can be open, no matter what you talk about. Nobody will see who you are — it\'s only about your message.</item>
 		<item>Enjoy openness and kindness. Get truthful responses and honest opinions. Let your ideas spread around the world.</item>
 		<item>You don\'t have a profile to worry about. There\'s no need to brag. It\'s just your words that count.</item>
@@ -93,7 +93,7 @@
 		<item>+ \"Full network access\": Send/receive messages, comments and favorites.</item>
 		<item>+ \"Run at startup\": Setting up notifications and synchronization again when you had switched off your device.</item>
 	</string-array>
-	<string name="meta_permissions_title"><b>App permissions:</b></string>
+	<string name="meta_permissions_title"><b>应用的权限：</b></string>
 	<string-array name="meta_privacy_body">
 		<item>+ We only access your phone number and your contacts\' phone numbers. We don\'t access any names, email addresses or other contact details.</item>
 		<item>+ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.</item>
@@ -128,19 +128,19 @@
 		<item>热闹消息</item>
 		<item>我的收藏</item>
 	</string-array>
-	<string name="next">Next</string>
+	<string name="next">下一个</string>
 	<string name="ok">OK</string>
 	<string name="please_choose_topic">请为这条信息选择主题</string>
 	<string name="please_enter_message">请为信息添加内容</string>
 	<string name="preview">预览</string>
 	<string name="private_reply">私信</string>
-	<string name="publish">Publish</string>
-	<string name="rate_app">Rate app</string>
-	<string name="read_message">Read message</string>
+	<string name="publish">发布</string>
+	<string name="rate_app">给应用打分</string>
+	<string name="read_message">读消息</string>
 	<string name="reply_privately">Reply privately</string>
 	<string name="report_comment">Report comment</string>
 	<string name="report_confirm_block">Block</string>
-	<string name="report_confirm_report">Report</string>
+	<string name="report_confirm_report">报告</string>
 	<string-array name="report_options">
 		<item>Wrong topic</item>
 		<item>Report bullying / harassment</item>
@@ -171,37 +171,37 @@
 	<string name="subscriptions">未读评论</string>
 	<string name="tap_to_change_pattern">点触切换背景图样</string>
 	<string name="this_app">关于本应用</string>
-	<string name="topic_art">Art</string>
+	<string name="topic_art">艺术</string>
 	<string name="topic_beauty">Beauty</string>
-	<string name="topic_books">Books</string>
-	<string name="topic_business">Business</string>
-	<string name="topic_culture">Culture</string>
-	<string name="topic_dating">Dating</string>
-	<string name="topic_family">Family</string>
-	<string name="topic_food">Food</string>
-	<string name="topic_health">Health</string>
-	<string name="topic_life">Life</string>
-	<string name="topic_love">Love</string>
-	<string name="topic_movies">Movies</string>
-	<string name="topic_music">Music</string>
-	<string name="topic_politics">Politics</string>
-	<string name="topic_science">Science</string>
-	<string name="topic_sex">Sex</string>
-	<string name="topic_sports">Sports</string>
-	<string name="topic_technology">Technology</string>
-	<string name="topic_work">Work</string>
+	<string name="topic_books">书籍</string>
+	<string name="topic_business">商业</string>
+	<string name="topic_culture">教育</string>
+	<string name="topic_dating">约会</string>
+	<string name="topic_family">家庭</string>
+	<string name="topic_food">食物</string>
+	<string name="topic_health">健康</string>
+	<string name="topic_life">生活</string>
+	<string name="topic_love">爱情</string>
+	<string name="topic_movies">电影</string>
+	<string name="topic_music">音乐</string>
+	<string name="topic_politics">政治</string>
+	<string name="topic_science">科学</string>
+	<string name="topic_sex">两性</string>
+	<string name="topic_sports">运动</string>
+	<string name="topic_technology">技术</string>
+	<string name="topic_work">工作</string>
 	<string name="topics">主题</string>
 	<string name="topics_empty_human">— 请选择话题分类 —</string>
-	<string name="topics_meta_human">关于 Faceless</string>
+	<string name="topics_meta_human">关于无面者</string>
 	<string name="topics_summary">你想在最新信息和最热信息中看到哪些主题呢？</string>
-	<string name="translate">Translate</string>
+	<string name="translate">翻译</string>
 	<string name="translate_explanation">Do you want to help us translate Faceless to your language?\n\nPlease visit the following website on your computer:\nwww.localize.im/v/36\n\nThank you so much for your support!</string>
 	<string name="type_here">Share a thought &#8230;\n\nBe kind and positive.</string>
-	<string name="verify">Verify</string>
-	<string name="verify_phone_number">Verify phone number</string>
+	<string name="verify">验证</string>
+	<string name="verify_phone_number">验证你的手机号</string>
 	<string name="verify_phone_number_how">In the next step, you\'ll be asked to start your usual app for text messages.\n\nPlease don\'t use WhatsApp or similar apps here, this won\'t work.\n\nWe\'ll have filled in the recipient and the content for your text message already.\n\nPlease don\'t change the text and just press \"Send\" to complete the verification.\n\nA few minutes later, you should be able to open Faceless and use all features as expected.\n\nNote: The normal fees by your carrier for international text messages apply.</string>
 	<string name="verify_phone_number_why">In order to protect you and your friends from fraud, we must verify your phone number.\n\nThis helps us offer a secure and enjoyable service for all users.\n\nDo you want to verify your number now?\n\nNote: You can only use this app on a single device.\n\nNeed help? Get in touch with us at %s</string>
-	<string name="write">Write</string>
+	<string name="write">写</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d chars left</item>
 		<item quantity="one">%d char left</item>
@@ -250,5 +250,5 @@
 		<item quantity="many">%d unread messages from your friends</item>
 		<item quantity="other">%d unread messages from your friends</item>
 	</plurals>
-	<string name="you_and_friends">You and your friends</string>
+	<string name="you_and_friends">你和你的朋友</string>
 </resources>
