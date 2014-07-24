@@ -211,11 +211,11 @@
 		<item quantity="other">%d tane karakter kaldı</item>
 	</plurals>
 	<plurals name="x_comments">
-		<item quantity="zero">%d comments</item>
+		<item quantity="zero">%d tane yorum</item>
 		<item quantity="one">%d tane yorum</item>
 		<item quantity="two">%d tane yorum</item>
-		<item quantity="few">%d comments</item>
-		<item quantity="many">%d comments</item>
+		<item quantity="few">%d tane yorum</item>
+		<item quantity="many">%d tane yorum</item>
 		<item quantity="other">%d tane yorum</item>
 	</plurals>
 	<plurals name="x_favorites">
@@ -235,19 +235,19 @@
 		<item quantity="other">%d tane arkadaşınız Faceless kullanıyor</item>
 	</plurals>
 	<plurals name="x_subscription_updates">
-		<item quantity="zero">%d unread comments</item>
+		<item quantity="zero">%d tane okunmayan yorum</item>
 		<item quantity="one">%d tane okunmayan yorum</item>
 		<item quantity="two">%d tane okunmayan yorum</item>
-		<item quantity="few">%d unread comments</item>
-		<item quantity="many">%d unread comments</item>
+		<item quantity="few">%d tane okunmayan yorum</item>
+		<item quantity="many">%d tane okunmayan yorum</item>
 		<item quantity="other">%d tane okunmayan yorum</item>
 	</plurals>
 	<plurals name="x_unread_messages">
 		<item quantity="zero">Arkadaşlarınızdan gelen %d tane mesaj</item>
 		<item quantity="one">Arkadaşlarınızdan gelen %d tane mesaj</item>
 		<item quantity="two">Arkadaşlarınızdan gelen %d tane mesaj</item>
-		<item quantity="few">%d unread messages from your friends</item>
-		<item quantity="many">%d unread messages from your friends</item>
+		<item quantity="few">Arkadaşlarınızdan gelen %d tane mesaj</item>
+		<item quantity="many">Arkadaşlarınızdan gelen %d tane mesaj</item>
 		<item quantity="other">Arkadaşlarınızdan gelen %d tane mesaj</item>
 	</plurals>
 	<string name="you_and_friends">Sen ve arkadaşların</string>
