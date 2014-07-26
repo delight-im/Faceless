@@ -16,11 +16,17 @@ package im.delight.faceless;
  * limitations under the License.
  */
 
+/** Source: <https://github.com/delight-im/Emoji> */
+
 import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.HashMap;
 
-/** Lets you replace all emoticons in a text with their corresponding Unicode Emoji by calling replaceInText(...) */
+/**
+ * Lets you replace all emoticons in a text with their corresponding Unicode Emoji
+ * <p>
+ * Usage: String myEmojiString = Emoji.replaceInText(myString);
+ */
 public class Emoji {
 	
 	/** A character class containing special chars often used with emoticons */

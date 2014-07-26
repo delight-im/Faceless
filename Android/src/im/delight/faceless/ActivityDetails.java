@@ -112,7 +112,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			// update contents
 			int textColor = UI.getTextColor(mMessage.getColor());
 			mViewScreenshotContainer.setBackgroundColor(mMessage.getColor());
-			mTextViewMessage.setText(AndroidEmoji.makeCompatible(mMessage.getText()));
+			mTextViewMessage.setText(AndroidEmoji.ensure(mMessage.getText(), ActivityDetails.this));
 			if (mMessage.getTopic() != null && mMessage.getTopic().length() > 0) {
 				mTextViewTopic.setText(mMessage.getTopicText(this));
 				mTextViewTopic.setVisibility(View.VISIBLE);
@@ -333,7 +333,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		
 		final TextView textViewOriginalComment = (TextView) viewReply.findViewById(R.id.textViewOriginalComment);
 		// show the original comment for reference
-		textViewOriginalComment.setText(AndroidEmoji.makeCompatible(comment.getText()));
+		textViewOriginalComment.setText(AndroidEmoji.ensure(comment.getText(), ActivityDetails.this));
 		final EditText editTextPrivateReply = (EditText) viewReply.findViewById(R.id.editTextPrivateReply);
 		// re-use any public comment that has been drafted already
 		editTextPrivateReply.setText(mEditTextComment.getText().toString());
@@ -649,7 +649,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					}
 					holder.textViewTime.setVisibility((o.isPrivate() || o.isTimeVisible()) ? View.VISIBLE : View.GONE);
 				}
-				holder.textViewComment.setText(AndroidEmoji.makeCompatible(o.getText()));
+				holder.textViewComment.setText(AndroidEmoji.ensure(o.getText(), ActivityDetails.this));
 			}
 			return v;
 		}

@@ -279,7 +279,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 
 				// update contents
 				mBackgroundPatterns.setViewBackground(AbstractMessagesActivity.this, holder.viewMessageContainer, o.getPatternID(), o.getColor());
-				holder.textViewMessage.setText(AndroidEmoji.makeCompatible(o.getText()));
+				holder.textViewMessage.setText(AndroidEmoji.ensure(o.getText(), AbstractMessagesActivity.this));
 				holder.textViewDegree.setText(o.getDegreeText(AbstractMessagesActivity.this));
 				if (o.isAdminMessage()) {
 					holder.textViewComments.setText(R.string.learn_more);
