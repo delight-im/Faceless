@@ -83,7 +83,8 @@
 				android:divider="@android:color/transparent"
 				android:dividerHeight="12dp"
 				android:fastScrollEnabled="false"
-				android:filterTouchesWhenObscured="true" />
+				android:filterTouchesWhenObscured="true"
+				android:smoothScrollbar="false" />
 		</uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
 	    <LinearLayout
 	        android:orientation="horizontal"
