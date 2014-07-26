@@ -47,6 +47,7 @@ public class ActivityMain extends AbstractMessagesActivity {
 	
 	private void changeMode(int mode) {
 		mMode = mode;
+		setActiveSpinnerPosition(mode);
 		reloadMessages(mMode, 0, true, false, false);
 	}
 	
@@ -62,6 +63,26 @@ public class ActivityMain extends AbstractMessagesActivity {
 			}
 		}
 	}
+	
+	private static int getModeFromSpinnerPosition(final int spinnerPosition) {
+		switch (spinnerPosition) {
+			case 0: return Server.MODE_LATEST;
+			case 1: return Server.MODE_FRIENDS;
+			case 2: return Server.MODE_POPULAR;
+			case 3: return Server.MODE_FAVORITES;
+			default: throw new RuntimeException("Unknown spinner position: "+spinnerPosition);
+		}
+	}
+	
+	private static int getSpinnerPositionFromMode(final int mode) {
+		switch (mode) {
+			case Server.MODE_LATEST: return 0;
+			case Server.MODE_FRIENDS: return 1;
+			case Server.MODE_POPULAR: return 2;
+			case Server.MODE_FAVORITES: return 3;
+			default: throw new RuntimeException("Unknown mode: "+mode);
+		}
+	}
 
 	protected void setupButtonBar() {
 		// set up the topic selection Spinner
@@ -75,14 +96,7 @@ public class ActivityMain extends AbstractMessagesActivity {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				final int newMode;
-				switch (position) {
-					case 0: newMode = Server.MODE_LATEST; break;
-					case 1: newMode = Server.MODE_FRIENDS; break;
-					case 2: newMode = Server.MODE_POPULAR; break;
-					case 3: newMode = Server.MODE_FAVORITES; break;
-					default: throw new RuntimeException("Unknown mode ID: "+position);
-				}
+				final int newMode = getModeFromSpinnerPosition(position);
 				if (newMode != mMode) {
 					changeMode(newMode);
 				}
@@ -108,6 +122,11 @@ public class ActivityMain extends AbstractMessagesActivity {
 		});
 	}
 	
+	private void setActiveSpinnerPosition(final int mode) {
+		final int activePosition = getSpinnerPositionFromMode(mode);
+		mSpinnerMode.setSelection(activePosition);
+	}
+	
 	@Override
 	public void onBackPressed() {
 		// if we are already on the home tab
@@ -118,8 +137,7 @@ public class ActivityMain extends AbstractMessagesActivity {
 		// if we are on another tab
 		else {
 			// first go back to the home tab
-			mMode = DEFAULT_MODE;
-			reloadMessages(mMode, 0, true, false, false);
+			changeMode(DEFAULT_MODE);
 		}
 	}
 	
