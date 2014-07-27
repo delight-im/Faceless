@@ -276,3 +276,10 @@
  * (The latest release (APK) is now available for download via GitHub (right from the repository) as well.)
  * (Known issues and a list of similar services have been added to the proejct's README.)
  * (The database structure has been optimized.)
+
+## Version 2.5.2
+
+ * Emoji (emoticons) are now working correctly on all Android versions, even if not supported by Android in the first place.
+ * Translations have been updated for Turkish and Chinese.
+ * (The smooth scrollbar has been replaced with a step-based (skipping) scrollbar on the comments pages. This is because the items are not of equal height and thus the scrollbar was always changing its size while scrolling.)
+ * (The mode selection (Spinner) is now correctly updated when pressing the back key on the main page.)
