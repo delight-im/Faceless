@@ -27,11 +27,11 @@ import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 
 /**
- * Emoji support for Android on every API level and platform version
+ * Emoji support for Android down to API level 8 (Android 2.2)
  * <p>
  * Usage: CharSequence myCharSequence = AndroidEmoji.ensure(myString);
  */
-public class AndroidEmoji extends Emoji {
+public class AndroidEmoji {
 	
 	/**
 	 * Span to set on TextView instances in order to have a custom font for single parts of a text
