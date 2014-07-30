@@ -29,7 +29,7 @@ public class GeneralNotifications extends AbstractNotificationSender {
 
 	@Override
 	protected String getLastExecutionPreference() {
-		return Config.Preferences.LAST_TIME_GENERAL_NOTIFICATIONS;
+		return Global.Preferences.LAST_TIME_GENERAL_NOTIFICATIONS;
 	}
 
 	@Override
@@ -71,12 +71,12 @@ public class GeneralNotifications extends AbstractNotificationSender {
 	
 	private void sendFriendsNotification() {
 		final int friendsCount = Server.getFriendsCountSync(this);
-		int oldFriendsCount = mPrefs.getInt(Config.Preferences.FRIENDS_COUNT, 0);
+		int oldFriendsCount = mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0);
 		
 		if (friendsCount > oldFriendsCount) {
 			// update the friends count in the preferences
 			SharedPreferences.Editor editor = mPrefs.edit();
-			editor.putInt(Config.Preferences.FRIENDS_COUNT, friendsCount);
+			editor.putInt(Global.Preferences.FRIENDS_COUNT, friendsCount);
 			editor.apply();
 			
 			// build the text for the notification
@@ -93,7 +93,7 @@ public class GeneralNotifications extends AbstractNotificationSender {
 		
 		if (messages != null) {
 			// get the ID of the latest message that has already been read
-			final long latestMessageRead = mPrefs.getLong(Config.Preferences.LATEST_MESSAGE_READ, 0);
+			final long latestMessageRead = mPrefs.getLong(Global.Preferences.LATEST_MESSAGE_READ, 0);
 			
 			// prepare a variable holding the new ID of the latest message read
 			long newLatestMessageRead = 0;
@@ -130,7 +130,7 @@ public class GeneralNotifications extends AbstractNotificationSender {
 			// update the ID of the latest message read in the preferences
 			if (newLatestMessageRead > latestMessageRead) {
 				SharedPreferences.Editor editor = mPrefs.edit();
-				editor.putLong(Config.Preferences.LATEST_MESSAGE_READ, newLatestMessageRead);
+				editor.putLong(Global.Preferences.LATEST_MESSAGE_READ, newLatestMessageRead);
 				editor.apply();
 			}
 			

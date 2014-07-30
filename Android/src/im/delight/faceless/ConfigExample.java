@@ -33,23 +33,5 @@ public class ConfigExample {
 	
 	/** This class may not be instantiated */
 	private ConfigExample() { }
-	
-	public static class Preferences {
-
-		public static String USERNAME = "username";
-		public static String PASSWORD = "password";
-		public static String REGION_CODE = "region_code";
-		public static String INTRO_STEP = "intro_step";
-		public static String LAST_TIME_CONTACTS_UPDATER = "last_time_contacts_updater";
-		public static String LAST_TIME_GENERAL_NOTIFICATIONS = "last_time_notifications_sender";
-		public static String LAST_TIME_SUBSCRIPTION_NOTIFICATIONS = "last_time_subscription_notifications";
-		public static String SUBSCRIPTION_NOTIFICATIONS_FREQUENCY = "subscription_notifications";
-		public static String FRIENDS_COUNT = "friends_count";
-		public static String LATEST_MESSAGE_READ = "latest_message_read";
-		
-		/** This class may not be instantiated */
-		private Preferences() { }
-
-	}
 
 }

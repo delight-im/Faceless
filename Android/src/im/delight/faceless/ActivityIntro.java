@@ -51,7 +51,7 @@ public class ActivityIntro extends Activity {
 		
 		// load the introduction steps
 		mIntroductionSteps = getResources().getStringArray(R.array.introduction_steps);
-		mStep = mPrefs.getInt(Config.Preferences.INTRO_STEP, 0);
+		mStep = mPrefs.getInt(Global.Preferences.INTRO_STEP, 0);
 		
 		// make sure the step is valid
 		if (mStep >= mIntroductionSteps.length) {
@@ -119,7 +119,7 @@ public class ActivityIntro extends Activity {
 	
 	private void saveStep(int step) {
 		SharedPreferences.Editor editor = mPrefs.edit();
-		editor.putInt(Config.Preferences.INTRO_STEP, step);
+		editor.putInt(Global.Preferences.INTRO_STEP, step);
 		editor.apply();
 	}
 	

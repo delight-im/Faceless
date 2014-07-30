@@ -29,14 +29,14 @@ public class SubscriptionNotifications extends AbstractNotificationSender {
 
 	@Override
 	protected String getLastExecutionPreference() {
-		return Config.Preferences.LAST_TIME_SUBSCRIPTION_NOTIFICATIONS;
+		return Global.Preferences.LAST_TIME_SUBSCRIPTION_NOTIFICATIONS;
 	}
 
 	@Override
 	protected long getInterval() {
 		// depending on the notification frequency defined in the settings
 		createPreferencesIfNecessary();
-		final String frequency = mPrefs.getString(Config.Preferences.SUBSCRIPTION_NOTIFICATIONS_FREQUENCY, "frequently");
+		final String frequency = mPrefs.getString(Global.Preferences.SUBSCRIPTION_NOTIFICATIONS_FREQUENCY, "frequently");
 		if (frequency.equals("frequently")) {
 			// every 30 minutes
 			return 1800000;

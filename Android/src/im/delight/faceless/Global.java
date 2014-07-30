@@ -72,16 +72,16 @@ public class Global {
 		}
 		
 		public synchronized static void load(SharedPreferences prefs) {
-			mUsername = prefs.getString(Config.Preferences.USERNAME, "");
-			mPassword = prefs.getString(Config.Preferences.PASSWORD, "");
-			mRegionCode = prefs.getString(Config.Preferences.REGION_CODE, "");
+			mUsername = prefs.getString(Global.Preferences.USERNAME, "");
+			mPassword = prefs.getString(Global.Preferences.PASSWORD, "");
+			mRegionCode = prefs.getString(Global.Preferences.REGION_CODE, "");
 		}
 		
 		public synchronized static void save(SharedPreferences prefs) {
 			SharedPreferences.Editor editor = prefs.edit();
-			editor.putString(Config.Preferences.USERNAME, mUsername);
-			editor.putString(Config.Preferences.PASSWORD, mPassword);
-			editor.putString(Config.Preferences.REGION_CODE, mRegionCode);
+			editor.putString(Global.Preferences.USERNAME, mUsername);
+			editor.putString(Global.Preferences.PASSWORD, mPassword);
+			editor.putString(Global.Preferences.REGION_CODE, mRegionCode);
 			editor.apply();
 		}
 		
@@ -303,6 +303,24 @@ public class Global {
 		public static void fadeIn(View view) {
 			ObjectAnimator.ofFloat(view, FADE_IN_PROPERTY, FADE_IN_VALUES).setDuration(FADE_IN_DURATION).start();
 		}
+
+	}
+
+	public static class Preferences {
+
+		public static String USERNAME = "username";
+		public static String PASSWORD = "password";
+		public static String REGION_CODE = "region_code";
+		public static String INTRO_STEP = "intro_step";
+		public static String LAST_TIME_CONTACTS_UPDATER = "last_time_contacts_updater";
+		public static String LAST_TIME_GENERAL_NOTIFICATIONS = "last_time_notifications_sender";
+		public static String LAST_TIME_SUBSCRIPTION_NOTIFICATIONS = "last_time_subscription_notifications";
+		public static String SUBSCRIPTION_NOTIFICATIONS_FREQUENCY = "subscription_notifications";
+		public static String FRIENDS_COUNT = "friends_count";
+		public static String LATEST_MESSAGE_READ = "latest_message_read";
+		
+		/** This class may not be instantiated */
+		private Preferences() { }
 
 	}
 	

@@ -129,7 +129,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 		Global.Setup.load(mPrefs);
 		
 		// check if introduction has already been completed
-		if (mPrefs.getInt(Config.Preferences.INTRO_STEP, 0) < Integer.MAX_VALUE) {
+		if (mPrefs.getInt(Global.Preferences.INTRO_STEP, 0) < Integer.MAX_VALUE) {
 			// if introduction has not yet been completed
 			// switch to introduction screen
 			startActivity(new Intent(this, ActivityIntro.class));
@@ -336,12 +336,12 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 	@Override
 	public void onReceivedMessages(final int status, final int mode, final int page, final boolean reachedEnd, long latestMessageID, final int subscriptionUpdates, final List<Message> messages) {
 		// get the ID of the latest message read
-		long latestMessageRead = mPrefs.getLong(Config.Preferences.LATEST_MESSAGE_READ, 0);
+		long latestMessageRead = mPrefs.getLong(Global.Preferences.LATEST_MESSAGE_READ, 0);
 		
 		// update the ID of the latest message read if necessary
 		if (latestMessageID > latestMessageRead) {
 			SharedPreferences.Editor editor = mPrefs.edit();
-			editor.putLong(Config.Preferences.LATEST_MESSAGE_READ, latestMessageID);
+			editor.putLong(Global.Preferences.LATEST_MESSAGE_READ, latestMessageID);
 			editor.apply();
 		}
 		

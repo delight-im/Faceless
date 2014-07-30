@@ -29,7 +29,7 @@ public class ContactsUpdater extends RegularIntentService {
 
 	@Override
 	protected String getLastExecutionPreference() {
-		return Config.Preferences.LAST_TIME_CONTACTS_UPDATER;
+		return Global.Preferences.LAST_TIME_CONTACTS_UPDATER;
 	}
 
 	@Override
