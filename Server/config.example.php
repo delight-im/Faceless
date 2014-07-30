@@ -5,6 +5,7 @@ define('CONFIG_DB_USERNAME', 'REPLACE_THIS_WITH_VALUE'); // username for databas
 define('CONFIG_DB_PASSWORD', 'REPLACE_THIS_WITH_VALUE'); // password for database authorization
 define('CONFIG_API_LIVE', true); // whether the service is live or down due to maintenance
 define('CONFIG_API_DEBUG', true); // whether the API is in debugging mode or not
+define('CONFIG_ENFORCE_SSL', false); // whether to require HTTPS (SSL/TLS) for all requests (should be set to <true> in production environments)
 define('CONFIG_API_CLIENTS', serialize(array('Android' => 21))); // a list of valid API clients with their respective minimum software version ID
 define('CONFIG_API_SECRET', 'REPLACE_THIS_WITH_VALUE'); // secret used to verify request signatures
 define('CONFIG_HEADER_SIGNATURE', 'HTTP_X_METHOD_SIGNATURE'); // the HTTP header field that contains the API method signature (HMAC)

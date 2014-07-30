@@ -3,10 +3,6 @@
  * Live: https://faceless-api.herokuapp.com/
  * PHP >= 5.3.27
 
-## HTTPS
-
-HTTPS is required for all requests.
-
 ## HTTP Basic Auth
 
 HTTP Basic Auth is required for all requests.

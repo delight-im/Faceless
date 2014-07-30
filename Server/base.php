@@ -41,8 +41,8 @@ function getRequestIdentifier($requestData) {
 }
 function init($requestData) {
     if (CONFIG_API_LIVE) {
-        if (isHTTPS()) {
-            // if the client uses HTTPS which we enforce
+        if (!CONFIG_ENFORCE_SSL || isHTTPS()) {
+            // if the client uses HTTPS (or it's not enforced)
             if (isset($_SERVER['HTTP_USER_AGENT'])) {
                 // if User-Agent header is set
                 if (preg_match('/Faceless-([a-z_-]+)-([0-9]+)/i', $_SERVER['HTTP_USER_AGENT'], $userAgent)) {
