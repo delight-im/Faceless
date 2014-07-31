@@ -19,7 +19,6 @@ define('CONFIG_API_DEBUG', true); // whether the API is in debugging mode or not
 define('CONFIG_HMAC_ALGORITHM', 'sha256'); // the cryptographic hash algorithm that will be used for HMAC signatures
 define('CONFIG_MESSAGES_PER_PAGE', 50); // the number of messages to return per page
 define('CONFIG_COMMENTS_PER_PAGE', 100); // the number of comments to return per page
-define('CONFIG_MAX_MESSAGE_DELAY', 900); // the maximum delay in seconds to delay new messages with
 define('CONFIG_ADMIN_USER_IDS', serialize(array())); // a list of user IDs that have administrator privileges
 define('CONFIG_CLIENT_HASH_ALGORITHM', 'sha256'); // hash algorithm used on client-side to hash phone numbers
 define('CONFIG_CLIENT_HASH_ITERATIONS', 4); // number of hash iterations used on client-side to hash phone numbers

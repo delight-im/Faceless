@@ -36,9 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $messageSecret = makeHash($_POST['random']);
                     $textEncrypted = encrypt(trim($_POST['text']), $messageSecret);
 
-                    // publish the story with a random delay (up to 1 hour)
-                    $timePublished = time() + mt_rand(0, CONFIG_MAX_MESSAGE_DELAY);
                     // save the message
+                    $timePublished = time();
                     $messageFields = "user_id, color_hex, pattern_id, text_encrypted, message_secret, time_published, time_active, topic";
                     $messageValues = intval($userID).", ".Database::escape($_POST['colorHex']).", ".intval($_POST['patternID']).", ".Database::escape($textEncrypted).", ".Database::escape($messageSecret).", ".$timePublished.", ".$timePublished.", ".Database::escape($_POST['topic']);
                     if (isset($_POST['languageISO3'])) {

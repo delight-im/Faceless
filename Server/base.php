@@ -163,7 +163,7 @@ function auth($username, $password, $requiresWrite) {
     return NULL; // suppress IDE warnings
 }
 function getScoreUpdateSQL() {
-    $formula = "POW(1+favorites_count+comments_count/4, 0.85)/POW((".CONFIG_MAX_MESSAGE_DELAY."+".time()."-time_published)/86400, 1.25)";
+    $formula = "POW(1+favorites_count+comments_count/4, 0.85)/POW((".time()."-time_published)/86400, 1.25)";
 	return "IF(time_published < ".time().", ".$formula.", 0)";
 }
 function getDegree($userID, $messageID) {

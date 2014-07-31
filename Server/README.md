@@ -69,7 +69,7 @@ The degree is an integer and may be `0` (oneself), `1` (direct friend), `2` (fri
    * `isSubscribed` (optional) : `boolean` : whether the authenticating user has subscribed to the comments thread of the message
 
 ### `POST /messages/new`
- * Publishes a new message to the server that will be dispatched to its receivers later (asynchronously). Dispatching will be done after a short random delay to prevent users from guessing the author's identity from the entry's time. It will be done by creating entries in the recipients' feeds for each message. Access will initially be granted to all user that have a `friend` connection (as opposed to `block`) with the authenticating user, but may be extended by sharing.
+ * Publishes a new message to the server that will be dispatched to its receivers later (asynchronously). Dispatching will be done by creating entries in the recipients' feeds for each message. Access will initially be granted to all user that have a `friend` connection (as opposed to `block`) with the authenticating user, but may be extended by sharing.
  * Request:
    * `colorHex` : `string` : the background color (#RRGGBB)
    * `patternID` : `int` : the background pattern ID
