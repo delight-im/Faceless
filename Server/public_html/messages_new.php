@@ -35,8 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($_POST['patternID'] >= 0) {
                     $messageSecret = makeHash($_POST['random']);
                     $textEncrypted = encrypt(trim($_POST['text']), $messageSecret);
+                    $isAdmin = in_array($userID, unserialize(CONFIG_ADMIN_USER_IDS));
 
-                    // save the message
+                    // if the authenticating user is an admin user
+                    if ($isAdmin) {
+                        // set the message's background color to black
+                        $_POST['colorHex'] = '#000000';
+                        $_POST['patternID'] = 0;
+                        // set the message's geographic origin to "worldwide"
+                        $_POST['countryISO3'] = 'ZZZ';
+                    }
                     $timePublished = time();
                     $messageFields = "user_id, color_hex, pattern_id, text_encrypted, message_secret, time_published, time_active, topic";
                     $messageValues = intval($userID).", ".Database::escape($_POST['colorHex']).", ".intval($_POST['patternID']).", ".Database::escape($textEncrypted).", ".Database::escape($messageSecret).", ".$timePublished.", ".$timePublished.", ".Database::escape($_POST['topic']);
@@ -48,11 +56,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $messageFields .= ", country_iso3";
                         $messageValues .= ", ".Database::escape($_POST['countryISO3']);
                     }
+                    // if the authenticating user is an admin user
+                    if ($isAdmin) {
+                        // do not send the message to friends' feeds because account usage is not personal
+                        $messageFields .= ", dispatched";
+                        $messageValues .= ", 1";
+                    }
                     Database::insert("INSERT INTO messages (".$messageFields.") VALUES (".$messageValues.")");
                     $messageID = Database::getLastInsertID();
 
-                    // add the message to the author's feed
-                    Database::insert("INSERT INTO feeds (user_id, message_id, degree) VALUES (".intval($userID).", ".intval($messageID).", 0)");
+                    // unless the authenticating user is an admin user
+                    if (!$isAdmin) {
+                        // add the message to the author's feed
+                        Database::insert("INSERT INTO feeds (user_id, message_id, degree) VALUES (".intval($userID).", ".intval($messageID).", 0)");
+                    }
 
                     // subscribe to the comments thread
                     Database::insert("INSERT IGNORE INTO subscriptions (message_id, user_id, degree) VALUES (".intval($messageID).", ".intval($userID).", 0)");
