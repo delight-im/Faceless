@@ -88,51 +88,51 @@
 	</string-array>
 	<string name="meta_open_source_title"><b>This app uses the following third-party components which are available under the terms of open-source licenses:</b></string>
 	<string-array name="meta_permissions_body">
-		<item>+ \"Read phone status and identity\": Get your phone number, securely encrypt it, and use the encrypted number to anonymously connect you with your friends.</item>
-		<item>+ \"Read your contacts\": Get your contacts\' phone numbers, securely encrypt them, and use the encrypted numbers to anonymously connect you with your friends.</item>
-		<item>+ \"Full network access\": Send/receive messages, comments and favorites.</item>
-		<item>+ \"Run at startup\": Setting up notifications and synchronization again when you had switched off your device.</item>
+		<item>+ \"Ler identificação e estado do celular:\" Obtem o número do seu celular, realiza a criptografia segura dele e usa o número criptografado para conectá-lo de forma anônima aos seus amigos.</item>
+		<item>+ \"Ler seus contatos\": Obtem os números de celular dos seus contatos, realiza a criptografia segura deles e usa os números criptografados para conectá-lo de forma anônima aos seus amigos.</item>
+		<item>+ \"Acesso total a rede\": Envia/Recebe mensagens, comentários e favoritos.</item>
+		<item>+ \"Iniciar ao ligar\": Inicializa notificações e a sincronização após você ter desligado seu dispositivo.</item>
 	</string-array>
 	<string name="meta_permissions_title"><b>Permissões de aplicativo:</b></string>
 	<string-array name="meta_privacy_body">
-		<item>+ We only access your phone number and your contacts\' phone numbers. We don\'t access any names, email addresses or other contact details.</item>
-		<item>+ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.</item>
-		<item>+ As you can see, we require only those app permissions that are really necessary. No heavy list of extended permissions as with other apps.</item>
+		<item>+ Acessamos somente o número do seu celular e dos seus contatos. Não acessamos nenhum nome, e-mail ou outros detalhes de contatos.</item>
+		<item>+ Os números de celulares são criptografados de forma irreversível e direta (criptografia hash) no seu dispositivo e somente depois são enviados para nossos servidores. Números verdadeiros de celulares nunca saem do seu dispositivo.</item>
+		<item>+ Como você pode ver, requisitamos somente dessas permissões que são realmente necessárias. Sem nenhuma lista carregada de permissões extensas como outros aplicativos.</item>
 	</string-array>
 	<string name="meta_privacy_title"><b>Política de privacidade:</b></string>
 	<string-array name="meta_questions_answers">
-		<item><b>Do I have to sign up for Faceless?</b></item>
-		<item>No. You don\'t need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.</item>
-		<item><b>Who can see that I am the author of a message?</b></item>
-		<item>Nobody. People will only see that you are a \"Friend\" or a \"Friend of a friend\". Otherwise, we may show them your country, but never something specific.</item>
-		<item><b>Are comments anonymous as well?</b></item>
-		<item>Yes. The only thing that will be shown is whether a comment has been written by the same person who also wrote the original message.</item>
-		<item><b>Can I see which of my friends are on Faceless already?</b></item>
-		<item>No. This is to protect their privacy. From time to time, we may show you the number of friends, without any names, of course.</item>
-		<item><b>Can I ignore or block a particular person?</b></item>
-		<item>Yes. If you don\'t like what a person posts, you can add them to your block list. This cannot be undone later, however!</item>
-		<item><b>Can I help translate the app?</b></item>
-		<item>Yes, that would be great! Please find your language on: https://www.localize.im/v/36</item>
+		<item><b>Tenho que cadastrar-me para o Faceless?</b></item>
+		<item>Não. Você não precisa de conta, e-mail e nem uma senha. Nem conta no Facebook, no Google e nem Twitter.</item>
+		<item><b>Quem pode ver que eu sou o autor de uma mensagem?</b></item>
+		<item>Ninguém. As pessoas somente verão que você é um \"Amigo\" ou um \"Amigo de um amigo\". Caso contrário, poderemos mostrar a eles o seu país, mas, nada específico.</item>
+		<item><b>Os comentários são anônimos também?</b></item>
+		<item>Sim. A única coisa que será exibida é se o autor do comentário foi escrito pela mesma pessoa que escreveu a mensagem originalmente.</item>
+		<item><b>Posso ver quais dos meus amigos já estão no Faceless?</b></item>
+		<item>Não. Essa medida é para proteger a privacidade deles. De tempos, em tempos, nós poderemos mostrar a você, o número de amigos, sem exibição de nomes, é claro.</item>
+		<item><b>Posso ignorar ou bloquear uma pessoa em particular?</b></item>
+		<item>Sim. Se você não gostar de algo que uma pessoa comentar, você pode bloqueá-la. Porém, isso não pode ser desfeito posteriormente!</item>
+		<item><b>Posso ajudar com a tradução do aplicativo?</b></item>
+		<item>Sim, isso seria ótimo! Por favor, ache o seu idioma em: https://www.localize.im/v/36</item>
 	</string-array>
 	<string-array name="meta_security_body">
-		<item>+ All communication between the app and our servers is encrypted with SSL/TLS. Before your messages and comments are saved on our servers, they are encrypted again.</item>
-		<item>+ No personal information is ever send to any device. Your friends and other users have no way to find out who you are, unless you reveal your identity yourself.</item>
-		<item>+ Messages and comments don\'t stay online forever. They will be destroyed after some time automatically.</item>
-		<item>+ Even if your friends correctly guessed a message that you wrote, they would still not know about any other message of yours.</item>
-		<item>+ Faceless is independent. There is no big company behind and we don\'t try to maximize profits.</item>
+		<item>+ Todas as comunicações entre o aplicativo e nossos servidores são criptografadas com SSL/TLS. Antes que suas mensagens e comentários são gravados nos nossos servidores, eles são criptografados novamente.</item>
+		<item>+ Nunca nenhuma informação pessoal é enviada para nenhum dispositivo. Seus amigos e outros usuários não podem descobrir quem você é, a não ser que você mesmo se identifique.</item>
+		<item>+ Mensagens e comentários não ficam disponíveis para sempre. Eles serão destruídos após certo tempo.</item>
+		<item>+ Mesmo se seus amigos adivinharem que você escreveu uma mensagem, eles não saberão nada das suas outras mensagens.</item>
+		<item>+ O Faceless é independente. Não há nenhuma grande empresa por trás e nós não tentamos maximizar lucros.</item>
 	</string-array>
-	<string name="meta_security_title"><b>Is Faceless really secure?</b></string>
+	<string name="meta_security_title"><b>O Faceless é seguro realmente?</b></string>
 	<string-array name="modes_human">
-		<item>Latest messages</item>
-		<item>Friends\' messages</item>
-		<item>Popular messages</item>
+		<item>Últimas mensagens</item>
+		<item>Mensagens de amigos</item>
+		<item>Mensagens populares</item>
 		<item>Saved favorites</item>
 	</string-array>
 	<string name="next">Próximo</string>
 	<string name="ok">OK</string>
-	<string name="please_choose_topic">Please choose a topic for your message</string>
-	<string name="please_enter_message">Please enter a text for your message</string>
-	<string name="preview">Preview</string>
+	<string name="please_choose_topic">Escolha um assunto para a sua mensagem</string>
+	<string name="please_enter_message">Digite o texto da sua mensagem</string>
+	<string name="preview">Visualizar</string>
 	<string name="private_reply">Private reply</string>
 	<string name="publish">Publicar</string>
 	<string name="rate_app">Comente aplicativo</string>
@@ -153,7 +153,7 @@
 		<item>Block the author</item>
 	</string-array>
 	<string name="report_sent">Your report has been successfully sent</string>
-	<string name="report_warning_block">Are you sure you want to block the author of this entry?\n\nYou will no longer receive any messages from that person in the future.\n\nThis action cannot be undone later.</string>
+	<string name="report_warning_block">Tem certeza que você deseja bloquear o autor desse registro?\n\nVocê não irá receber mais mensagens dessa pessoa no futuro.\n\nO bloqueio não pode ser desfeito posteriormente.</string>
 	<string name="report_warning_report">Are you sure you want to report this entry as inappropriate?\n\nA report may cause the entry to be deleted and the author to be temporarily banned from Faceless.\n\nIf you are reporting a message, it will be removed from your personal feed immediately.</string>
 	<string name="save">Guardar</string>
 	<string name="send">Enviar</string>

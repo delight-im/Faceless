@@ -78,8 +78,8 @@
 	<string name="message">消息</string>
 	<string-array name="meta_about">
 		<item>无面者是一个可以向全世界的朋友畅所欲言的地方。</item>
-		<item>你可以是开放的，无论你谈什么。没有人会看到你是谁 — 这只是关于你的消息。</item>
-		<item>享受开放和善良。获取真实的反应和诚实的意见。让你的思想传播到世界各地。</item>
+		<item>你可以坦诚公开，无论你谈什么。没有人会知道你是谁 — 别人只能看到你的消息。</item>
+		<item>享受开放和善良，获取真实的反应和诚实的意见，让你的思想传播到世界各地。</item>
 		<item>你没有必要当心一个自己资历。也没有必要吹嘘。这里只有你的话语。</item>
 		<item>谈论事情可能会尴尬，不要害怕问问题。分享的东西没有任何缺点!</item>
 		<item>您将自动连接到你的朋友。阅读他们的消息、写评论 — 你永远不会知道他们是谁。</item>
@@ -88,16 +88,16 @@
 	</string-array>
 	<string name="meta_open_source_title"><b>这个应用程序根据开源许可证使用了以下第三方组件：</b></string>
 	<string-array name="meta_permissions_body">
-		<item>+ “读取手机状态和身份”：获取你的电话号码，安全加密，并使用加密的数据以匿名方式使你与你的朋友建立联络。</item>
-		<item>+ “读你的联系人”：获取你联系人的电话号码，安全加密，并使用加密的数据以匿名方式使你与你的朋友建立联络。</item>
+		<item>+ “读取手机状态和标识”：获取你的电话号码，安全加密后再使用加密的数据以匿名方式使你与你的朋友建立联络。</item>
+		<item>+ “读你的联系人”：获取你联系人的电话号码，安全加密后再使用加密的数据以匿名方式使你与你的朋友建立联络。</item>
 		<item>+ “完全网络访问”：发送/接收消息，评论和收藏。</item>
-		<item>+ “在启动时运行”：当你已经关闭您的设备，重新设置通知和同步。</item>
+		<item>+ “在启动时运行”：关闭设备后重新接受通知和同步。</item>
 	</string-array>
 	<string name="meta_permissions_title"><b>应用程序的权限：</b></string>
 	<string-array name="meta_privacy_body">
-		<item>+ 我们只访问您的电话号码和联系人的电话号码。我们不访问任何姓名，电子邮件地址或其他联系方式。</item>
-		<item>+ 电话号码在你的设备中使用不可逆转的单向加密方法(散列函数)的加密，稍后发送到我们的服务器中。真实的电话号码永远不会离开你的设备。</item>
-		<item>+ 正如你所看到的，我们只需要那些程序真正需要的权限。不像其他应用程序那样包含许多扩展权限列表。</item>
+		<item>+ 本应用只访问你和你的联系人的电话号码，不访问任何姓名，电子邮件地址或其他联系方式。</item>
+		<item>+ 你的电话号码使用不可逆的单向加密（散列函数）方式进行加密，稍后会发送到我们的服务器中。你尽可放心，因为即使知道这串加密字符也无法倒推出你的号码。</item>
+		<item>+ 正如你所看到的，我们只需要那些程序正常运行真正需要的权限，不像其他应用程序那样包含许多扩展权限列表。</item>
 	</string-array>
 	<string name="meta_privacy_title"><b>隐私政策：</b></string>
 	<string-array name="meta_questions_answers">
@@ -106,11 +106,11 @@
 		<item><b>谁会知道我是某条信息的撰写者？</b></item>
 		<item>没有人会知道。他们只能看到消息来自「朋友」或者「朋友的朋友」。还有种可能，我们会显示你的国家，但决不会涉及特定的信息。</item>
 		<item><b>所有的评论也要匿名吗？</b></item>
-		<item>Yes. The only thing that will be shown is whether a comment has been written by the same person who also wrote the original message.</item>
+		<item>是的。唯一的一个例外是本应用能指出原始消息和某评论是同一个人写的。</item>
 		<item><b>我可以看到我的哪些朋友在使用无面者吗？</b></item>
-		<item>不行。这是为了保护他们的隐私。不时，我们可能会告诉你的朋友的数量，但没有任何名字。</item>
+		<item>不行。这是为了保护他们的隐私。时不时地，我们可能会告诉你的朋友的数量，但没有任何名字。</item>
 		<item><b>我可以忽略或屏蔽某个人吗？</b></item>
-		<item>是的。如果你不喜欢一个人，你可以将它们添加到你屏蔽列表。然而这将无法撤消!</item>
+		<item>当然可以。如果你不喜欢一个人，你可以将他们添加到你屏蔽列表。警告：以后也不能撤消！</item>
 		<item><b>我可以帮忙翻译的这个应用程序吗？</b></item>
 		<item>是的，这将是伟大的！请在这里找到你的语言：https://www.localize.im/v/36</item>
 	</string-array>

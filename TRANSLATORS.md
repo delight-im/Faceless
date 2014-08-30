@@ -6,3 +6,5 @@
  * SodaCracker (`ZH-CN`)
  * Suleyman Celik (`TR`)
  * unsignedint (`JA`)
+ * Warley F. Lopes (`PT-BR`)
+ * yicn (`ZH-CN`)
