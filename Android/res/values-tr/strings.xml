@@ -27,6 +27,7 @@
 	<string name="block_user_added">Bu kullanıcından bir daha mesaj almayacaksınız</string>
 	<string name="cancel">İptal et</string>
 	<string name="choose_recipient">Alıcı seç</string>
+	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="comment_add_hint">Yorumun &#8230;</string>
 	<string name="comment_confirm_public_body">Yorumunuzun tüm kullanıcılara paylaşılmasını ister misiniz?\n\nEğer birisine özel olarak yanıt vermek istiyorsanız, lütfen cevap vermek istediğini yoruma dokunun.</string>
 	<string name="comment_confirm_public_title">Herkese açık yorum</string>
@@ -201,7 +202,6 @@
 	<string name="verify_phone_number">Telefon numarasını doğrula</string>
 	<string name="verify_phone_number_how">Bir sonraki adımda, mesajlaşma için kullandığınız uygulama sorulacaktır.\n\nLütfen Whatsapp ya da benzer uygulamalar kullanmayınız aksi takdirde çalışmayacaktır.\n\nBiz zaten mesaj alımları ve içerikleri konusunda gerekli olan özelliklere sahibiz.\n\nDoğrulama işlemini tamamlamak için metni değiştirmeden sadece \"Gönder\" butonuna dokununuz.\n\nBirkaç dakika sonra, Faceless\'i açabilir ve size sunduğumuz tüm özellikleri kullanabilirsiniz.\n\nNot: Mesajlaşma ücreti olarak uluslararası kabul gören fiyat uygulanacaktır.</string>
 	<string name="verify_phone_number_why">Sizi ve arkadaşlarınızı dolandırıcılıktan korumak için telefon numaranızı doğrulamamız gerekmektedir.\n\nTelefon doğrulama işlemi sizlere daha güvenli ve zevkli bir hizmet sunmamız için bize yardım edecek.\n\nŞimdi telefon doğrulama işlemini yapmak ister misiniz?\n\nNot: Uygulamayı sadece tek cihazda kullanabilirsiniz.\n\nYardıma ihtiyacınız mı var? Bizimle %s aracılığıyla iletişim kurabilirsiniz.</string>
-	<string name="write">Yaz</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d tane karakter kaldı</item>
 		<item quantity="one">%d tane karakter kaldı</item>

@@ -27,6 +27,7 @@
 	<string name="block_user_added">このユーザーからメッセージを受け取ることはもうありません。</string>
 	<string name="cancel">キャンセル</string>
 	<string name="choose_recipient">送信先を選ぶ</string>
+	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="comment_add_hint">あなたのコメント…</string>
 	<string name="comment_confirm_public_body">このコメントを全ユーザーに公開しますか?\n\n特定の誰かにプライベートに返答したい場合は、そのコメントをタップしてください。</string>
 	<string name="comment_confirm_public_title">公開コメント</string>
@@ -201,7 +202,6 @@
 	<string name="verify_phone_number">電話番号を確認する</string>
 	<string name="verify_phone_number_how">普段お使いのテキストメッセージアプリを起動してください。\n\nWhatsAppなどは正しく動作しません。\n\n受信者と内容はこちらでセット済みです。\n\n内容は変更せず、「送信」してください。\n\n数分で、Facelessを開いてすべての機能が使えるようになります。\n\n注意: あなたのお使いの携帯電話会社の、国際SMSの料金が掛かります。</string>
 	<string name="verify_phone_number_why">あなたと友人を詐欺等から守るため、あなたの電話番号を確認させていただきます。\n\nこれによって、安全なサービスを全員が楽しめます。\n\n電話番号の確認を今行いますか?\n\n注意: このアプリは一つのデバイスからのみ使えます。\n\n手助けが必要ですか? %s へ(英語で)連絡ください。</string>
-	<string name="write">書き込む</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">あと %d 文字</item>
 		<item quantity="one">あと %d 文字</item>

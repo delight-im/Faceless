@@ -27,6 +27,7 @@
 	<string name="block_user_added">You will no longer receive messages from this user</string>
 	<string name="cancel">Cancel</string>
 	<string name="choose_recipient">Choose recipient</string>
+	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="comment_add_hint">Your comment &#8230;</string>
 	<string name="comment_confirm_public_body">Do you want to publish this comment for all users?\n\nIf you want to reply to somebody privately instead, please tap on the respective comment.</string>
 	<string name="comment_confirm_public_title">Public comment</string>
@@ -201,7 +202,6 @@
 	<string name="verify_phone_number">Verify phone number</string>
 	<string name="verify_phone_number_how">In the next step, you\'ll be asked to start your usual app for text messages.\n\nPlease don\'t use WhatsApp or similar apps here, this won\'t work.\n\nWe\'ll have filled in the recipient and the content for your text message already.\n\nPlease don\'t change the text and just press \"Send\" to complete the verification.\n\nA few minutes later, you should be able to open Faceless and use all features as expected.\n\nNote: The normal fees by your carrier for international text messages apply.</string>
 	<string name="verify_phone_number_why">In order to protect you and your friends from fraud, we must verify your phone number.\n\nThis helps us offer a secure and enjoyable service for all users.\n\nDo you want to verify your number now?\n\nNote: You can only use this app on a single device.\n\nNeed help? Get in touch with us at %s</string>
-	<string name="write">Write</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d chars left</item>
 		<item quantity="one">%d char left</item>

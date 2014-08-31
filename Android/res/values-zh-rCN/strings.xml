@@ -27,6 +27,7 @@
 	<string name="block_user_added">你不会再接受到这个用户的消息</string>
 	<string name="cancel">取消</string>
 	<string name="choose_recipient">选择收件人</string>
+	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="comment_add_hint">你的评论 &#8230;</string>
 	<string name="comment_confirm_public_body">你想给所有用户发表评论?\n\n相反如果你私下回复某人，请点击相应的评论。</string>
 	<string name="comment_confirm_public_title">公开的评论</string>
@@ -201,7 +202,6 @@
 	<string name="verify_phone_number">验证你的手机号</string>
 	<string name="verify_phone_number_how">在接下来的步骤中，您会被要求启动你的短信应用。 \n\n在这里请不要使用WhatsApp的或类似的应用程序，这是不行的。 \n\n我们已经在您的短信填写收件人和内容。 \n\n请不要更改文本，并按下“发送”即可完成验证。 \n\n几分钟后，你应该能够打开无面者，使用所有的预期功能。 \n\n注意：费用由您的运营商国际短信资费决定。</string>
 	<string name="verify_phone_number_why">为了保护你和你的朋友免受欺诈，我们必须验证您的电话号码。 \n\n这有助于我们给所有用户提供一个安全和愉快的服务。 \n\n你现在要核实你的电话号码？ \n\n注意：您只能使用一个单一的设备上这个程序。 \n\n需要帮助？通过%s与我们取得联系</string>
-	<string name="write">写</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">还剩%d个字</item>
 		<item quantity="one">还剩%d个字</item>

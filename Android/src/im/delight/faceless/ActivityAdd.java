@@ -45,6 +45,11 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	public static final String EXTRA_PATTERN_ID = "patternID";
 	public static final String EXTRA_TEXT = "text";
 	private static final int MAX_CHARS_MESSAGE = 240;
+	// TWO MAIN VIEW GROUPS BEGIN
+	private View mViewOptionsContainer;
+	private View mViewMessageContainer;
+	// TWO MAIN VIEW GROUPS END
+	private Button mButtonNext;
 	private Button mButtonPublish;
 	private EditText mEditTextMessage;
 	private TextView mTextViewDegree;
@@ -119,6 +124,33 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		super.onNewIntent(intent);
 		updateTextAndColor(intent);
 	}
+	
+	private void setActiveScreen(int index) {
+		if (index == 0) {
+			mViewMessageContainer.setVisibility(View.GONE);
+			mViewOptionsContainer.setVisibility(View.VISIBLE);
+			setTitle(R.string.action_add);
+		}
+		else if (index == 1) {
+			mViewOptionsContainer.setVisibility(View.GONE);
+			mViewMessageContainer.setVisibility(View.VISIBLE);
+			setTitle(mSpinnerTopic.getValue().toString());
+		}
+		else {
+			throw new RuntimeException("Unknown screen index: "+index);
+		}
+		invalidateOptionsMenu();
+	}
+	
+	@Override
+	public void onBackPressed() {
+		if (mViewMessageContainer.getVisibility() == View.VISIBLE) {
+			setActiveScreen(0);
+		}
+		else {
+			super.onBackPressed();
+		}
+	}
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -131,24 +163,34 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		mResources = getResources();
 		mBackgroundPatterns = BackgroundPatterns.getInstance(this);
 		
+		// set up two main view groups
+		mViewOptionsContainer = findViewById(R.id.viewOptionsContainer);
+		mViewMessageContainer = findViewById(R.id.viewMessageContainer);
+		
 		// set up the buttons
+		mButtonNext = (Button) findViewById(R.id.buttonNext);
+		mButtonNext.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (mSpinnerTopic.getKey() != null && mSpinnerTopic.getKey().length() > 0) {
+					setActiveScreen(1);
+				}
+				else {
+					Toast.makeText(ActivityAdd.this, R.string.please_choose_topic, Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
 		mButtonPublish = (Button) findViewById(R.id.buttonPublish);
 		mButtonPublish.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				final CharSequence selectedTopic = mSpinnerTopic.getKey();
-				if (selectedTopic != null && selectedTopic.length() > 0) {
-					final String text = Emoji.replaceInText(mText.trim());
-					if (text.length() > 0) {
-						setLoading(true);
-						Server.saveMessage(ActivityAdd.this, Data.colorToHex(mColor), mPatternID, text, selectedTopic.toString(), ActivityAdd.this);
-					}
-					else {
-						Toast.makeText(ActivityAdd.this, getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
-					}
+				final String text = Emoji.replaceInText(mText.trim());
+				if (text.length() > 0) {
+					setLoading(true);
+					Server.saveMessage(ActivityAdd.this, Data.colorToHex(mColor), mPatternID, text, mSpinnerTopic.getKey().toString(), ActivityAdd.this);
 				}
 				else {
-					Toast.makeText(ActivityAdd.this, getString(R.string.please_choose_topic), Toast.LENGTH_SHORT).show();
+					Toast.makeText(ActivityAdd.this, getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -235,7 +277,15 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.add, menu);
-		return true;
+
+		if (mViewMessageContainer.getVisibility() == View.VISIBLE) {
+			// show the menu
+			return true;
+		}
+		else {
+			// hide the menu
+			return false;
+		}
 	}
 	
 	@Override
