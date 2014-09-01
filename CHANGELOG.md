@@ -283,3 +283,15 @@
  * Translations have been updated for Turkish and Chinese.
  * (The smooth scrollbar has been replaced with a step-based (skipping) scrollbar on the comments pages. This is because the items are not of equal height and thus the scrollbar was always changing its size while scrolling.)
  * (The mode selection (Spinner) is now correctly updated when pressing the back key on the main page.)
+
+## Version 2.6.0
+
+ * You can now decide who to share your messages with. This allows for completely anonymous messages that won't appear in your friends' feeds.
+ * The process of posting a new message has been simplified and split to two separate screens for more clarity.
+ * (The artificial delay when posting new messages has been removed to avoid confusion.)
+ * (Refactored and restructured the configuration file for the Android client.)
+ * (Refactored and restructured the configuration file for the server.)
+ * (Added full documentation to the configuration file of the Android client.)
+ * (Added full documentation to the configuration file of the server.)
+ * (Let admin accounts post content as official messages.)
+ * (Make HTTPS configurable so that development servers don't necessarily need SSL/TLS.)
