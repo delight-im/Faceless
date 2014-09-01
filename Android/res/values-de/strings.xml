@@ -16,7 +16,6 @@
 	<string name="action_report">Nachricht melden</string>
 	<string name="action_settings">Einstellungen</string>
 	<string name="action_share_picture">Als Bild teilen</string>
-	<string name="anonymous">Anonym</string>
 	<string name="app_name">Faceless</string>
 	<string name="app_rater_explanation">Wie gefällt Dir diese App? Wir würden uns sehr freuen, wenn Du unsere Anwendung auf Google Play bewerten könntest. Vielen Dank für Deine Unterstützung!</string>
 	<string name="app_rater_later">Später</string>
@@ -28,6 +27,7 @@
 	<string name="cancel">Abbrechen</string>
 	<string name="choose_recipient">Empfänger auswählen</string>
 	<string name="choose_topic_help">Über welches Thema möchtest Du etwas schreiben? Deine Auswahl hilft anderen, nur die Inhalte zu sehen, die sie interessieren.</string>
+	<string name="choose_visibility_help">Mit wem möchtest Du Deine Nachricht teilen? In keinem Fall wird jemand sehen können, wer Du bist. Nachrichten auf Faceless sind immer anonym.</string>
 	<string name="comment_add_hint">Dein Kommentar &#8230;</string>
 	<string name="comment_confirm_public_body">Möchtest Du diesen Kommentar für alle Nutzer veröffentlichen?\n\nWenn Du stattdessen jemandem privat antworten möchtest, tippe bitte auf den entsprechenden Kommentar.</string>
 	<string name="comment_confirm_public_title">Öffentlicher Kommentar</string>
@@ -202,6 +202,8 @@
 	<string name="verify_phone_number">Telefonnummer bestätigen</string>
 	<string name="verify_phone_number_how">Im nächsten Schritt wirst Du gebeten, Deine normale SMS-App zu öffnen.\n\nBitte nutze nicht WhatsApp oder ähnliche Apps, das funktioniert nicht.\n\nWir werden den Empfänger und den Inhalt für Deine SMS schon ausgefüllt haben.\n\nBitte ändere den Text nicht und drücke einfach auf \"Senden\", um die Bestätigung abzuschließen.\n\nEin paar Minuten später wirst Du Faceless öffnen und alle Funktionen wie erwartet nutzen können.\n\nHinweis: Es gelten die normalen Gebühren Deines Mobilfunkbetreibers für internationale SMS.</string>
 	<string name="verify_phone_number_why">Um Dich und Deine Freunde vor Betrug zu schützen, müssen wir Deine Telefonnummer bestätigen.\n\nDas hilft uns, einen sicheren und angenehmen Service für alle Nutzer anzubieten.\n\nMöchtest Du Deine Nummer jetzt bestätigen?\n\nHinweis: Du kannst diese App nur auf einem einzigen Gerät benutzen.\n\nDu brauchst Hilfe? Melde Dich bei uns unter %s</string>
+	<string name="visibility_friends_public">Freunde und öffentlich</string>
+	<string name="visibility_public">Nur öffentlich</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d Zeichen übrig</item>
 		<item quantity="one">%d Zeichen übrig</item>

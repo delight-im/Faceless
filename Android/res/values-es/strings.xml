@@ -16,7 +16,6 @@
 	<string name="action_report">Denunciar mensaje</string>
 	<string name="action_settings">Configuración</string>
 	<string name="action_share_picture">Compartir como una imagen</string>
-	<string name="anonymous">Anónimo</string>
 	<string name="app_name">Faceless</string>
 	<string name="app_rater_explanation">¿Que piensas de esta aplicación? Nos encantaría que calificaras nuestra aplicación en Google Play. ¡Gracias por tu apoyo!</string>
 	<string name="app_rater_later">Más tarde</string>
@@ -28,6 +27,7 @@
 	<string name="cancel">Cancelar</string>
 	<string name="choose_recipient">Elige un receptor</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
+	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Tu comentario &#8230;</string>
 	<string name="comment_confirm_public_body">¿Deseas publicar este comentario para todos los usuarios?\n\nSi deseas responder a alguien de forma privada, pulsa sobre el respectivo comentario.</string>
 	<string name="comment_confirm_public_title">Comentario público</string>
@@ -202,6 +202,8 @@
 	<string name="verify_phone_number">Verifique el número de teléfono</string>
 	<string name="verify_phone_number_how">En el siguiente paso, se te pedirá que inicies la app que utilizas para los mensajes de texto.\n\nPor favor no selecciones WhatsApp or app similares aquí, no funcionarán.\n\nLlenaremos el destinatario y el contenido del mensaje automaticamente.\n\nPor favor no cambies el mensajes y solo presiona \"Enviar\" para completar la verificación.\n\nLuego de algunos minutos, deberías poder acceder a Faceless y usar todas la funciones.\n\nNota: se aplicarán los costos normales de mensajes de texto internacionales de tu compañía telefónica.</string>
 	<string name="verify_phone_number_why">Con el fin de protegerte a tí y tus amigos de fraude, debemos verificar tu número.\n\nEsto nos ayuda a ofrecer un servicio seguro y agradable para todos los usuarios.\n\n¿Deseas verificar tu número ahora?\n\nNota: solo puedes utilizar esta aplicación en un solo dispositivo.\n\n¿Necesitas ayuda? Contáctanos con nosotros en %s</string>
+	<string name="visibility_friends_public">Friends and public</string>
+	<string name="visibility_public">Public only</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d caracteres dejados</item>
 		<item quantity="one">%d caracter dejado</item>

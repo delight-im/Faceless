@@ -16,7 +16,6 @@
 	<string name="action_report">Mesajı şikayet et</string>
 	<string name="action_settings">Ayarlar</string>
 	<string name="action_share_picture">Resim olarak paylaş</string>
-	<string name="anonymous">Anonim</string>
 	<string name="app_name">Faceless</string>
 	<string name="app_rater_explanation">Uygulamamızı beğendiniz mi? Eğer Google Play\'de uygulamamızı değerlendirirseniz çok mutlu oluruz. Desteğiniz için teşekkürler.</string>
 	<string name="app_rater_later">Daha sonra</string>
@@ -28,6 +27,7 @@
 	<string name="cancel">İptal et</string>
 	<string name="choose_recipient">Alıcı seç</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
+	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Yorumun &#8230;</string>
 	<string name="comment_confirm_public_body">Yorumunuzun tüm kullanıcılara paylaşılmasını ister misiniz?\n\nEğer birisine özel olarak yanıt vermek istiyorsanız, lütfen cevap vermek istediğini yoruma dokunun.</string>
 	<string name="comment_confirm_public_title">Herkese açık yorum</string>
@@ -202,6 +202,8 @@
 	<string name="verify_phone_number">Telefon numarasını doğrula</string>
 	<string name="verify_phone_number_how">Bir sonraki adımda, mesajlaşma için kullandığınız uygulama sorulacaktır.\n\nLütfen Whatsapp ya da benzer uygulamalar kullanmayınız aksi takdirde çalışmayacaktır.\n\nBiz zaten mesaj alımları ve içerikleri konusunda gerekli olan özelliklere sahibiz.\n\nDoğrulama işlemini tamamlamak için metni değiştirmeden sadece \"Gönder\" butonuna dokununuz.\n\nBirkaç dakika sonra, Faceless\'i açabilir ve size sunduğumuz tüm özellikleri kullanabilirsiniz.\n\nNot: Mesajlaşma ücreti olarak uluslararası kabul gören fiyat uygulanacaktır.</string>
 	<string name="verify_phone_number_why">Sizi ve arkadaşlarınızı dolandırıcılıktan korumak için telefon numaranızı doğrulamamız gerekmektedir.\n\nTelefon doğrulama işlemi sizlere daha güvenli ve zevkli bir hizmet sunmamız için bize yardım edecek.\n\nŞimdi telefon doğrulama işlemini yapmak ister misiniz?\n\nNot: Uygulamayı sadece tek cihazda kullanabilirsiniz.\n\nYardıma ihtiyacınız mı var? Bizimle %s aracılığıyla iletişim kurabilirsiniz.</string>
+	<string name="visibility_friends_public">Friends and public</string>
+	<string name="visibility_public">Public only</string>
 	<plurals name="x_chars_left">
 		<item quantity="zero">%d tane karakter kaldı</item>
 		<item quantity="one">%d tane karakter kaldı</item>

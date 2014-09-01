@@ -20,6 +20,9 @@
 require_once(__DIR__.'/../base.php');
 require_once(__DIR__.'/../base_crypto.php');
 
+define('VISIBILITY_FRIENDS_AND_PUBLIC', 'friends_public');
+define('VISIBILITY_PUBLIC_ONLY', 'public');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // initialization
     $user = init($_POST);
@@ -27,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userID = auth($user['username'], $user['password'], true);
     // check if required parameters are set
     if (isset($_POST['colorHex']) && isset($_POST['patternID']) && isset($_POST['text']) && isset($_POST['topic']) && isset($_POST['random'])) {
+        if (!isset($_POST['visibility'])) { // XXX remove this check with default value and add a condition above instead, later
+            $_POST['visibility'] = VISIBILITY_FRIENDS_AND_PUBLIC;
+        }
         // check color string (hex) for validity
         if (preg_match("/^#[abcdef0-9]{6}$/i", $_POST['colorHex'])) {
             // require at least 32 characters for the random string
@@ -56,12 +62,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $messageFields .= ", country_iso3";
                         $messageValues .= ", ".Database::escape($_POST['countryISO3']);
                     }
-                    // if the authenticating user is an admin user
-                    if ($isAdmin) {
-                        // do not send the message to friends' feeds because account usage is not personal
+
+                    if ($_POST['visibility'] == VISIBILITY_FRIENDS_AND_PUBLIC) {
+                        // send the message to all friends' feeds
+                        $messageFields .= ", dispatched";
+                        $messageValues .= ", 0";
+                    }
+                    elseif ($_POST['visibility'] == VISIBILITY_PUBLIC_ONLY) {
+                        // do not send the message to any friend's feeds
                         $messageFields .= ", dispatched";
                         $messageValues .= ", 1";
                     }
+                    else {
+                        respond(array('status' => 'bad_request'));
+                    }
+
                     Database::insert("INSERT INTO messages (".$messageFields.") VALUES (".$messageValues.")");
                     $messageID = Database::getLastInsertID();
 

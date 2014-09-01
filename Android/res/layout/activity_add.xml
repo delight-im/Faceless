@@ -12,23 +12,36 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:background="@color/background_darkest">
-	    <LinearLayout
-	        android:orientation="vertical"
-		    android:layout_width="match_parent"
-		    android:layout_height="0dp"
-		    android:layout_weight="1"
-		    android:layout_marginLeft="8dp"
-		    android:layout_marginRight="8dp">
-		    <TextView
-		        android:layout_width="match_parent"
-		        android:text="@string/choose_topic_help"
-		        android:textColor="#ffffff"
-		        style="@style/TextView_Readable" />
-			<im.delight.android.keyvaluespinner.KeyValueSpinner
-			    android:id="@+id/spinnerTopic"
+	    <ScrollView
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1">
+		    <LinearLayout
+		        android:orientation="vertical"
 			    android:layout_width="match_parent"
-			    style="@style/Spinner_Readable.Light" />
-		</LinearLayout>
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="8dp"
+			    android:layout_marginRight="8dp">
+			    <TextView
+			        android:layout_width="match_parent"
+			        android:text="@string/choose_topic_help"
+			        android:textColor="#ffffff"
+			        style="@style/TextView_Readable" />
+				<im.delight.android.keyvaluespinner.KeyValueSpinner
+				    android:id="@+id/spinnerTopic"
+				    android:layout_width="match_parent"
+				    style="@style/Spinner_Readable.Light" />
+			    <TextView
+			        android:layout_width="match_parent"
+			        android:text="@string/choose_visibility_help"
+			        android:textColor="#ffffff"
+			        style="@style/TextView_Readable" />
+				<im.delight.android.keyvaluespinner.KeyValueSpinner
+				    android:id="@+id/spinnerVisibility"
+				    android:layout_width="match_parent"
+				    style="@style/Spinner_Readable.Light" />
+			</LinearLayout>
+		</ScrollView>
 	    <include layout="@layout/divider" />
 		<Button
 			android:id="@+id/buttonNext"
@@ -63,7 +76,6 @@
 			    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:textSize="@dimen/fontsize_small"
-			    android:text="@string/anonymous"
 			    android:paddingLeft="4dp"
 			    android:paddingBottom="4dp"
 			    android:gravity="left" />

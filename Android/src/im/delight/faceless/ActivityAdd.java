@@ -55,6 +55,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	private TextView mTextViewDegree;
 	private TextView mTextViewCharsLeft;
 	private KeyValueSpinner<CharSequence> mSpinnerTopic;
+	private KeyValueSpinner<CharSequence> mSpinnerVisibility;
 	private int mColor;
 	private int mPatternID;
 	private String mText;
@@ -135,6 +136,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			mViewOptionsContainer.setVisibility(View.GONE);
 			mViewMessageContainer.setVisibility(View.VISIBLE);
 			setTitle(mSpinnerTopic.getValue().toString());
+			mTextViewDegree.setText(mSpinnerVisibility.getValue().toString());
 		}
 		else {
 			throw new RuntimeException("Unknown screen index: "+index);
@@ -173,7 +175,12 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			@Override
 			public void onClick(View v) {
 				if (mSpinnerTopic.getKey() != null && mSpinnerTopic.getKey().length() > 0) {
-					setActiveScreen(1);
+					if (mSpinnerVisibility.getKey() != null && mSpinnerVisibility.getKey().length() > 0) {
+						setActiveScreen(1);
+					}
+					else {
+						throw new RuntimeException("Undefined visibility level");
+					}
 				}
 				else {
 					Toast.makeText(ActivityAdd.this, R.string.please_choose_topic, Toast.LENGTH_SHORT).show();
@@ -187,7 +194,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				final String text = Emoji.replaceInText(mText.trim());
 				if (text.length() > 0) {
 					setLoading(true);
-					Server.saveMessage(ActivityAdd.this, Data.colorToHex(mColor), mPatternID, text, mSpinnerTopic.getKey().toString(), ActivityAdd.this);
+					Server.saveMessage(ActivityAdd.this, Data.colorToHex(mColor), mPatternID, text, mSpinnerTopic.getKey().toString(), mSpinnerVisibility.getKey().toString(), ActivityAdd.this);
 				}
 				else {
 					Toast.makeText(ActivityAdd.this, getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
@@ -257,6 +264,13 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		// show the Adapter's data in the Spinner
 		topicsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mSpinnerTopic.setAdapter(topicsAdapter);
+
+		// set up the visibility selection Spinner
+		mSpinnerVisibility = (KeyValueSpinner<CharSequence>) findViewById(R.id.spinnerVisibility);
+		final KeyValueSpinner.Adapter<CharSequence> visibilityAdapter = KeyValueSpinner.Adapter.createFromResource(this, R.array.visibility_list_machine, R.array.visibility_list_human, R.layout.spinner_text_white);
+		// show the Adapter's data in the Spinner
+		visibilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mSpinnerVisibility.setAdapter(visibilityAdapter);
 
 		// set up the action bar
 		getActionBar().setDisplayHomeAsUpEnabled(true);

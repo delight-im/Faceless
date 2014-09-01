@@ -107,4 +107,12 @@
 	</string-array>
 	<string name="topics_empty_machine" translatable="false"></string>
 	<string name="topics_meta_machine" translatable="false">meta</string>
+	<string-array name="visibility_list_human" translatable="false">
+	    <item>@string/visibility_friends_public</item>
+	    <item>@string/visibility_public</item>
+	</string-array>
+	<string-array name="visibility_list_machine" translatable="false">
+	    <item>friends_public</item>
+	    <item>public</item>
+	</string-array>
 </resources>

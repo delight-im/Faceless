@@ -176,13 +176,14 @@ public class Server {
 		});
 	}
 	
-	public static void saveMessage(final Context context, final String colorHex, final int patternID, final String text, final String topic, final Callback.MessageEvent callback) {
+	public static void saveMessage(final Context context, final String colorHex, final int patternID, final String text, final String topic, final String visibility, final Callback.MessageEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/messages/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("colorHex", colorHex);
 		request.addParam("patternID", patternID);
 		request.addParam("text", text);
 		request.addParam("topic", topic);
+		request.addParam("visibility", visibility);
 		try {
 			request.addParam("languageISO3", Locale.getDefault().getISO3Language().toUpperCase(Locale.US));
 		}
