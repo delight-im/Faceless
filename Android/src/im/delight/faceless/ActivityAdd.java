@@ -121,6 +121,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		mTextViewCharsLeft.setTextColor(textColor);
 	}
 	
+	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		updateTextAndColor(intent);
@@ -331,6 +332,8 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	@Override
 	public void onSentMessage(final int status, final String messageText, final String messageTopic, final String messageID, final long messageTime, final String messageColorHex, final int messagePatternID, final String messageCountryISO3) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
@@ -363,6 +366,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 					Toast.makeText(ActivityAdd.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 

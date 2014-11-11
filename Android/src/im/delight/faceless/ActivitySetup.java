@@ -41,6 +41,8 @@ public class ActivitySetup extends Activity {
 			
 			// check the input and run the setup in a new thread
 			new Thread() {
+
+				@Override
 				public void run() {
 					final String phoneNumber = mEditTextPhoneNumber.getText().toString().trim();
 					final String countryIso2 = Phone.getCountry(ActivitySetup.this, "US");
@@ -48,6 +50,8 @@ public class ActivitySetup extends Activity {
 
 					// show the results back on the UI thread
 					runOnUiThread(new Runnable() {
+
+						@Override
 						public void run() {
 							// if a valid phone number has been entered
 							if (validatedPhoneData != null) {
@@ -83,8 +87,10 @@ public class ActivitySetup extends Activity {
 								setLoading(false);
 							}
 						}
+
 					});
 				}
+
 			}.start();
 		}
 	};

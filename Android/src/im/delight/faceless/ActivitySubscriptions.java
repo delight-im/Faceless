@@ -107,7 +107,7 @@ public class ActivitySubscriptions extends AbstractMessagesActivity implements S
 	}
 	
 	@Override
-	protected void onDestroy() {
+	public void onDestroy() {
 		super.onDestroy();
 		
 		// stop listening for new messages read on the current Adapter
@@ -120,6 +120,8 @@ public class ActivitySubscriptions extends AbstractMessagesActivity implements S
 	@Override
 	public void onClearedSubscriptions(final int status) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 
@@ -150,6 +152,7 @@ public class ActivitySubscriptions extends AbstractMessagesActivity implements S
 					Toast.makeText(ActivitySubscriptions.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 

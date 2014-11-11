@@ -323,7 +323,8 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 		startService(new Intent(this, SubscriptionNotifications.class));
 	}
 	
-	protected void onDestroy() {
+	@Override
+	public void onDestroy() {
 		super.onDestroy();
 		setLoading(false);
     	startService(new Intent(this, ContactsUpdater.class));
@@ -357,6 +358,8 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 		}
 
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 
@@ -444,6 +447,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 				
 				onUpdated(status, page);
 			}
+
 		});
 	}
 
@@ -456,15 +460,20 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 	@Override
 	public void onLoadVerification() {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(true);
 			}
+
 		});
 	}
 	
 	@Override
 	public void onPreparedVerification(final int status, final String apiPhoneNumber, final String verificationCode, final long validUntil) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
@@ -522,6 +531,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 					Toast.makeText(AbstractMessagesActivity.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 

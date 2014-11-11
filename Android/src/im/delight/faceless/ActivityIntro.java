@@ -64,7 +64,7 @@ public class ActivityIntro extends Activity {
 		mButtonNext = (Button) findViewById(R.id.buttonNext);
 		mProgressBarStep = (ProgressBar) findViewById(R.id.progressBarStep);
 		mTextViewStep = (TextView) findViewById(R.id.textViewStep);
-		updateTextAndProgress(mStep);
+		updateTextAndProgress();
 
 		// set up background color and pattern for the TextView
 		BackgroundPatterns.applyRandomBackground(this, mTextViewIntroduction);
@@ -78,7 +78,7 @@ public class ActivityIntro extends Activity {
 				// if there are stil steps to be shown
 				if (mStep < mIntroductionSteps.length) {
 					saveStep(mStep);
-					updateTextAndProgress(mStep);
+					updateTextAndProgress();
 				}
 				// if introduction has been completed
 				else {
@@ -86,6 +86,8 @@ public class ActivityIntro extends Activity {
 					final SimpleProgressDialog loadingDialog = SimpleProgressDialog.show(ActivityIntro.this);
 					// do the time-consuming work in another thread
 					new Thread() {
+
+						@Override
 						public void run() {
 							// pre-run the setup here with a loading indicator so that the main screen remains responsive
 							Global.Setup.load(mPrefs);
@@ -94,6 +96,8 @@ public class ActivityIntro extends Activity {
 							}
 
 							runOnUiThread(new Runnable() {
+
+								@Override
 								public void run() {
 									// mark the introduction as completed
 									saveStep(Integer.MAX_VALUE);
@@ -109,8 +113,10 @@ public class ActivityIntro extends Activity {
 									overridePendingTransition(0, 0);
 									finish();
 								}
+
 							});
 						}
+
 					}.start();
 				}
 			}
@@ -123,7 +129,7 @@ public class ActivityIntro extends Activity {
 		editor.apply();
 	}
 	
-	private void updateTextAndProgress(int step) {
+	private void updateTextAndProgress() {
 		mTextViewIntroduction.setText(mIntroductionSteps[mStep]);
 		
 		int percentage = 100 * (mStep+1) / mIntroductionSteps.length;

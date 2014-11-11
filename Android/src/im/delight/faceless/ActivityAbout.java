@@ -135,11 +135,11 @@ public class ActivityAbout extends Activity {
 		}
 	}
 	
-	private void addString(StringBuilder builder, String string) {
+	private static void addString(StringBuilder builder, String string) {
 		addString(builder, string, false);
 	}
 	
-	private void addString(StringBuilder builder, String string, boolean isHeadline) {
+	private static void addString(StringBuilder builder, String string, boolean isHeadline) {
 		if (isHeadline) {
 			builder.append("<b>");
 		}

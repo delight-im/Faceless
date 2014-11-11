@@ -249,10 +249,12 @@ public class Message extends Content implements Parcelable {
 		}
 	};
 
+	@Override
 	public int describeContents() {
 		return 0;
 	}
 
+	@Override
 	public void writeToParcel(Parcel out, int flags) {
 		out.writeString(mID);
 		out.writeInt(mDegree);

@@ -65,6 +65,7 @@ public class ActivityCustomize extends Activity implements ColorPicker.OnColorSe
 		}
 	}
 	
+	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		updateTextAndColor(intent);

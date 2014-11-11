@@ -25,8 +25,8 @@ public class Identicon {
 	/**
 	 * Returns a resource ID for an identicon image (user's random but unique avatar)
 	 * 
-	 * @param int authorIndex the author's index in a given comments thread
-	 * @param long timePublished the time since the parent message has been published in seconds since Jan 1, 1970
+	 * @param authorIndex the author's index in a given comments thread
+	 * @param timePublished the time since the parent message has been published in seconds since Jan 1, 1970
 	 * @return the resource ID for the avatar image
 	 */
 	public static int forComment(int authorIndex, long timePublished) {

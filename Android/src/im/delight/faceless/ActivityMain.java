@@ -37,10 +37,12 @@ public class ActivityMain extends AbstractMessagesActivity {
 	private View mButtonSettings;
 	// MODE SELECTION END
 	
+	@Override
 	protected int getLayoutResourceID() {
 		return R.layout.activity_main;
 	}
 	
+	@Override
 	protected int getMessagesMode() {
 		return mMode;
 	}
@@ -84,6 +86,7 @@ public class ActivityMain extends AbstractMessagesActivity {
 		}
 	}
 
+	@Override
 	protected void setupButtonBar() {
 		// set up the topic selection Spinner
 		mSpinnerMode = (Spinner) findViewById(R.id.spinnerMode);

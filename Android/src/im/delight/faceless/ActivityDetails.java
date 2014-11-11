@@ -328,8 +328,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	}
 	
 	private void replyPrivately(final Comment comment) {
-		final LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-		final View viewReply = inflater.inflate(R.layout.dialog_reply_privately, null);
+		final View viewReply = View.inflate(this, R.layout.dialog_reply_privately, null);
 		
 		final TextView textViewOriginalComment = (TextView) viewReply.findViewById(R.id.textViewOriginalComment);
 		// show the original comment for reference
@@ -438,18 +437,24 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			affirmationMessage = R.string.report_warning_report;
 			affirmationConfirm = R.string.report_confirm_report;
 			affirmationAction = new Runnable() {
+
+				@Override
 				public void run() {
 					Server.sendReport(ActivityDetails.this, contentType, contentID, reportOption, ActivityDetails.this);
 				}
+
 			};
 		}
 		else if (reportOption == REPORT_BLOCK_AUTHOR) {
 			affirmationMessage = R.string.report_warning_block;
 			affirmationConfirm = R.string.report_confirm_block;
 			affirmationAction = new Runnable() {
+
+				@Override
 				public void run() {
 					Server.setBlocked(ActivityDetails.this, contentType, contentID, ActivityDetails.this);
 				}
+
 			};
 		}
 		else {
@@ -527,7 +532,8 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		}
 	}
 	
-	protected void onDestroy() {
+	@Override
+	public void onDestroy() {
 		super.onDestroy();
 		if (mAlertDialog != null) {
 			mAlertDialog.dismiss();
@@ -695,6 +701,8 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	@Override
 	public void onSentReport(final int status) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
@@ -723,6 +731,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
@@ -732,6 +741,8 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	@Override
 	public void onAddedBlock(final int status) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
@@ -760,12 +771,15 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
 	@Override
 	public void onChangedFavorite(final int status, final boolean favorited) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
@@ -797,12 +811,15 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
 	@Override
 	public void onReceivedComments(final int status, final List<Comment> comments, final boolean hasPrivateComments) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				mPullToRefreshLayout.setRefreshComplete();
@@ -838,12 +855,15 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
 	@Override
 	public void onSentComment(final int status, final String commentText, final String commentID, final int ownerInThread, final int privateRecipientInThread, final long commentTime) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				mImageButtonCommentSubmit.setEnabled(true);
@@ -887,6 +907,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
@@ -896,6 +917,8 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	@Override
 	public void onReceivedDetails(final int status, final boolean isFavorited, final boolean isSubscribed) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				mMessageDetailsStatus = status;
 				if (status == Server.STATUS_OK) {
@@ -926,6 +949,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
@@ -935,6 +959,8 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	@Override
 	public void onChangedSubscription(final int status, final boolean subscribed) {
 		runOnUiThread(new Runnable() {
+
+			@Override
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
@@ -964,6 +990,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					Toast.makeText(ActivityDetails.this, R.string.error_no_connection, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 		});
 	}
 
