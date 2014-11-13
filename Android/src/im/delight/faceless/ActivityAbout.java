@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import android.util.Base64;
 import im.delight.android.baselib.Strings;
 import android.net.Uri;
 import android.os.Bundle;
@@ -62,7 +63,14 @@ public class ActivityAbout extends Activity {
 		
 		// set up UI widgets
 		if (Config.DEMO_ACTIVE) {
-			final String[] descriptionChunks = Strings.splitToChunks(builder.toString(), 4000);
+			// this outputs the app description (composed from single resources) to the console
+			final StringBuilder appDescription = new StringBuilder();
+			appDescription.append("<!-- APP DESCRIPTION -->\n");
+			appDescription.append("<!-- BEGIN BASE64 -->\n");
+			appDescription.append(Base64.encodeToString(builder.toString().getBytes(), Base64.NO_WRAP));
+			appDescription.append("<!-- END BASE64 -->\n");
+
+			final String[] descriptionChunks = Strings.splitToChunks(appDescription.toString(), 4000);
 			for (String descriptionChunk : descriptionChunks) {
 				System.out.println(descriptionChunk);
 			}
