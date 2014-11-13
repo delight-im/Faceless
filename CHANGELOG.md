@@ -295,3 +295,8 @@
  * (Added full documentation to the configuration file of the server.)
  * (Let admin accounts post content as official messages.)
  * (Make HTTPS configurable so that development servers don't necessarily need SSL/TLS.)
+
+## Version 2.6.1
+
+ * Translations have been updated for Portuguese.
+ * (Legacy support for the Blowfish cipher has been removed.)
