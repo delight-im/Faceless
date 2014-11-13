@@ -1,0 +1,52 @@
+Faceless é onde você pode conversar livremente, com seus amigos ou o mundo.
+
+Você pode se abrir, sem preocupar-se sobre o que falar. Ninguém verá quem você é — tudo se resume na sua mensagem.
+
+Desfrute de franqueza e gentileza. Receba opiniões verdadeiras e sinceras como respostas. Deixe suas ideias espalharem-se ao redor do mundo.
+
+Você não possui um perfil para preocupar-se. Não há necessidade de pessoas se gabarem. São só as suas palavras que contam.
+
+Converse sobre coisas que podem ser embaraçosas, e não sinta medo de fazer uma pergunta. Compartilhe coisas sem nenhuma desvantagem!
+
+Você será conectado com seus amigos automaticamente. Poderá ler as mensagens deles e comentar — você nunca saberá exatamente quem eles são.
+
+Compartilhe histórias, faça perguntas, discute sobre a vida ou confesse coisas. Só seja você mesmo.
+
+Seja honesto e natural. Seja inteligente e positivo.
+
+
+<b>Tenho que cadastrar-me para o Faceless?</b>
+Não. Você não precisa de conta, e-mail e nem uma senha. Nem conta no Facebook, no Google e nem Twitter.
+
+<b>Quem pode ver que eu sou o autor de uma mensagem?</b>
+Ninguém. As pessoas somente verão que você é um "Amigo" ou um "Amigo de um amigo". Caso contrário, poderemos mostrar a eles o seu país, mas, nada específico.
+
+<b>Os comentários são anônimos também?</b>
+Sim. A única coisa que será exibida é se o autor do comentário foi escrito pela mesma pessoa que escreveu a mensagem originalmente.
+
+<b>Posso ver quais dos meus amigos já estão no Faceless?</b>
+Não. Essa medida é para proteger a privacidade deles. De tempos, em tempos, nós poderemos mostrar a você, o número de amigos, sem exibição de nomes, é claro.
+
+<b>Posso ignorar ou bloquear uma pessoa em particular?</b>
+Sim. Se você não gostar de algo que uma pessoa comentar, você pode bloqueá-la. Porém, isso não pode ser desfeito posteriormente!
+
+
+<b>O Faceless é seguro realmente?</b>
++ Todas as comunicações entre o aplicativo e nossos servidores são criptografadas com SSL/TLS. Antes que suas mensagens e comentários são gravados nos nossos servidores, eles são criptografados novamente.
++ Nunca nenhuma informação pessoal é enviada para nenhum dispositivo. Seus amigos e outros usuários não podem descobrir quem você é, a não ser que você mesmo se identifique.
++ Mensagens e comentários não ficam disponíveis para sempre. Eles serão destruídos após certo tempo.
++ Mesmo se seus amigos adivinharem que você escreveu uma mensagem, eles não saberão nada das suas outras mensagens.
++ O Faceless é independente. Não há nenhuma grande empresa por trás e nós não tentamos maximizar lucros.
+
+
+<b>Permissões de aplicativo:</b>
++ "Ler identificação e estado do celular:" Obtem o número do seu celular, realiza a criptografia segura dele e usa o número criptografado para conectá-lo de forma anônima aos seus amigos.
++ "Ler seus contatos": Obtem os números de celular dos seus contatos, realiza a criptografia segura deles e usa os números criptografados para conectá-lo de forma anônima aos seus amigos.
++ "Acesso total a rede": Envia/Recebe mensagens, comentários e favoritos.
++ "Iniciar ao ligar": Inicializa notificações e a sincronização após você ter desligado seu dispositivo.
+
+
+<b>Política de privacidade:</b>
++ Acessamos somente o número do seu celular e dos seus contatos. Não acessamos nenhum nome, e-mail ou outros detalhes de contatos.
++ Os números de celulares são criptografados de forma irreversível e direta (criptografia hash) no seu dispositivo e somente depois são enviados para nossos servidores. Números verdadeiros de celulares nunca saem do seu dispositivo.
++ Como você pode ver, requisitamos somente dessas permissões que são realmente necessárias. Sem nenhuma lista carregada de permissões extensas como outros aplicativos.

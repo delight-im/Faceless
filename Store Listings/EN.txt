@@ -1,0 +1,52 @@
+Faceless is where you can talk freely, to your friends and the whole world.
+
+You can be open, no matter what you talk about. Nobody will see who you are — it's only about your message.
+
+Enjoy openness and kindness. Get truthful responses and honest opinions. Let your ideas spread around the world.
+
+You don't have a profile to worry about. There's no need to brag. It's just your words that count.
+
+Talk about things that might be embarrassing, and don't be afraid to ask a question. Share things without any downsides!
+
+You will be connected to your friends automatically. Read their messages and write comments — you will never know exactly who they are.
+
+Share stories, ask questions, discuss life or confess things. Just be yourself.
+
+Be honest and genuine. Be smart and positive.
+
+
+<b>Do I have to sign up for Faceless?</b>
+No. You don't need an account, neither an email address nor a password. No Facebook, no Google, no Twitter.
+
+<b>Who can see that I am the author of a message?</b>
+Nobody. People will only see that you are a "Friend" or a "Friend of a friend". Otherwise, we may show them your country, but never something specific.
+
+<b>Are comments anonymous as well?</b>
+Yes. The only thing that will be shown is whether a comment has been written by the same person who also wrote the original message.
+
+<b>Can I see which of my friends are on Faceless already?</b>
+No. This is to protect their privacy. From time to time, we may show you the number of friends, without any names, of course.
+
+<b>Can I ignore or block a particular person?</b>
+Yes. If you don't like what a person posts, you can add them to your block list. This cannot be undone later, however!
+
+
+<b>Is Faceless really secure?</b>
++ All communication between the app and our servers is encrypted with SSL/TLS. Before your messages and comments are saved on our servers, they are encrypted again.
++ No personal information is ever send to any device. Your friends and other users have no way to find out who you are, unless you reveal your identity yourself.
++ Messages and comments don't stay online forever. They will be destroyed after some time automatically.
++ Even if your friends correctly guessed a message that you wrote, they would still not know about any other message of yours.
++ Faceless is independent. There is no big company behind and we don't try to maximize profits.
+
+
+<b>App permissions:</b>
++ "Read phone status and identity": Get your phone number, securely encrypt it, and use the encrypted number to anonymously connect you with your friends.
++ "Read your contacts": Get your contacts' phone numbers, securely encrypt them, and use the encrypted numbers to anonymously connect you with your friends.
++ "Full network access": Send/receive messages, comments and favorites.
++ "Run at startup": Setting up notifications and synchronization again when you had switched off your device.
+
+
+<b>Privacy Policy:</b>
++ We only access your phone number and your contacts' phone numbers. We don't access any names, email addresses or other contact details.
++ Phone numbers are encrypted with an irreversible one-way encryption (hash function) on your device and only afterwards send to our servers. Real phone numbers never leave your device.
++ As you can see, we require only those app permissions that are really necessary. No heavy list of extended permissions as with other apps.

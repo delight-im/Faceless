@@ -1,0 +1,52 @@
+Faceless arkadaşlarınla ve tüm dünya ile özgürce konuşabileceğin yerdir.
+
+Dilediğin gibi konuşabilirsin. Ne konuda konuştuğun hiç önemli değil. Senin kim olduğunu kimse bilmeyecek — Yazdıklarını görecekler ve onları bilecekler.
+
+Açık sözlülüğün ve nezaketin keyfini çıkar. Doğru yanıtlar ve dürüst düşünceler elde et. Haydi fikirlerini tüm dünya ile paylaş.
+
+Saklamaya çalışacak veya övünmek için bir profilin olmayacak. Sadece kelimelerin olacak.
+
+Söylemeye çekindiğin şeyler hakkında konuş, soru sormaktan çekinme. Herhangi bir olumsuzluk düşünmeden düşüncelerini paylaş.
+
+Arkadaşlarına otomatik olarak bağlanacaksın. Arkadaşların mesajlarını okuyabilecek ve mesajlarına yorum yazabileceksin — Onların kim olduğunu bilmeyeceksin.
+
+Hikayelerini paylaş, sorular sor, hayatını sorgula veya itiraflarda bulun. Sadece kendin ol.
+
+Dürüst ve içten ol. Akıllı ve olumlu ol.
+
+
+<b>Faceless için kayıt olmak zorunda mıyım?</b>
+Bir hesaba, e-posta adresine veya şifreye gerek yoktur. Facebook, Google, Twitter hesaplarınla giriş yapmana da gerek yok.
+
+<b>Mesajın yazarını kimler görebilir?</b>
+Hiç kimse. İnsanlar seni " Arkadaş " veya " Arkadaşının arkadaşı " olarak görebilecekler. Senin ülkeni de görebilirler fakat asla özel bir bilgini paylaşmayacağız.
+
+<b>Yorumlar da anonim mi olacak?</b>
+Evet. Yorumu yazan ile mesajı yazan kişinin aynı olduğu gösterilecek.
+
+<b>Hangi arkadaşlarımın Faceless'da olduğunu görebilecek miyim?</b>
+Hayır. Onların özelini korumak için göremezsiniz. Zamanla, arkadaşlarınız sayısını gösterebiliriz fakat onların isimlerini gösteremeyiz.
+
+<b>Birini engelleyebilir ya da görmezden gelebilir miyim?</b>
+Evet. Eğer birinin yazdıklarını beğenmiyorsan, onu engellenenler listesine ekleyebilirsin. Engelleme işlemi geri alınamaz bunu unutma.
+
+
+<b>Faceless gerçekten güvenilir mi?</b>
++ Uygulama ve sunucularımız arasındaki bütün iletişim SSL/TLS ile şifrelenmektedir. Mesajlarınız ve yorumlarınız sunucularımıza kaydedilmeden önce, şifrelenmektedir.
++ Kişisel bilgileriniz kimseye gönderilmemektedir. Siz söylemedikçe uygulamayı kullanan arkadaşlarınız ve diğer kullanıcılar kim olduğunuzu bilmelerinin imkanı yoktur.
++ Mesajlarınız ve yorumlarınız sonsuza dek gözükmeyecektir. Bir süre sonra mesajlarınız ve yorumlarınız silinecektir.
++ Arkadaşlarınız yazdığınız mesajları doğru bir şekilde tahmin etseler bile, arkadaşlarınız sizin diğer mesajlarını hakkında hiç bir şey bilmeyeceklerdir.
++ Faceless bağımsızdır. Arkasında büyük bir şirket bulunmamaktadır ve biz kazancımızı arttırmak için uğraşmıyoruz.
+
+
+<b>Uygulama İzinleri:</b>
++ "Cihazın durumu ve cihazın kimliği" : Telefon numaranızı alıyoruz, güvenli bir şekilde şifreliyor ve şifrelenmiş olan telefon numarası aracılığıyla seni anonim kalacak şekilde arkadaşlarınla bağlantı kuruyoruz.
++ "Rehberindekiler erişim": Rehberindekilerin telefon numaralarını alıyor, güvenli bir şekilde şifreliyor ve şifrelenmiş telefon numaralarını seni ve arkadaşlarını bağlantı kurmak için kullanıyoruz.
++ " İnternet Erişimi " : Mesajlar, yorumlar göndermek ve favoriler için.
++ "Başlangıçta çalıştır" : Bildirimleri ve senkronizasyonu cihaz açıldığında devam ettir.
+
+
+<b>Güvenlik Politikası:</b>
++ Biz sadece telefon numaranıza ve rehberinizdeki kişilerin telefon numaralarına erişeceğiz. Herhangi bir isme, e-posta adresine veya kişisel diğer bilgilere erişmeyeceğiz.
++ Telefon numaraları değiştirilemeyecek şekilde tek taraflı ( hash fonksiyonu ) olarak şifrelendikten sonra sunucularımıza yollanmaktadır. Gerçek telefon numaralarını telefonunuzda saklamıyoruz.
++ Gördüğünüz gibi sadece gerekli olan izinleri sizden istiyoruz. Diğer uygulamaların yaptığı gibi uzun bir izin listesi istemiyoruz.
