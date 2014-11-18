@@ -28,5 +28,6 @@ define('CONFIG_THROTTLING_LOGIN_ATTEMPTS', 100); // the maximum number of login 
 define('CONFIG_THROTTLING_LOGIN_HOURS', 12); // the number of hours to throttle a user's login for if throttling has been caused
 define('CONFIG_HEADER_SIGNATURE', 'HTTP_X_METHOD_SIGNATURE'); // the HTTP header field that contains the API method signature (HMAC)
 define('CONFIG_HEADER_TIMESTAMP', 'HTTP_X_METHOD_TIMESTAMP'); // the HTTP header field that contains the API method timestamp
+define('CONFIG_ADMINS_READ_PRIVATE', false); // whether users with administrator privileges may read private conversations for support and anti-abuse purposes
 
 ?>

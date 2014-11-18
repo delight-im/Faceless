@@ -45,10 +45,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         // mark this comments thread as read
         Database::update("UPDATE subscriptions SET counter = 0 WHERE message_id = ".intval($messageID)." AND user_id = ".intval($userID));
 
-        // get the comments for the given message:
-        // + if the content either has not been deleted (flagged through reports) or the authenticating user is the author of the content themself
-        // + if the content is either public or the authenticating user is the private recipient or the authenticating user is the private sender
-        $items = Database::select("SELECT id, user_id, text_encrypted, comment_secret, private_to_user, time_inserted FROM comments WHERE message_id = ".intval($messageID)." AND (deleted = 0 OR user_id = ".intval($userID).") AND (private_to_user IS NULL OR private_to_user = ".intval($userID)." OR user_id = ".intval($userID).") ORDER BY time_inserted DESC LIMIT 0, ".CONFIG_COMMENTS_PER_PAGE);
+        // check if the authenticating user is an admin user
+        $isAdmin = in_array($userID, unserialize(CONFIG_ADMIN_USER_IDS));
+
+        // get the comments for the given message
+        $commentsQuery = "SELECT id, user_id, text_encrypted, comment_secret, private_to_user, time_inserted FROM comments WHERE message_id = ".intval($messageID);
+        // the content must either not have been deleted (flagged through reports) or the authenticating user must be the author of the content themself
+        $commentsQuery .= " AND (deleted = 0 OR user_id = ".intval($userID).")";
+        // unless the authenticating user has administrator privileges and those permissions allow the inspection of private conversations
+        if (!$isAdmin || !CONFIG_ADMINS_READ_PRIVATE) {
+            // the content must either be public or the authenticating user must be the designated sender/recipient from the private conversation
+            $commentsQuery .= " AND (private_to_user IS NULL OR private_to_user = ".intval($userID)." OR user_id = ".intval($userID).")";
+        }
+        // the items are sorted by freshness and the total number is limited as set in the configuration
+        $commentsQuery .= " ORDER BY time_inserted DESC LIMIT 0, ".CONFIG_COMMENTS_PER_PAGE;
+        // run the query and get the results
+        $items = Database::select($commentsQuery);
 
         // return the comments
         foreach ($items as $item) {
