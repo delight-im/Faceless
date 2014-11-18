@@ -19,6 +19,16 @@
 
 require_once(__DIR__.'/../base.php');
 
+/**
+ * Updates the favorites count for the message with the given ID
+ *
+ * @param int $messageID the ID of the message to update the favorites count for
+ * @param boolean $increase whether to increase (true) or decrease (false) the count by one
+ */
+function updateFavoritesCount($messageID, $increase) {
+    Database::update("UPDATE messages SET favorites_count = favorites_count".($increase ? "+1" : "-1").", score = ".getScoreUpdateSQL()." WHERE id = ".intval($messageID));
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // initialization
     $user = init($_POST);
@@ -38,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // if the action succeeded (the favorite is new)
             if ($success) {
                 // update the favorites count of the message
-                Database::update("UPDATE messages SET favorites_count = favorites_count+1, score = ".getScoreUpdateSQL()." WHERE id = ".intval($messageID));
+                updateFavoritesCount($messageID, true);
 
                 // if the message is a (friend of a) friend's message
                 if ($degree == 1 || $degree == 2) {
@@ -54,7 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         else {
-            Database::delete("DELETE FROM favorites WHERE user_id = ".intval($userID)." AND message_id = ".intval($messageID));
+            // try to remove the message from the personal favorites
+            $deletedRows = Database::delete("DELETE FROM favorites WHERE user_id = ".intval($userID)." AND message_id = ".intval($messageID));
+            // if the action succeeded (the favorite has been removed)
+            if ($deletedRows > 0) {
+                // update the favorites count of the message
+                updateFavoritesCount($messageID, false);
+            }
         }
         respond(array('status' => 'ok'));
     }

@@ -57,8 +57,14 @@ class Database {
         self::$db->exec($sql_string);
     }
 
+    /**
+     * Deletes rows from the database using the given SQL statement
+     *
+     * @param string $sql_string the SQL command to execute
+     * @return int the number of affected (i.e. deleted) rows
+     */
     public static function delete($sql_string) {
-        self::$db->exec($sql_string);
+        return self::$db->exec($sql_string);
     }
 
 }
