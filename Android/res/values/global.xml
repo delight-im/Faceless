@@ -64,6 +64,21 @@
 	    <item>@string/topic_food</item>
 	    <item>@string/topic_life</item>
 	    <item>@string/topic_love</item>
+		<item>@string/topic_confessions</item>
+		<item>@string/topic_dreams</item>
+		<item>@string/topic_fantasy</item>
+		<item>@string/topic_friendship</item>
+		<item>@string/topic_funny</item>
+		<item>@string/topic_games</item>
+		<item>@string/topic_hobbies</item>
+		<item>@string/topic_money</item>
+		<item>@string/topic_party</item>
+		<item>@string/topic_philosophy</item>
+		<item>@string/topic_quotes</item>
+		<item>@string/topic_school</item>
+		<item>@string/topic_stories</item>
+		<item>@string/topic_studies</item>
+		<item>@string/topic_travel</item>
 	</string-array>
 	<string-array name="topics_list_machine" translatable="false">
 	    <item>politics</item>
@@ -85,6 +100,21 @@
 	    <item>food</item>
 	    <item>life</item>
 	    <item>love</item>
+		<item>confessions</item>
+		<item>dreams</item>
+		<item>fantasy</item>
+		<item>friendship</item>
+		<item>funny</item>
+		<item>games</item>
+		<item>hobbies</item>
+		<item>money</item>
+		<item>party</item>
+		<item>philosophy</item>
+		<item>quotes</item>
+		<item>school</item>
+		<item>stories</item>
+		<item>studies</item>
+		<item>travel</item>
 	</string-array>
 	<string-array name="topics_list_default" translatable="false">
 	    <item>politics</item>
@@ -104,6 +134,21 @@
 	    <item>food</item>
 	    <item>life</item>
 	    <item>love</item>
+		<item>confessions</item>
+		<item>dreams</item>
+		<item>fantasy</item>
+		<item>friendship</item>
+		<item>funny</item>
+		<item>games</item>
+		<item>hobbies</item>
+		<item>money</item>
+		<item>party</item>
+		<item>philosophy</item>
+		<item>quotes</item>
+		<item>school</item>
+		<item>stories</item>
+		<item>studies</item>
+		<item>travel</item>
 	</string-array>
 	<string name="topics_empty_machine" translatable="false"></string>
 	<string name="topics_meta_machine" translatable="false">meta</string>
