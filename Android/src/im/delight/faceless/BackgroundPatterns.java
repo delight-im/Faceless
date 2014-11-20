@@ -35,11 +35,11 @@ import android.widget.TextView;
 public class BackgroundPatterns {
 	
 	private static BackgroundPatterns mInstance;
-	private Bitmap[] mBitmaps;
+	private final Bitmap[] mBitmaps;
 	
-	private BackgroundPatterns(Activity activity) {
-		Context context = activity.getApplicationContext();
-		List<Bitmap> bitmaps = new LinkedList<Bitmap>();
+	private BackgroundPatterns(final Activity activity) {
+		final Context context = activity.getApplicationContext();
+		final List<Bitmap> bitmaps = new LinkedList<Bitmap>();
 		
 		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_1));
 		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_2));
@@ -55,11 +55,29 @@ public class BackgroundPatterns {
 		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_12));
 		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_13));
 		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_14));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_15));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_16));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_17));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_18));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_19));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_20));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_21));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_22));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_23));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_24));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_25));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_26));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_27));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_28));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_29));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_30));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_31));
+		bitmaps.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_32));
 		
 		mBitmaps = bitmaps.toArray(new Bitmap[bitmaps.size()]);
 	}
 	
-	public static BackgroundPatterns getInstance(Activity activity) {
+	public static BackgroundPatterns getInstance(final Activity activity) {
 		if (mInstance == null) {
 			mInstance = new BackgroundPatterns(activity);
 		}
@@ -71,11 +89,11 @@ public class BackgroundPatterns {
 		return random.nextInt(mBitmaps.length);
 	}
 	
-	public int validatePatternID(int patternID) {
+	public int validatePatternID(final int patternID) {
 		return (patternID + mBitmaps.length) % mBitmaps.length;
 	}
 	
-	public BitmapDrawable getBackgroundDrawable(Context context, int patternID, int color) {
+	public BitmapDrawable getBackgroundDrawable(final Context context, final int patternID, final int color) {
 		BitmapDrawable out = new BackgroundBitmapDrawable(context.getResources(), mBitmaps[validatePatternID(patternID)]);
 		out.setAntiAlias(true);
 		out.setDither(true);
@@ -86,7 +104,7 @@ public class BackgroundPatterns {
 	
 	@SuppressLint("NewApi")
 	@SuppressWarnings("deprecation")
-	public void setViewBackground(Context context, View view, int patternID, int color) {
+	public void setViewBackground(final Context context, final View view, final int patternID, final int color) {
 		BitmapDrawable drawable = getBackgroundDrawable(context, patternID, color);
 		if (Build.VERSION.SDK_INT >= 16) {
 			view.setBackground(drawable);
@@ -96,7 +114,7 @@ public class BackgroundPatterns {
 		}
 	}
 	
-	public static void applyRandomBackground(final Activity activity, View view) {
+	public static void applyRandomBackground(final Activity activity, final View view) {
 		final int backgroundColor = UI.getRandomColor();
 		final BackgroundPatterns patterns = BackgroundPatterns.getInstance(activity);
 		patterns.setViewBackground(activity, view, patterns.getRandomPatternID(), backgroundColor);
