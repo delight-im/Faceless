@@ -300,3 +300,10 @@
 
  * Translations have been updated for Portuguese.
  * (Legacy support for the Blowfish cipher has been removed.)
+
+## Version 2.7.0
+
+ * The existing list of 19 topics has been extended by adding 15 new topics. These are available when posting new messages or filtering the personal feed.
+ * The 14 background patterns have been replaced with 32 new background patterns of higher quality.
+ * A bug has been fixed where the favorites count would not be decreased on deletion of a favorite. This caused the issue that you could infinitely increase the favorites count by adding/removing a message to/from your favorites.
+ * (Added an optional conversation review feature for private threads. This may be responsibly used by service operators for anti-abuse and support reasons.)
