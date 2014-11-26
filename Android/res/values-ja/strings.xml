@@ -25,7 +25,6 @@
 	<string name="background">背景</string>
 	<string name="block_user_added">このユーザーからメッセージを受け取ることはもうありません。</string>
 	<string name="cancel">キャンセル</string>
-	<string name="choose_recipient">送信先を選ぶ</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">あなたのコメント…</string>
@@ -33,7 +32,6 @@
 	<string name="comment_confirm_public_title">公開コメント</string>
 	<string name="comment_options">コメントのオプション</string>
 	<string name="comments">コメント</string>
-	<string name="continueToPreview">プレビューへ続く</string>
 	<string name="country">国</string>
 	<string name="degree_author">送信者</string>
 	<string name="degree_example">例</string>
@@ -69,7 +67,6 @@
 		<item>Remember, everything is shared anonymously.\n\nPeople will see your messages, but they won\'t know who you are.</item>
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
-	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
 	<string name="invitation_title">Facelessを入手する</string>
 	<string name="language">言語</string>
 	<string name="learn_more">もっと知りたい</string>
@@ -133,7 +130,6 @@
 	<string name="ok">OK</string>
 	<string name="please_choose_topic">トピックを選んでください</string>
 	<string name="please_enter_message">メッセージを入力してください</string>
-	<string name="preview">プレビュー</string>
 	<string name="private_reply">プライベートに返信する</string>
 	<string name="publish">公開する</string>
 	<string name="rate_app">アプリを評価する</string>

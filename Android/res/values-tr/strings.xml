@@ -25,7 +25,6 @@
 	<string name="background">Arka plan</string>
 	<string name="block_user_added">Bu kullanıcından bir daha mesaj almayacaksınız</string>
 	<string name="cancel">İptal et</string>
-	<string name="choose_recipient">Alıcı seç</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Yorumun &#8230;</string>
@@ -33,7 +32,6 @@
 	<string name="comment_confirm_public_title">Herkese açık yorum</string>
 	<string name="comment_options">Yorum seçenekleri</string>
 	<string name="comments">Yorumlar</string>
-	<string name="continueToPreview">Önizleme için devam edin</string>
 	<string name="country">Ülke</string>
 	<string name="degree_author">Yazar</string>
 	<string name="degree_example">Örnek</string>
@@ -69,7 +67,6 @@
 		<item>Her şey anonim olarak paylaşıldığını unutma.\n\nİnsanlar senin mesajlarını görebilir fakat senin kim olduğunu bilmeyecekler.</item>
 		<item>Bu uygulama zorbalığın, tacizin ve olumsuzluğun yeri değildir.\n\nBir sonraki ekranda ilk mesajını yazarak başla.</item>
 	</string-array>
-	<string name="invitation_howto">Arkadaşlarınla özgürce konuşmak çok daha eğlenceli.\n\nFaceless\'da, arkadaşların senin ismini görmeyecek. Onlar sadece seni \"Arkadaş\" olarak bilecek.\n\nBöylelikle sohbetler olabildiğince daha gerçekçi olacak.\n\nArkadaşlarını e-posta veya telefonundaki diğer uygulamalar ile davet et.</string>
 	<string name="invitation_title">Faceless\'i indir</string>
 	<string name="language">Dil</string>
 	<string name="learn_more">Daha fazla öğren</string>
@@ -133,7 +130,6 @@
 	<string name="ok">Tamam</string>
 	<string name="please_choose_topic">Lütfen mesajınız için bir konu seçin</string>
 	<string name="please_enter_message">Lütfen mesajınız için metin yazınız</string>
-	<string name="preview">Ön izleme</string>
 	<string name="private_reply">Özelden cevapla</string>
 	<string name="publish">Yayınla</string>
 	<string name="rate_app">Uygulamaya değerlendir</string>

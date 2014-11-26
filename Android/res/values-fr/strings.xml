@@ -25,7 +25,6 @@
 	<string name="background">Fond</string>
 	<string name="block_user_added">You will no longer receive messages from this user</string>
 	<string name="cancel">Annuler</string>
-	<string name="choose_recipient">Choose recipient</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Votre commentaire &#8230;</string>
@@ -33,7 +32,6 @@
 	<string name="comment_confirm_public_title">Public comment</string>
 	<string name="comment_options">Comment options</string>
 	<string name="comments">Commentaires</string>
-	<string name="continueToPreview">Continue to preview</string>
 	<string name="country">Country</string>
 	<string name="degree_author">Auteur</string>
 	<string name="degree_example">Exemple</string>
@@ -69,7 +67,6 @@
 		<item>Remember, everything is shared anonymously.\n\nPeople will see your messages, but they won\'t know who you are.</item>
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
-	<string name="invitation_howto">Talking freely is even more fun with your friends.\n\nOn Faceless, they will never see your name. They will just see that you\'re a \"Friend\".\n\nThis makes conversations as truthful as they can possibly get.\n\nContinue to invite friends via email or any other app available on your phone.</string>
 	<string name="invitation_title">Obtenez Faceless</string>
 	<string name="language">Language</string>
 	<string name="learn_more">Learn more</string>
@@ -133,7 +130,6 @@
 	<string name="ok">Bien</string>
 	<string name="please_choose_topic">Please choose a topic for your message</string>
 	<string name="please_enter_message">Please enter a text for your message</string>
-	<string name="preview">Preview</string>
 	<string name="private_reply">Private reply</string>
 	<string name="publish">Publier</string>
 	<string name="rate_app">Évaluer application</string>

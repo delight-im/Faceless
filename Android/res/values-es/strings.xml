@@ -25,7 +25,6 @@
 	<string name="background">Fondo</string>
 	<string name="block_user_added">Nunca más recibirás mensajes de este usuario</string>
 	<string name="cancel">Cancelar</string>
-	<string name="choose_recipient">Elige un receptor</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Tu comentario &#8230;</string>
@@ -33,7 +32,6 @@
 	<string name="comment_confirm_public_title">Comentario público</string>
 	<string name="comment_options">Opciones de comentarios</string>
 	<string name="comments">Comentarios</string>
-	<string name="continueToPreview">Continuar a la vista previa</string>
 	<string name="country">País</string>
 	<string name="degree_author">Autor</string>
 	<string name="degree_example">Ejemplo</string>
@@ -69,7 +67,6 @@
 		<item>Recuerda, todo lo compartido es anónimo.\n\nLas personas verán tus mensajes, pero no sabrán quien eres.</item>
 		<item>Esta aplicación no es lugar para hacer bullying, acosar o ser negativo.\n\nComienza con escribir tu mensaje en la siguiente pantalla.</item>
 	</string-array>
-	<string name="invitation_howto">Hablar libremente es más divertido con tus amigos.\n\nEn Faceless, ellos nunca podrán ver tu nombre. Solo verán que tu eres un \"Amigo\".\n\nEsto hace que las conversaciones sean lo mas veraz que sea posible.\n\nInvita a tus amigos via correo electrónico o cualquier otra aplicación en tu teléfono.</string>
 	<string name="invitation_title">Obtener Faceless</string>
 	<string name="language">Idioma</string>
 	<string name="learn_more">Ver más</string>
@@ -133,7 +130,6 @@
 	<string name="ok">OK</string>
 	<string name="please_choose_topic">Por favor elige una categoría para tu mensaje</string>
 	<string name="please_enter_message">Por favor ingresa un texto para tu mensaje</string>
-	<string name="preview">Vista previa</string>
 	<string name="private_reply">Respuesta privada</string>
 	<string name="publish">Publicar</string>
 	<string name="rate_app">Calificar aplicación</string>
