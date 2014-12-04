@@ -68,6 +68,7 @@
 		<item>Bu uygulama zorbalığın, tacizin ve olumsuzluğun yeri değildir.\n\nBir sonraki ekranda ilk mesajını yazarak başla.</item>
 	</string-array>
 	<string name="invitation_title">Faceless\'i indir</string>
+	<string name="invite_x_friends_to_see_message">Invite %d friends in order to see this message</string>
 	<string name="language">Dil</string>
 	<string name="learn_more">Daha fazla öğren</string>
 	<string name="login_throttled_body">Çok fazla hesabınıza giriş hataları bulunmaktadır.\n\nHesabınıza giriş yapmak isteyen başka biri tarafından dolayı olabilir. \n\nBu nedenle hesabınızı koruma altına alıyoruz ve geçici bir süreliğine hesabını kilitliyoruz.\n\nLütfen daha sonra tekrar deneyiniz!</string>

@@ -68,6 +68,7 @@
 		<item>这个应用不是一个恃强凌弱、骚扰或消极的地方。\n\n在下一个屏幕上开始编写你的第一个消息吧。</item>
 	</string-array>
 	<string name="invitation_title">获取无面者</string>
+	<string name="invite_x_friends_to_see_message">Invite %d friends in order to see this message</string>
 	<string name="language">语言</string>
 	<string name="learn_more">了解更多</string>
 	<string name="login_throttled_body">您的帐户已经有太多失败的登录尝试。 \n\n这也可能是由于另一个人谁试图访问您的帐户。 \n\n因此，我们为保护您的帐户，现在暂时锁定它。 \n\n请稍后再试！</string>

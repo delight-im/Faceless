@@ -2,17 +2,17 @@ package im.delight.faceless;
 
 /**
  * Copyright (C) 2014 www.delight.im <info@delight.im>
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
@@ -27,8 +27,36 @@ import android.util.Base64;
 
 public class Message extends Content implements Parcelable {
 
+	public static class Type {
+
+		/** Indicates that this is a normal message that has been sent between users */
+		public static final int NORMAL = 0;
+		/** Indicates that the message is hidden until the user has invited more friends */
+		public static final int NOT_ENOUGH_FRIENDS = 1;
+
+		public static int fromProperties(final int messageDegree, final int userFriendsCount) {
+			if (messageDegree == DEGREE_FRIEND || messageDegree == DEGREE_FRIEND_OF_FRIEND) {
+				if (userFriendsCount >= MIN_FRIENDS_COUNT) {
+					return NORMAL;
+				}
+				else {
+					return NOT_ENOUGH_FRIENDS;
+				}
+			}
+			else {
+				return NORMAL;
+			}
+		}
+
+	}
+
 	public static final int DEGREE_ADMIN = -2;
 	public static final int DEGREE_EXAMPLE = -1;
+	public static final int DEGREE_SELF = 0;
+	public static final int DEGREE_FRIEND = 1;
+	public static final int DEGREE_FRIEND_OF_FRIEND = 2;
+	/** The minimum number of friends required before the user can see messages from their (friends of) friends */
+	public static final int MIN_FRIENDS_COUNT = 3;
 	private final String mID;
 	private final int mDegree;
 	private final int mColor;
@@ -40,8 +68,9 @@ public class Message extends Content implements Parcelable {
 	private final String mCountryISO3;
 	private boolean mFavorited;
 	private boolean mSubscribed;
-	
-	public Message(String id, int degree, String colorHex, int patternID, String text, String topic, long time, int favorites, int comments, String countryISO3) {
+	private final int mType;
+
+	public Message(String id, int degree, String colorHex, int patternID, String text, String topic, long time, int favorites, int comments, String countryISO3, int type) {
 		mID = id;
 		mDegree = degree;
 		mColor = Color.parseColor(colorHex);
@@ -54,16 +83,17 @@ public class Message extends Content implements Parcelable {
 		mCountryISO3 = countryISO3;
 		mFavorited = false;
 		mSubscribed = false;
+		mType = type;
 	}
-	
+
 	public String getID() {
 		return mID;
 	}
-	
+
 	public long getIDNumber() throws Exception {
 		return getIDNumber(mID);
 	}
-	
+
 	public static long getIDNumber(String idStr) throws Exception {
 		if (idStr != null) {
 			try {
@@ -78,7 +108,7 @@ public class Message extends Content implements Parcelable {
 	public int getDegree() {
 		return mDegree;
 	}
-	
+
 	public String getDegreeText(Context context) {
 		if (mDegree == DEGREE_ADMIN) {
 			return context.getString(R.string.app_name);
@@ -86,13 +116,13 @@ public class Message extends Content implements Parcelable {
 		else if (mDegree == DEGREE_EXAMPLE) {
 			return context.getString(R.string.degree_example);
 		}
-		else if (mDegree == 0) {
+		else if (mDegree == DEGREE_SELF) {
 			return context.getString(R.string.degree_self);
 		}
-		else if (mDegree == 1) {
+		else if (mDegree == DEGREE_FRIEND) {
 			return context.getString(R.string.degree_friend);
 		}
-		else if (mDegree == 2) {
+		else if (mDegree == DEGREE_FRIEND_OF_FRIEND) {
 			return context.getString(R.string.degree_friend_of_friend);
 		}
 		else {
@@ -104,11 +134,11 @@ public class Message extends Content implements Parcelable {
 			}
 		}
 	}
-	
+
 	public boolean isAdminMessage() {
 		return mDegree == DEGREE_ADMIN;
 	}
-	
+
 	public boolean isExampleMessage() {
 		return mDegree == DEGREE_EXAMPLE;
 	}
@@ -128,11 +158,11 @@ public class Message extends Content implements Parcelable {
 	public String getText() {
 		return mText;
 	}
-	
+
 	public String getTopic() {
 		return mTopic;
 	}
-	
+
 	public String getTopicText(Context context) {
 		if (mTopic == null) {
 			return null;
@@ -154,10 +184,14 @@ public class Message extends Content implements Parcelable {
 		}
 	}
 
+	public int getType() {
+		return mType;
+	}
+
 	public int getFavorites() {
 		return mFavorites;
 	}
-	
+
 	public void updateFavorites(int delta) {
 		mFavorites = mFavorites+delta;
 	}
@@ -165,31 +199,31 @@ public class Message extends Content implements Parcelable {
 	public int getComments() {
 		return mComments;
 	}
-	
+
 	public void increaseComments() {
 		mComments = mComments+1;
 	}
-	
+
 	public String getCountryISO3() {
 		return mCountryISO3;
 	}
-	
+
 	public String getCountryName(Context context) throws Exception {
 		return Country.getNameByIso3Code(context, mCountryISO3);
 	}
-	
+
 	public boolean isFavorited() {
 		return mFavorited;
 	}
-	
+
 	public void setFavorited(boolean state) {
 		mFavorited = state;
 	}
-	
+
 	public boolean isSubscribed() {
 		return mSubscribed;
 	}
-	
+
 	public void setSubscribed(boolean state) {
 		mSubscribed = state;
 	}
@@ -268,6 +302,7 @@ public class Message extends Content implements Parcelable {
 		out.writeString(mCountryISO3);
 		out.writeByte((byte) (mFavorited ? 1 : 0));
 		out.writeByte((byte) (mSubscribed ? 1 : 0));
+		out.writeInt(mType);
 	}
 
 	private Message(Parcel in) {
@@ -283,6 +318,7 @@ public class Message extends Content implements Parcelable {
 		mCountryISO3 = in.readString();
 		mFavorited = in.readByte() == 1;
 		mSubscribed = in.readByte() == 1;
+		mType = in.readInt();
 	}
 
 }

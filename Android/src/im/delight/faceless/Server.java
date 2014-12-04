@@ -2,20 +2,22 @@ package im.delight.faceless;
 
 /**
  * Copyright (C) 2014 www.delight.im <info@delight.im>
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
+
+import im.delight.faceless.Message.Type;
 
 import im.delight.android.baselib.Collections;
 import im.delight.android.baselib.Data;
@@ -33,7 +35,7 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 
 public class Server {
-	
+
 	public static final int MODE_FRIENDS = 1;
 	public static final int MODE_POPULAR = 2;
 	public static final int MODE_LATEST = 3;
@@ -48,9 +50,9 @@ public class Server {
 	public static final int STATUS_LOGIN_THROTTLED = 7;
 	public static final int STATUS_NO_CONNECTION = 8;
 	protected static final int MESSAGES_PER_REQUEST = 50;
-	
+
 	public static class Callback {
-		
+
 		// instances of this class are not allowed
 		private Callback() { }
 
@@ -59,66 +61,66 @@ public class Server {
 			public void onReceivedDetails(int status, boolean isFavorited, boolean isSubscribed);
 			public void onSentMessage(int status, String messageText, String messageTopic, String messageID, long messageTime, String messageColorHex, int messagePatternID, String messageCountryISO3);
 		}
-		
+
 		public interface CommentEvent {
 			public void onReceivedComments(int status, List<Comment> comments, boolean hasPrivateComments);
 			public void onSentComment(int status, String commentText, String commentID, int ownerInThread, int privateRecipientInThread, long commentTime);
 		}
-		
+
 		public interface FavoriteEvent {
 			public void onChangedFavorite(int status, boolean favorited);
 		}
-		
+
 		public interface SubscriptionEvent {
 			public void onChangedSubscription(int status, boolean subscribed);
 			public void onClearedSubscriptions(int status);
 		}
-		
+
 		public interface ConnectionEvent {
 			public void onAddedFriend(int status);
 			public void onAddedBlock(int status);
 		}
-		
+
 		public interface ReportEvent {
 			public void onSentReport(int status);
 		}
-		
+
 		public interface VerificationEvent {
 			public void onLoadVerification();
 			public void onPreparedVerification(int status, String apiPhoneNumber, String verificationCode, long validUntil);
 		}
 
 	}
-	
+
 	public static class GetMessagesResponse {
 		public boolean reachedEnd;
 		public long latestMessageID;
 		public List<Message> messages;
 		public int subscriptionUpdates;
 	}
-	
-	public static GetMessagesResponse getMessagesSync(final Context context, final int mode, final int page, final Set<String> topicsList) {
+
+	public static GetMessagesResponse getMessagesSync(final Context context, final int mode, final int page, final Set<String> topicsList, final int friendsCount) {
 		WebRequest request = getMessagesRequest(context, mode, page, topicsList);
 		final String responseText = request.executeSync();
 		final int status = parseStatus(responseText);
-		
+
 		if (status == STATUS_OK) {
-			GetMessagesResponse response = parseMessages(context, mode, page, responseText);
+			GetMessagesResponse response = parseMessages(context, mode, page, responseText, friendsCount);
 			return response;
 		}
 		else {
 			return null;
 		}
 	}
-	
-	public static void getMessagesAsync(final Context context, final int mode, final int page, final Set<String> topicsList, final Callback.MessageEvent callback) {
+
+	public static void getMessagesAsync(final Context context, final int mode, final int page, final Set<String> topicsList, final int friendsCount, final Callback.MessageEvent callback) {
 		WebRequest request = getMessagesRequest(context, mode, page, topicsList);
 		request.executeAsync(new WebRequest.Callback() {
 			@Override
 			public void onSuccess(String responseText) {
 				final int status = parseStatus(responseText);
 				if (status == STATUS_OK) {
-					GetMessagesResponse response = parseMessages(context, mode, page, responseText);
+					GetMessagesResponse response = parseMessages(context, mode, page, responseText, friendsCount);
 					if (callback != null) {
 						callback.onReceivedMessages(status, mode, page, response.reachedEnd, response.latestMessageID, response.subscriptionUpdates, response.messages);
 					}
@@ -137,7 +139,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void getMessageDetails(final Context context, final String messageID, final Callback.MessageEvent callback) {
 		WebRequest request = new APIRequest(context).get().to("/messages/details");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -175,7 +177,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void saveMessage(final Context context, final String colorHex, final int patternID, final String text, final String topic, final String visibility, final Callback.MessageEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/messages/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -233,7 +235,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void getComments(final Context context, final String messageID, final Callback.CommentEvent callback) {
 		WebRequest request = new APIRequest(context).get().to("/comments/list");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -278,7 +280,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void addComment(final Context context, final String messageID, final String privateReplyToCommentID, final String text, final Callback.CommentEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/comments/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -311,7 +313,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void setFavorited(final Context context, final String messageID, final boolean favorited, final Callback.FavoriteEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/favorites/set");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -332,7 +334,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void setSubscribed(final Context context, final String messageID, final boolean subscribed, final Callback.SubscriptionEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/subscriptions/set");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -353,7 +355,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void clearSubscriptions(final Context context, final Callback.SubscriptionEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/subscriptions/clear");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -372,7 +374,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void setFriends(final Context context, final String usernamesCSV, final Callback.ConnectionEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/connections/friend");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -392,12 +394,12 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static int getFriendsCountSync(final Context context) {
 		WebRequest request = new APIRequest(context).get().to("/connections/friend/count");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		final String responseText = request.executeSync();
-		
+
 		final int status = parseStatus(responseText);
 		if (status == STATUS_OK) {
 			try {
@@ -412,7 +414,7 @@ public class Server {
 			return -1;
 		}
 	}
-	
+
 	public static void setBlocked(final Context context, final String contentType, final String contentID, final Callback.ConnectionEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/connections/block");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -433,7 +435,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void sendReport(final Context context, final String contentType, final String contentID, final int reason, final Callback.ReportEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/reports/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -455,7 +457,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	public static void prepareVerification(final Context context, final Callback.VerificationEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/verifications/prepare");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
@@ -492,7 +494,7 @@ public class Server {
 			}
 		});
 	}
-	
+
 	protected static WebRequest getMessagesRequest(final Context context, final int mode, final int page, final Set<String> topicsList) {
 		// add meta category to list of topics as this should be visible to all users
 		topicsList.add("meta");
@@ -525,8 +527,8 @@ public class Server {
 		catch (Exception e) { }
 		return request;
 	}
-	
-	protected static GetMessagesResponse parseMessages(final Context context, final int mode, final int page, final String responseText) {
+
+	protected static GetMessagesResponse parseMessages(final Context context, final int mode, final int page, final String responseText, final int friendsCount) {
 		List<Message> messages = new LinkedList<Message>();
 		long oldestMessageTime = System.currentTimeMillis();
 		long latestMessageID = 0;
@@ -536,8 +538,10 @@ public class Server {
 				final JSONObject responseData = new JSONObject(responseText);
 				final JSONArray responseMessages = responseData.getJSONArray("messages");
 				final int responseMessageCount = responseMessages.length();
-				
+
 				long responseMessageTime;
+				int messageDegree;
+				int messageType;
 				for (int i = 0; i < responseMessageCount; i++) {
 					JSONObject responseMessage = (JSONObject) responseMessages.get(i);
 					responseMessageTime = responseMessage.getInt("time") * 1000L;
@@ -548,9 +552,11 @@ public class Server {
 						latestMessageID = Math.max(latestMessageID, Message.getIDNumber(responseMessage.getString("id")));
 					}
 					catch (Exception e) { }
-					messages.add(new Message(responseMessage.getString("id"), responseMessage.getInt("degree"), responseMessage.getString("colorHex"), responseMessage.getInt("patternID"), responseMessage.getString("text"), responseMessage.getString("topic"), responseMessageTime, responseMessage.getInt("favoritesCount"), responseMessage.getInt("commentsCount"), responseMessage.getString("countryISO3")));
+					messageDegree = responseMessage.getInt("degree");
+					messageType = Message.Type.fromProperties(messageDegree, friendsCount);
+					messages.add(new Message(responseMessage.getString("id"), messageDegree, responseMessage.getString("colorHex"), responseMessage.getInt("patternID"), responseMessage.getString("text"), responseMessage.getString("topic"), responseMessageTime, responseMessage.getInt("favoritesCount"), responseMessage.getInt("commentsCount"), responseMessage.getString("countryISO3"), messageType));
 				}
-				
+
 				subscriptionUpdates = responseData.getInt("subscriptionUpdates");
 			}
 			catch (Exception e) {
@@ -575,16 +581,16 @@ public class Server {
 			// add the examples to the response
 			messages.addAll(exampleMessages);
 		}
-		
+
 		GetMessagesResponse out = new GetMessagesResponse();
 		out.reachedEnd = messageCount < MESSAGES_PER_REQUEST;
 		out.latestMessageID = latestMessageID;
 		out.messages = messages;
 		out.subscriptionUpdates = subscriptionUpdates;
-		
+
 		return out;
 	}
-	
+
 	protected static List<Message> getExampleMessages(Context context, int number, long startTime) {
 		final List<Message> out = new LinkedList<Message>();
 		final String[] exampleMessages = context.getResources().getStringArray(R.array.example_messages);
@@ -612,12 +618,12 @@ public class Server {
 			if (comments < 0) {
 				comments = 0;
 			}
-			out.add(new Message(null, degree, colorHex, i, exampleMessages[i], "life", messageTime, 4, comments, null));
+			out.add(new Message(null, degree, colorHex, i, exampleMessages[i], "life", messageTime, 4, comments, null, Type.NORMAL));
 		}
-		
+
 		return out;
 	}
-	
+
 	protected static int getExampleColor(int n) {
 		// don't start with a color that is too dark (value produces nice colors and has been retrieved experimentally)
 		n = n+9;
@@ -625,7 +631,7 @@ public class Server {
 		// use different slopes for R/G/B to prevent grayscale colors
 		return Color.rgb((42 + ((n * 45) % 172)), (42 + ((n * 75) % 172)), (42 + ((n * 105) % 172)));
 	}
-	
+
 	protected static int parseStatus(String responseText) {
 		try {
 			JSONObject json = new JSONObject(responseText);

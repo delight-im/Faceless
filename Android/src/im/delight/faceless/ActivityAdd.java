@@ -2,17 +2,17 @@ package im.delight.faceless;
 
 /**
  * Copyright (C) 2014 www.delight.im <info@delight.im>
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
@@ -40,7 +40,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 
 public class ActivityAdd extends Activity implements Server.Callback.MessageEvent {
-	
+
 	public static final String EXTRA_COLOR = "color";
 	public static final String EXTRA_PATTERN_ID = "patternID";
 	public static final String EXTRA_TEXT = "text";
@@ -63,11 +63,11 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	private BackgroundPatterns mBackgroundPatterns;
 	private SimpleProgressDialog mSimpleProgressDialog;
 	private TextWatcher mTextWatcher = new TextWatcher() {
-		
+
 		@Override
 		public void onTextChanged(CharSequence s, int start, int before, int count) {
 			mText = s.toString();
-			
+
 			int charsLeft = MAX_CHARS_MESSAGE - mText.length();
 			if (charsLeft < 0) {
 				charsLeft = 0;
@@ -82,7 +82,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
 	};
-	
+
 	private void updateTextAndColor(Intent intent) {
 		int color = 0;
 		int patternID = -1;
@@ -93,7 +93,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			text = intent.getStringExtra(EXTRA_TEXT);
 		}
 		catch (Exception e) { }
-		
+
 		if (color != 0) {
 			mColor = color;
 		}
@@ -103,9 +103,9 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		if (text != null) {
 			mText = text;
 		}
-		
+
 		int textColor = UI.getTextColor(mColor);
-		
+
 		mBackgroundPatterns.setViewBackground(this, mEditTextMessage, mPatternID, mColor);
 		mEditTextMessage.setTypeface(FontProvider.getInstance(ActivityAdd.this).getFontRegular());
 		mEditTextMessage.setTextColor(textColor);
@@ -113,20 +113,20 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		mEditTextMessage.setHintTextColor(textColor);
 		mEditTextMessage.setText(mText);
 		UI.putCursorToEnd(mEditTextMessage);
-		
+
 		mBackgroundPatterns.setViewBackground(this, mTextViewDegree, mPatternID, mColor);
 		mTextViewDegree.setTextColor(textColor);
-		
+
 		mBackgroundPatterns.setViewBackground(this, mTextViewCharsLeft, mPatternID, mColor);
 		mTextViewCharsLeft.setTextColor(textColor);
 	}
-	
+
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		updateTextAndColor(intent);
 	}
-	
+
 	private void setActiveScreen(int index) {
 		if (index == 0) {
 			mViewMessageContainer.setVisibility(View.GONE);
@@ -144,7 +144,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		}
 		invalidateOptionsMenu();
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		if (mViewMessageContainer.getVisibility() == View.VISIBLE) {
@@ -160,16 +160,16 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add);
-		
+
 		// set up resources
 		Global.Setup.load(PreferenceManager.getDefaultSharedPreferences(ActivityAdd.this));
 		mResources = getResources();
 		mBackgroundPatterns = BackgroundPatterns.getInstance(this);
-		
+
 		// set up two main view groups
 		mViewOptionsContainer = findViewById(R.id.viewOptionsContainer);
 		mViewMessageContainer = findViewById(R.id.viewMessageContainer);
-		
+
 		// set up the buttons
 		mButtonNext = (Button) findViewById(R.id.buttonNext);
 		mButtonNext.setOnClickListener(new View.OnClickListener() {
@@ -202,14 +202,14 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				}
 			}
 		});
-		
+
 		// set up the EditText for the message text
 		mEditTextMessage = (EditText) findViewById(R.id.editTextMessage);
 		mEditTextMessage.addTextChangedListener(mTextWatcher);
-		
+
 		// set up a length filter for the EditText
 		UI.setMaxLength(mEditTextMessage, MAX_CHARS_MESSAGE);
-		
+
 		// prevent the user from entering line breaks in the EditText
 		mEditTextMessage.setOnKeyListener(new View.OnKeyListener() {
 			@Override
@@ -218,7 +218,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				return keyCode == KeyEvent.KEYCODE_ENTER;
 			}
 		});
-		
+
 		// clear the hint when the user enters the EditText
 		mEditTextMessage.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			@Override
@@ -228,7 +228,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				}
 			}
 		});
-		
+
 		// set up the TextViews for meta information at the bottom
 		mTextViewDegree = (TextView) findViewById(R.id.textViewDegree);
 		mTextViewCharsLeft = (TextView) findViewById(R.id.textViewCharsLeft);
@@ -253,7 +253,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 
 		// get color and text that may have been previously defined
 		updateTextAndColor(getIntent());
-		
+
 		// set up the topic selection Spinner
 		mSpinnerTopic = (KeyValueSpinner<CharSequence>) findViewById(R.id.spinnerTopic);
 		final KeyValueSpinner.Adapter<CharSequence> topicsAdapter = KeyValueSpinner.Adapter.createFromResource(this, R.array.topics_list_machine, R.array.topics_list_human, R.layout.spinner_text_white);
@@ -276,7 +276,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		// set up the action bar
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
-	
+
 	private void setLoading(boolean loading) {
 		if (loading) {
 			mSimpleProgressDialog = SimpleProgressDialog.show(this);
@@ -302,7 +302,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			return false;
 		}
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -318,7 +318,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				return true;
 		}
 	}
-	
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
@@ -337,7 +337,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
-					final Message publishedMessage = new Message(messageID, 0, messageColorHex, messagePatternID, messageText, messageTopic, messageTime, 0, 0, messageCountryISO3);
+					final Message publishedMessage = new Message(messageID, 0, messageColorHex, messagePatternID, messageText, messageTopic, messageTime, 0, 0, messageCountryISO3, Message.Type.NORMAL);
 					Intent backToMainScreen = new Intent(ActivityAdd.this, ActivityMain.class);
 					backToMainScreen.putExtra(ActivityMain.EXTRA_NEW_MESSAGE, publishedMessage);
 					startActivity(backToMainScreen);

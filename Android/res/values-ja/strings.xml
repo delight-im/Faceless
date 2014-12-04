@@ -68,6 +68,7 @@
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
 	<string name="invitation_title">Facelessを入手する</string>
+	<string name="invite_x_friends_to_see_message">Invite %d friends in order to see this message</string>
 	<string name="language">言語</string>
 	<string name="learn_more">もっと知りたい</string>
 	<string name="login_throttled_body">あなたのアカウントへのログイン失敗が多すぎます。\n\n誰か他の人があなたのアカウントに侵入しようとしている可能性もあります。\n\nそのため、一時的にアカウントをロックしました。\n\n後でまた試してみてください。</string>

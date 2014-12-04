@@ -68,6 +68,7 @@
 		<item>This app is no place for bullying, harassment or negativity.\n\nGet started by writing your first message on the next screen.</item>
 	</string-array>
 	<string name="invitation_title">Obter Faceless</string>
+	<string name="invite_x_friends_to_see_message">Invite %d friends in order to see this message</string>
 	<string name="language">Language</string>
 	<string name="learn_more">Learn more</string>
 	<string name="login_throttled_body">There have been too many failed login attempts for your account.\n\nThis may also have been caused by another person who tried to get access to your account.\n\nThus we are now protecting your account and have temporarily locked it.\n\nPlease try again later!</string>

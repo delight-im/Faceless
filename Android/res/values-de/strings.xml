@@ -68,6 +68,7 @@
 		<item>Diese App ist kein Ort für Mobbing, Belästigung oder Negativität.\n\nFange an, indem Du auf der nächsten Seite Deine erste Nachricht schreibst.</item>
 	</string-array>
 	<string name="invitation_title">Hol\' Dir Faceless</string>
+	<string name="invite_x_friends_to_see_message">Lade %d Freunde ein, um diese Nachricht zu sehen</string>
 	<string name="language">Sprache</string>
 	<string name="learn_more">Mehr erfahren</string>
 	<string name="login_throttled_body">Es gab zu viele gescheiterte Login-Versuche für Deinen Account.\n\nDies kann auch durch eine andere Person verursacht worden sein, die versucht hat, Zugriff auf Deinen Account zu bekommen.\n\nDeshalb schützen wir Deinen Account jetzt und haben ihn vorübergehend gesperrt.\n\nBitte versuche es später noch einmal!</string>

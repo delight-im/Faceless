@@ -68,6 +68,7 @@
 		<item>Esta aplicación no es lugar para hacer bullying, acosar o ser negativo.\n\nComienza con escribir tu mensaje en la siguiente pantalla.</item>
 	</string-array>
 	<string name="invitation_title">Obtener Faceless</string>
+	<string name="invite_x_friends_to_see_message">Invite %d friends in order to see this message</string>
 	<string name="language">Idioma</string>
 	<string name="learn_more">Ver más</string>
 	<string name="login_throttled_body">Ha habido demasiados intentos fallidos de acceso a tu cuenta.\n\nEsto también pudo ser causado por otra persona que intentó tener acceso a tu cuenta.\n\nEs por eso que ahora estamos protegiendo tu cuenta y la hemos bloqueado temporalmente.\n\nPor favor, inténtalo de nuevamente más tarde!</string>
