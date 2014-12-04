@@ -307,3 +307,8 @@
  * The 14 background patterns have been replaced with 32 new background patterns of higher quality.
  * A bug has been fixed where the favorites count would not be decreased on deletion of a favorite. This caused the issue that you could infinitely increase the favorites count by adding/removing a message to/from your favorites.
  * (Added an optional conversation review feature for private threads. This may be responsibly used by service operators for anti-abuse and support reasons.)
+
+## Version 2.7.1
+
+ * Recommending the app by sharing an app link with friends has been simplified. All intermediate steps have been removed so that sharing is faster and more straightforward now. Furthermore, only SMS and messaging apps are now offered as means of sending the invitations, as these services are coupled to the address book just as this project is.
+ * A certain number of friends who are active on this app is now required if users want to see their (friends of) friends' messages. Until they reach that threshold, the messages are hidden (checked on the client only as this is not relevant to security) and asked to invite more friends.
