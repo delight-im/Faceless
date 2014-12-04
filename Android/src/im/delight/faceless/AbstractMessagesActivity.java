@@ -18,7 +18,6 @@ package im.delight.faceless;
  */
 
 import android.util.TypedValue;
-
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
@@ -90,7 +89,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 			if (message.isAdminMessage() || message.getType() == Message.Type.NOT_ENOUGH_FRIENDS) {
 				startActivity(new Intent(AbstractMessagesActivity.this, ActivityInvite.class));
 			}
-			else if (message.isExampleMessage()) {
+			else if (message.getType() == Message.Type.EXAMPLE) {
 				Toast.makeText(AbstractMessagesActivity.this, R.string.example_message_explanation, Toast.LENGTH_SHORT).show();
 			}
 			else {

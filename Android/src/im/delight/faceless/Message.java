@@ -33,6 +33,8 @@ public class Message extends Content implements Parcelable {
 		public static final int NORMAL = 0;
 		/** Indicates that the message is hidden until the user has invited more friends */
 		public static final int NOT_ENOUGH_FRIENDS = 1;
+		/** Indicates that the message is only an exemplary (dummy/stub) message */
+		public static final int EXAMPLE = 2;
 
 		public static int fromProperties(final int messageDegree, final int userFriendsCount) {
 			if (messageDegree == DEGREE_FRIEND || messageDegree == DEGREE_FRIEND_OF_FRIEND) {
@@ -51,7 +53,6 @@ public class Message extends Content implements Parcelable {
 	}
 
 	public static final int DEGREE_ADMIN = -2;
-	public static final int DEGREE_EXAMPLE = -1;
 	public static final int DEGREE_SELF = 0;
 	public static final int DEGREE_FRIEND = 1;
 	public static final int DEGREE_FRIEND_OF_FRIEND = 2;
@@ -110,11 +111,11 @@ public class Message extends Content implements Parcelable {
 	}
 
 	public String getDegreeText(Context context) {
-		if (mDegree == DEGREE_ADMIN) {
-			return context.getString(R.string.app_name);
-		}
-		else if (mDegree == DEGREE_EXAMPLE) {
+		if (mType == Type.EXAMPLE) {
 			return context.getString(R.string.degree_example);
+		}
+		else if (mDegree == DEGREE_ADMIN) {
+			return context.getString(R.string.app_name);
 		}
 		else if (mDegree == DEGREE_SELF) {
 			return context.getString(R.string.degree_self);
@@ -137,10 +138,6 @@ public class Message extends Content implements Parcelable {
 
 	public boolean isAdminMessage() {
 		return mDegree == DEGREE_ADMIN;
-	}
-
-	public boolean isExampleMessage() {
-		return mDegree == DEGREE_EXAMPLE;
 	}
 
 	public int getColor() {

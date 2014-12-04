@@ -17,8 +17,6 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
-import im.delight.faceless.Message.Type;
-
 import im.delight.android.baselib.Collections;
 import im.delight.android.baselib.Data;
 import im.delight.android.languages.CustomLanguage;
@@ -596,11 +594,11 @@ public class Server {
 		final String[] exampleMessages = context.getResources().getStringArray(R.array.example_messages);
 		number = Math.min(number, exampleMessages.length);
 
-		int degree;
 		int color;
 		String colorHex;
 		long messageTime;
 		int comments;
+		int messageType;
 		for (int i = 0; i < number; i++) {
 			// create arbitrary but constant (on subsequent requests) colors
 			color = getExampleColor(i);
@@ -608,17 +606,19 @@ public class Server {
 			colorHex = Data.colorToHex(color);
 			// create arbitrary but constant (on subsequent requests) message timestamps
 			messageTime = startTime - ((i+1) * 3600L * 12L * 1000L);
+
 			if (Config.DEMO_ACTIVE) {
-				degree = (i+1) % 4;
+				messageType = Message.Type.NORMAL;
 			}
 			else {
-				degree = -1;
+				messageType = Message.Type.EXAMPLE;
 			}
+
 			comments = 12 - (i * 3);
 			if (comments < 0) {
 				comments = 0;
 			}
-			out.add(new Message(null, degree, colorHex, i, exampleMessages[i], "life", messageTime, 4, comments, null, Type.NORMAL));
+			out.add(new Message(null, ((i+1) % 4), colorHex, i, exampleMessages[i], "life", messageTime, 4, comments, null, messageType));
 		}
 
 		return out;
