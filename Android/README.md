@@ -9,6 +9,7 @@
  * [HoloColorPicker](https://github.com/LarsWerkman/HoloColorPicker)
  * [AppRater](https://github.com/delight-im/AppRater)
  * [Emoji](https://github.com/delight-im/Emoji)
+ * [Android-SimpleLocation](https://github.com/delight-im/Android-SimpleLocation)
  * [Android-Countries](https://github.com/delight-im/Android-Countries)
  * [Android-Languages](https://github.com/delight-im/Android-Languages)
  * [Android-BaseLib](https://github.com/delight-im/Android-BaseLib)
