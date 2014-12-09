@@ -547,6 +547,7 @@ public class Server {
 				long responseMessageTime;
 				int messageDegree;
 				int messageType;
+				SimpleLocation.Point messageLocation;
 				for (int i = 0; i < responseMessageCount; i++) {
 					JSONObject responseMessage = (JSONObject) responseMessages.get(i);
 					responseMessageTime = responseMessage.getInt("time") * 1000L;
@@ -559,7 +560,8 @@ public class Server {
 					catch (Exception e) { }
 					messageDegree = responseMessage.getInt("degree");
 					messageType = Message.Type.fromProperties(messageDegree, friendsCount);
-					messages.add(new Message(responseMessage.getString("id"), messageDegree, responseMessage.getString("colorHex"), responseMessage.getInt("patternID"), responseMessage.getString("text"), responseMessage.getString("topic"), responseMessageTime, responseMessage.getInt("favoritesCount"), responseMessage.getInt("commentsCount"), responseMessage.getString("countryISO3"), messageType));
+					messageLocation = parseLocation(responseMessage, "location");
+					messages.add(new Message(responseMessage.getString("id"), messageDegree, responseMessage.getString("colorHex"), responseMessage.getInt("patternID"), responseMessage.getString("text"), responseMessage.getString("topic"), responseMessageTime, responseMessage.getInt("favoritesCount"), responseMessage.getInt("commentsCount"), responseMessage.getString("countryISO3"), messageType, messageLocation));
 				}
 
 				subscriptionUpdates = responseData.getInt("subscriptionUpdates");
@@ -596,6 +598,22 @@ public class Server {
 		return out;
 	}
 
+	protected static SimpleLocation.Point parseLocation(final JSONObject jsonObj, final String locationFieldKey) {
+		try {
+			if (!jsonObj.isNull(locationFieldKey)) {
+				JSONObject locationObj = jsonObj.getJSONObject(locationFieldKey);
+				if (locationObj != null) {
+					if (!locationObj.isNull("lat") && !locationObj.isNull("long")) {
+						return new SimpleLocation.Point(locationObj.getDouble("lat"), locationObj.getDouble("long"));
+					}
+				}
+			}
+		}
+		catch (Exception e) { }
+
+		return null;
+	}
+
 	protected static List<Message> getExampleMessages(Context context, int number, long startTime) {
 		final List<Message> out = new LinkedList<Message>();
 		final String[] exampleMessages = context.getResources().getStringArray(R.array.example_messages);
@@ -625,7 +643,7 @@ public class Server {
 			if (comments < 0) {
 				comments = 0;
 			}
-			out.add(new Message(null, ((i+1) % 4), colorHex, i, exampleMessages[i], "life", messageTime, 4, comments, null, messageType));
+			out.add(new Message(null, ((i+1) % 4), colorHex, i, exampleMessages[i], "life", messageTime, 4, comments, null, messageType, null));
 		}
 
 		return out;

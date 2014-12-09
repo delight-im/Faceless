@@ -384,7 +384,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			public void run() {
 				setLoading(false);
 				if (status == Server.STATUS_OK) {
-					final Message publishedMessage = new Message(messageID, Message.DEGREE_SELF, messageColorHex, messagePatternID, messageText, messageTopic, messageTime, 0, 0, messageCountryISO3, Message.Type.NORMAL);
+					final Message publishedMessage = new Message(messageID, Message.DEGREE_SELF, messageColorHex, messagePatternID, messageText, messageTopic, messageTime, 0, 0, messageCountryISO3, Message.Type.NORMAL, null);
 					Intent backToMainScreen = new Intent(ActivityAdd.this, ActivityMain.class);
 					backToMainScreen.putExtra(ActivityMain.EXTRA_NEW_MESSAGE, publishedMessage);
 					startActivity(backToMainScreen);

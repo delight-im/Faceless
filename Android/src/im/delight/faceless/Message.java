@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.android.location.SimpleLocation;
 import im.delight.android.baselib.Data;
 import im.delight.android.countries.Country;
 import android.content.Context;
@@ -70,8 +71,9 @@ public class Message extends Content implements Parcelable {
 	private boolean mFavorited;
 	private boolean mSubscribed;
 	private final int mType;
+	private final SimpleLocation.Point mLocation;
 
-	public Message(String id, int degree, String colorHex, int patternID, String text, String topic, long time, int favorites, int comments, String countryISO3, int type) {
+	public Message(String id, int degree, String colorHex, int patternID, String text, String topic, long time, int favorites, int comments, String countryISO3, int type, SimpleLocation.Point location) {
 		mID = id;
 		mDegree = degree;
 		mColor = Color.parseColor(colorHex);
@@ -85,6 +87,7 @@ public class Message extends Content implements Parcelable {
 		mFavorited = false;
 		mSubscribed = false;
 		mType = type;
+		mLocation = location;
 	}
 
 	public String getID() {
@@ -110,7 +113,7 @@ public class Message extends Content implements Parcelable {
 		return mDegree;
 	}
 
-	public String getDegreeText(Context context) {
+	public String getOriginIndicator(final Context context, final SimpleLocation.Point currentLocation) {
 		if (mType == Type.EXAMPLE) {
 			return context.getString(R.string.degree_example);
 		}
@@ -127,11 +130,17 @@ public class Message extends Content implements Parcelable {
 			return context.getString(R.string.degree_friend_of_friend);
 		}
 		else {
-			try {
-				return getCountryName(context);
+			if (currentLocation != null && mLocation != null) {
+				final double distanceKm = SimpleLocation.calculateDistance(currentLocation, mLocation);
+				return context.getString(R.string.about_x_kilometers, distanceKm);
 			}
-			catch (Exception e) {
-				return context.getString(R.string.degree_worldwide);
+			else {
+				try {
+					return getCountryName(context);
+				}
+				catch (Exception e) {
+					return context.getString(R.string.degree_worldwide);
+				}
 			}
 		}
 	}
@@ -225,6 +234,10 @@ public class Message extends Content implements Parcelable {
 		mSubscribed = state;
 	}
 
+	public SimpleLocation.Point getLocation() {
+		return mLocation;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -300,6 +313,7 @@ public class Message extends Content implements Parcelable {
 		out.writeByte((byte) (mFavorited ? 1 : 0));
 		out.writeByte((byte) (mSubscribed ? 1 : 0));
 		out.writeInt(mType);
+		out.writeParcelable(mLocation, flags);
 	}
 
 	private Message(Parcel in) {
@@ -316,6 +330,7 @@ public class Message extends Content implements Parcelable {
 		mFavorited = in.readByte() == 1;
 		mSubscribed = in.readByte() == 1;
 		mType = in.readInt();
+		mLocation = (SimpleLocation.Point) in.<SimpleLocation.Point>readParcelable(SimpleLocation.Point.class.getClassLoader());
 	}
 
 }

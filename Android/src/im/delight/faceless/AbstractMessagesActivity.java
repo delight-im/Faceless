@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.android.location.SimpleLocation;
 import android.util.TypedValue;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
@@ -72,6 +73,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 	private PullToRefreshLayout mPullToRefreshLayout;
 	private ListView mListView;
 	private ProgressBar mProgressBarLoading;
+	private SimpleLocation mSimpleLocation;
 	protected MessagesAdapter mAdapter;
 	private AdapterView.OnItemClickListener mMessageClickListener = new AdapterView.OnItemClickListener() {
 		@Override
@@ -182,6 +184,9 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 		// set up the action bar
 		getActionBar().setDisplayHomeAsUpEnabled(isActionBarUpEnabled());
 
+		// create the location provider
+		mSimpleLocation = new SimpleLocation(this);
+
 		// load first data into the ListView
 		reloadMessages(getMessagesMode(), 0, true, false, false);
 
@@ -189,6 +194,26 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 		AppRater appRater = new AppRater(this);
 		appRater.setPhrases(R.string.app_rater_title, R.string.app_rater_explanation, R.string.app_rater_now, R.string.app_rater_later, R.string.app_rater_never);
 		appRater.show();
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		// if location access is enabled
+		if (mSimpleLocation.hasLocationEnabled()) {
+			// only if we don't have a location yet
+			if (mSimpleLocation.getPosition() == null) {
+				// ask the device to update the location
+				mSimpleLocation.beginUpdates();
+			}
+		}
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		// stop requesting and receiving updates for the location
+		mSimpleLocation.endUpdates();
 	}
 
 	abstract protected boolean isActionBarUpEnabled();
@@ -288,7 +313,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 					holder.textViewMessage.setText(AndroidEmoji.ensure(o.getText(), AbstractMessagesActivity.this));
 					holder.textViewMessage.setTextSize(TypedValue.COMPLEX_UNIT_PX, mResources.getDimension(R.dimen.fontsize_large));
 				}
-				holder.textViewDegree.setText(o.getDegreeText(AbstractMessagesActivity.this));
+				holder.textViewDegree.setText(o.getOriginIndicator(AbstractMessagesActivity.this, mSimpleLocation.getPosition()));
 				if (o.isAdminMessage()) {
 					holder.textViewComments.setText(R.string.learn_more);
 				}
@@ -360,7 +385,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 			if (messagesCount >= 10) {
 				final Random random = new Random();
 				final int randomPromoPosition = random.nextInt(messagesCount+1);
-				final Message promoMessage = new Message(null, Message.DEGREE_ADMIN, "#000000", 0, getString(R.string.action_invite_promo), "meta", System.currentTimeMillis()-300, 0, 0, null, Message.Type.NORMAL);
+				final Message promoMessage = new Message(null, Message.DEGREE_ADMIN, "#000000", 0, getString(R.string.action_invite_promo), "meta", System.currentTimeMillis()-300, 0, 0, null, Message.Type.NORMAL, null);
 				messages.add(randomPromoPosition, promoMessage);
 			}
 		}

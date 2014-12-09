@@ -2,21 +2,22 @@ package im.delight.faceless;
 
 /**
  * Copyright (C) 2014 www.delight.im <info@delight.im>
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.android.location.SimpleLocation;
 import im.delight.android.baselib.Social;
 import im.delight.android.baselib.UI;
 import im.delight.android.baselib.ViewScreenshot;
@@ -55,7 +56,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 
 public class ActivityDetails extends Activity implements OnRefreshListener, Server.Callback.MessageEvent, Server.Callback.CommentEvent, Server.Callback.FavoriteEvent, Server.Callback.ConnectionEvent, Server.Callback.ReportEvent, Server.Callback.SubscriptionEvent, ViewScreenshot.Callback {
-	
+
 	public static final String EXTRA_MESSAGE = "message";
 	private static final String SHARED_IMAGE_FILENAME = "Faceless";
 	private static final int REPORT_WRONG_TOPIC = 0;
@@ -93,6 +94,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	private SimpleProgressDialog mSimpleProgressDialog;
 	private AlertDialog mAlertDialog;
 	private int mMessageDetailsStatus;
+	private SimpleLocation mSimpleLocation;
 	// COMMENTS SCREEN BEGIN
 	private EditText mEditTextComment;
 	private ImageButton mImageButtonCommentSubmit;
@@ -108,7 +110,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 
 		if (message != null) {
 			mMessage = message;
-			
+
 			// update contents
 			int textColor = UI.getTextColor(mMessage.getColor());
 			mViewScreenshotContainer.setBackgroundColor(mMessage.getColor());
@@ -127,9 +129,9 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			else {
 				mTextViewFavoritesOrTime.setVisibility(View.GONE);
 			}
-			mTextViewDegree.setText(mMessage.getDegreeText(this));
+			mTextViewDegree.setText(mMessage.getOriginIndicator(this, mSimpleLocation.getPosition()));
 			updateFavoritesAndComments();
-			
+
 			// update text and shadow colors
 			mTextViewMessage.setTextColor(textColor);
 			mTextViewMessage.setLinkTextColor(textColor);
@@ -137,7 +139,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			mTextViewFavoritesOrTime.setTextColor(textColor);
 			mTextViewDegree.setTextColor(textColor);
 			mTextViewComments.setTextColor(textColor);
-			
+
 			// update property images (TextViews' compound drawables)
 			mTextViewTopic.setCompoundDrawablesWithIntrinsicBounds(mMessagePropertyDrawables.getTopic(textColor == Color.BLACK), null, null, null);
 			if (mMessage.isTimeVisible()) {
@@ -148,21 +150,21 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			}
 			mTextViewDegree.setCompoundDrawablesWithIntrinsicBounds(mMessagePropertyDrawables.getDegree(textColor == Color.BLACK), null, null, null);
 			mTextViewComments.setCompoundDrawablesWithIntrinsicBounds(null, null, mMessagePropertyDrawables.getComments(textColor == Color.BLACK), null);
-			
+
 			// set background texture
 			BackgroundPatterns backgroundPatterns = BackgroundPatterns.getInstance(this);
 			backgroundPatterns.setViewBackground(this, mViewScreenshotContainer, mMessage.getPatternID(), mMessage.getColor());
 			mTextViewMessage.setTypeface(FontProvider.getInstance(ActivityDetails.this).getFontRegular());
-			
+
 			// load the message's details before we let the user interact with the message
 			mMessageDetailsStatus = 0;
 			Server.getMessageDetails(this, mMessage.getID(), this);
-			
+
 			// slowly fade in the text
 			Global.UI.fadeIn(mTextViewMessage);
 		}
 	}
-	
+
 	private void updateFavoritesAndComments() {
 		if (!mMessage.isTimeVisible()) {
 			mTextViewFavoritesOrTime.setText(mMessage.getFavorites() > 0 ? mResources.getQuantityString(R.plurals.x_favorites, mMessage.getFavorites(), mMessage.getFavorites()) : "");
@@ -170,7 +172,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		}
 		mTextViewComments.setText(mResources.getQuantityString(R.plurals.x_comments, mMessage.getComments(), mMessage.getComments()));
 	}
-	
+
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
@@ -181,19 +183,19 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_details);
-		
+
 		// set up the layout inflater
 		mInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-		
+
 		// set up resources
 		Global.Setup.load(PreferenceManager.getDefaultSharedPreferences(ActivityDetails.this));
 		mResources = getResources();
 		mMessagePropertyDrawables = new Global.MessagePropertyDrawables(this);
-		
+
 		// set up two main view groups
 		mViewScreenshotContainer = findViewById(R.id.viewScreenshotContainer);
 		mViewListViewContainer = findViewById(R.id.viewListViewContainer);
-		
+
 		// set up UI widgets
 		mTextViewMessage = (TextView) findViewById(R.id.textViewMessage);
 		mTextViewTopic = (TextView) findViewById(R.id.textViewTopic);
@@ -204,10 +206,10 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		mButtonComments = (Button) findViewById(R.id.buttonComments);
 		mEditTextComment = (EditText) findViewById(R.id.editTextComment);
 		mImageButtonCommentSubmit = (ImageButton) findViewById(R.id.imageButtonCommentSubmit);
-		
+
 		// set up a length filter for the EditText
 		UI.setMaxLength(mEditTextComment, MAX_CHARS_COMMENT);
-		
+
 		// set up the buttons' OnClickListeners
 		mButtonMessage.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -220,10 +222,10 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			public void onClick(View v) {
 				mViewScreenshotContainer.setVisibility(View.GONE);
 				mViewListViewContainer.setVisibility(View.VISIBLE);
-				
+
 				mButtonComments.setEnabled(false);
 				mButtonMessage.setEnabled(true);
-				
+
 				reloadComments(true);
 			}
 		});
@@ -234,12 +236,12 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 				sendCommentFromView(mEditTextComment, null);
 			}
 		});
-		
+
 		// set up the ListView with its ArrayAdapter and the ProgressBar
 		mListView = (ListView) findViewById(R.id.listViewComments);
 		mAdapter = new CommentsAdapter(this, R.layout.row_comments_list, new ArrayList<Comment>());
 		mListView.setAdapter(mAdapter);
-		
+
 		// set up the reporting menu for the comments (in the long-click listener)
 		mListView.setLongClickable(true);
 		mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -260,11 +262,14 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 				}
 			}
 		});
-		
+
 		// set up pull-to-refresh (at the top)
 		mPullToRefreshLayout = (PullToRefreshLayout) findViewById(R.id.pullToRefreshLayout);
 		ActionBarPullToRefresh.from(this).allChildrenArePullable().listener(this).setup(mPullToRefreshLayout);
-		
+
+		// create the location provider
+		mSimpleLocation = new SimpleLocation(this);
+
 		// get the message
 		updateMessage(getIntent());
 
@@ -272,7 +277,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		UI.forceOverflowMenu(this);
 	}
-	
+
 	private void sendCommentFromView(final EditText source, final Comment privateReplyTarget) {
 		final String text = Emoji.replaceInText(source.getText().toString().trim());
 		if (text.length() > 0) {
@@ -299,7 +304,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			}
 		}
 	}
-	
+
 	private void sendComment(final String text, final Comment privateReplyTarget) {
 		mImageButtonCommentSubmit.setEnabled(false);
 		setLoading(true);
@@ -307,7 +312,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		final String privateReplyTo = privateReplyTarget == null ? null : privateReplyTarget.getID();
 		Server.addComment(ActivityDetails.this, mMessage.getID(), privateReplyTo, text, ActivityDetails.this);
 	}
-	
+
 	private void showCommentOptions(final Comment comment) {
 		final CharSequence[] options = { getString(R.string.reply_privately), getString(R.string.report_comment) };
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -326,10 +331,10 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		builder.setNeutralButton(R.string.cancel, null);
 		mAlertDialog = builder.show();
 	}
-	
+
 	private void replyPrivately(final Comment comment) {
 		final View viewReply = View.inflate(this, R.layout.dialog_reply_privately, null);
-		
+
 		final TextView textViewOriginalComment = (TextView) viewReply.findViewById(R.id.textViewOriginalComment);
 		// show the original comment for reference
 		textViewOriginalComment.setText(AndroidEmoji.ensure(comment.getText(), ActivityDetails.this));
@@ -350,7 +355,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		builder.setNegativeButton(R.string.cancel, null);
 		mAlertDialog = builder.show();
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		// if we are already on the home tab
@@ -364,7 +369,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			showMessageView();
 		}
 	}
-	
+
 	private void showMessageView() {
 		mViewListViewContainer.setVisibility(View.GONE);
 		mViewScreenshotContainer.setVisibility(View.VISIBLE);
@@ -378,7 +383,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.details, menu);
-		
+
 		// if the message details have not been received yet
 		if (mMessageDetailsStatus == 0) {
 			// show a loading indicator (progress bar) first
@@ -389,7 +394,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			menu.findItem(R.id.action_remove_subscription).setVisible(false).setEnabled(false);
 			menu.findItem(R.id.action_share_picture).setVisible(false).setEnabled(false);
 			menu.findItem(R.id.action_report).setVisible(false).setEnabled(false);
-			
+
 			// show the menu
 			return true;
 		}
@@ -417,7 +422,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			menu.findItem(R.id.action_remove_subscription).setVisible(isSubscribed).setEnabled(isSubscribed);
 			menu.findItem(R.id.action_share_picture).setVisible(!isOwnMessage).setEnabled(!isOwnMessage);
 			menu.findItem(R.id.action_report).setVisible(!isOwnMessage).setEnabled(!isOwnMessage);
-			
+
 			// show the menu
 			return true;
 		}
@@ -427,7 +432,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			return false;
 		}
 	}
-	
+
 	private void reportAffirmation(final int reportOption, final CharSequence optionTitle, final String contentType, final String contentID) {
 		final int affirmationMessage;
 		final int affirmationConfirm;
@@ -460,7 +465,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		else {
 			throw new RuntimeException("Unknown reporting option: "+reportOption);
 		}
-		
+
 		AlertDialog.Builder builder = new AlertDialog.Builder(ActivityDetails.this);
 		builder.setTitle(optionTitle);
 		builder.setMessage(affirmationMessage);
@@ -474,7 +479,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		builder.setNegativeButton(R.string.cancel, null);
 		mAlertDialog = builder.show();
 	}
-	
+
 	private void reportContent(final String contentType, final String contentID) {
 		final String[] options = getResources().getStringArray(R.array.report_options);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -498,7 +503,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		builder.setNeutralButton(R.string.cancel, null);
 		mAlertDialog = builder.show();
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -531,7 +536,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 				return true;
 		}
 	}
-	
+
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
@@ -551,11 +556,11 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	}
 
 	public class CommentsAdapter extends ArrayAdapter<Comment> {
-			
+
 		public CommentsAdapter(Context context, int textViewResourceId, List<Comment> items) {
 			super(context, textViewResourceId, items);
 		}
-			
+
 		@Override
 		public long getItemId(int position) {
 			return position;
@@ -661,7 +666,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 		}
 
 	}
-	
+
 	private void reloadComments(boolean showLoadingDialog) {
 		if (showLoadingDialog) {
 			setLoading(true);
@@ -673,7 +678,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	public void onRefreshStarted(View view) {
 		reloadComments(false);
 	}
-	
+
 	private void setLoading(boolean loading) {
 		if (loading) {
 			mSimpleProgressDialog = SimpleProgressDialog.show(this);
@@ -685,13 +690,13 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			}
 		}
 	}
-	
+
 	private void setMessageFavorited(boolean state) {
 		if (mMessage != null) {
 			mMessage.setFavorited(state);
 		}
 	}
-	
+
 	private void setMessageSubscribed(boolean state) {
 		if (mMessage != null) {
 			mMessage.setSubscribed(state);
@@ -828,7 +833,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 
 					// tell other components that a message has just been read (if any component is listening)
 					MessageReadReceiver.getInstance().setMessageRead(mMessage);
-					
+
 					// if there are private comments in the thread already double check before replying publicly
 					mConfirmPublicReplies = hasPrivateComments;
 				}
@@ -870,7 +875,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 				if (status == Server.STATUS_OK) {
 					UI.setKeyboardVisibility(ActivityDetails.this, mEditTextComment, false);
 					mEditTextComment.setText("");
-					
+
 					// only if the comment is public
 					if (privateRecipientInThread == 0) {
 						mMessage.increaseComments();
@@ -879,7 +884,7 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 					// after commenting automatically subscribe to new comments (if not done already)
 					setMessageSubscribed(true);
 					invalidateOptionsMenu();
-					
+
 					// insert a preview of the comment right at the top
 					final Comment publishedComment = new Comment(commentID, commentText, privateRecipientInThread, false, true, ownerInThread, commentTime);
 					mAdapter.insert(publishedComment, 0);
