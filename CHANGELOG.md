@@ -312,3 +312,10 @@
 
  * Recommending the app by sharing an app link with friends has been simplified. All intermediate steps have been removed so that sharing is faster and more straightforward now. Furthermore, only SMS and messaging apps are now offered as means of sending the invitations, as these services are coupled to the address book just as this project is.
  * A certain number of friends who are active on this app is now required if users want to see their (friends of) friends' messages. Until they reach that threshold, the messages are hidden (checked on the client only as this is not relevant to security) and asked to invite more friends.
+
+## Version 2.8.0
+
+ * Location-based services have been added.
+ * You can now add your *approximate* location (blurred to protect your privacy) to messages and share them with people nearby.
+ * See how close (or far) you are to the author of a message you're just reading. Again, the distance is a rough approximation only to protect the privacy -- both yours and the author's.
+ * Multi-line comments are now possible and the input field expands seamlessly for your convenience.
