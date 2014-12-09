@@ -40,6 +40,16 @@
 				    android:id="@+id/spinnerVisibility"
 				    android:layout_width="match_parent"
 				    style="@style/Spinner_Readable.Light" />
+			    <TextView
+			        android:layout_width="match_parent"
+			        android:text="@string/enable_location_help"
+			        android:textColor="#ffffff"
+			        style="@style/TextView_Readable" />
+			    <CheckBox
+			        android:id="@+id/checkBoxLocation"
+			        android:layout_width="match_parent"
+			        android:text="@string/enable_location_caption"
+			        style="@style/CheckBox_Readable.Light" />
 			</LinearLayout>
 		</ScrollView>
 	    <include layout="@layout/divider" />

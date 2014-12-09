@@ -17,6 +17,8 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.android.location.SimpleLocation;
+import android.widget.CheckBox;
 import java.util.List;
 import im.delight.android.baselib.Data;
 import im.delight.android.baselib.UI;
@@ -56,12 +58,14 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	private TextView mTextViewCharsLeft;
 	private KeyValueSpinner<CharSequence> mSpinnerTopic;
 	private KeyValueSpinner<CharSequence> mSpinnerVisibility;
+	private CheckBox mCheckBoxLocation;
 	private int mColor;
 	private int mPatternID;
 	private String mText;
 	private Resources mResources;
 	private BackgroundPatterns mBackgroundPatterns;
 	private SimpleProgressDialog mSimpleProgressDialog;
+	private SimpleLocation mSimpleLocation;
 	private TextWatcher mTextWatcher = new TextWatcher() {
 
 		@Override
@@ -195,7 +199,9 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				final String text = Emoji.replaceInText(mText.trim());
 				if (text.length() > 0) {
 					setLoading(true);
-					Server.saveMessage(ActivityAdd.this, Data.colorToHex(mColor), mPatternID, text, mSpinnerTopic.getKey().toString(), mSpinnerVisibility.getKey().toString(), ActivityAdd.this);
+
+					final SimpleLocation.Point location = mCheckBoxLocation.isChecked() ? mSimpleLocation.getPosition() : null;
+					Server.saveMessage(ActivityAdd.this, Data.colorToHex(mColor), mPatternID, text, mSpinnerTopic.getKey().toString(), mSpinnerVisibility.getKey().toString(), location, ActivityAdd.this);
 				}
 				else {
 					Toast.makeText(ActivityAdd.this, getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
@@ -273,8 +279,49 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		visibilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mSpinnerVisibility.setAdapter(visibilityAdapter);
 
+		// create the location provider
+		mSimpleLocation = new SimpleLocation(this);
+
+		// set up the location feature checkbox
+		mCheckBoxLocation = (CheckBox) findViewById(R.id.checkBoxLocation);
+		mCheckBoxLocation.setChecked(mSimpleLocation.hasLocationEnabled());
+		mCheckBoxLocation.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// if the location feature has just been enabled
+				if (mCheckBoxLocation.isChecked()) {
+					// if we don't have location access on the device yet
+					if (!mSimpleLocation.hasLocationEnabled()) {
+						// uncheck the location feature checkbox again
+						mCheckBoxLocation.setChecked(false);
+						// ask the user to enable location access
+						SimpleLocation.openSettings(ActivityAdd.this);
+					}
+				}
+			}
+
+		});
+
 		// set up the action bar
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		// if location access is enabled
+		if (mSimpleLocation.hasLocationEnabled()) {
+			// ask the device to update the location
+			mSimpleLocation.beginUpdates();
+		}
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		// stop requesting and receiving updates for the location
+		mSimpleLocation.endUpdates();
 	}
 
 	private void setLoading(boolean loading) {

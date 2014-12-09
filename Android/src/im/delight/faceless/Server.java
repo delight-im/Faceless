@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.android.location.SimpleLocation;
 import im.delight.android.baselib.Collections;
 import im.delight.android.baselib.Data;
 import im.delight.android.languages.CustomLanguage;
@@ -176,7 +177,7 @@ public class Server {
 		});
 	}
 
-	public static void saveMessage(final Context context, final String colorHex, final int patternID, final String text, final String topic, final String visibility, final Callback.MessageEvent callback) {
+	public static void saveMessage(final Context context, final String colorHex, final int patternID, final String text, final String topic, final String visibility, final SimpleLocation.Point location, final Callback.MessageEvent callback) {
 		WebRequest request = new APIRequest(context).post().to("/messages/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("colorHex", colorHex);
@@ -206,6 +207,12 @@ public class Server {
 			request.addParam("countryISO3", countryIso3);
 		}
 		catch (Exception e) { }
+
+		if (location != null) {
+			request.addParam("location[lat]", location.latitude);
+			request.addParam("location[long]", location.longitude);
+		}
+
 		final String messageCountryIso3 = countryIso3;
 		request.addParam("random", UUID.randomUUID().toString());
 		request.executeAsync(new WebRequest.Callback() {

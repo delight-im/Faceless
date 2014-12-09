@@ -116,6 +116,17 @@
 	<style name="Spinner_Readable.Light">
 	    <item name="android:background">@drawable/spinner_light</item>
 	</style>
+
+	<style name="CheckBox_Readable">
+	    <item name="android:layout_marginLeft">12dp</item>
+	    <item name="android:layout_marginTop">8dp</item>
+	    <item name="android:layout_marginRight">12dp</item>
+	    <item name="android:layout_marginBottom">8dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	</style>
+	<style name="CheckBox_Readable.Light">
+	    <item name="android:textColor">#ffffff</item>
+	</style>
 	
 	<style name="TextView_Readable">
 	    <item name="android:layout_height">wrap_content</item>
