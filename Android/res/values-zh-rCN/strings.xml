@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="about_x_kilometers">ca. %.1f km</string>
 	<string name="action_add">写一条信息</string>
 	<string name="action_add_favorite">添加到收藏</string>
 	<string name="action_add_subscription">评论订阅</string>

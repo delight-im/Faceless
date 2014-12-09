@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="about_x_kilometers">ca. %.1f km</string>
 	<string name="action_add">Escrever mensagem</string>
 	<string name="action_add_favorite">Adicionar aos favoritos</string>
 	<string name="action_add_subscription">Subscrever aos comentários</string>
