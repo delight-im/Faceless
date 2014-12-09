@@ -103,10 +103,11 @@
 		        android:layout_weight="1"
 		        android:textSize="@dimen/fontsize_normal"
 		        android:textColor="#000000"
-		        android:inputType="text|textShortMessage"
+		        android:inputType="text|textMultiLine"
 		        android:hint="@string/comment_add_hint"
-		        android:lines="1"
-		        android:maxLines="1"
+		        android:minLines="1"
+		        android:maxLines="3"
+		        android:gravity="top|left"
 		        android:background="@android:color/transparent" />
 		    <ImageButton
 		        android:id="@+id/imageButtonCommentSubmit"
@@ -116,6 +117,7 @@
 		        android:src="@drawable/ic_ib_send"
 		        android:contentDescription="@string/send"
 		        android:layout_marginLeft="8dp"
+		        android:layout_gravity="center_vertical"
 		        android:filterTouchesWhenObscured="true" />
 	    </LinearLayout>
 	</LinearLayout>
