@@ -39,6 +39,8 @@
 	<string name="degree_friend_of_friend">Freund eines Freundes</string>
 	<string name="degree_self">Du</string>
 	<string name="degree_worldwide">Weltweit</string>
+	<string name="enable_location_caption">Mit Leuten in der Nähe teilen</string>
+	<string name="enable_location_help">Möchtest Du Deine Nachricht und den <b>ungefähren</b> Ort mit Leuten in Deiner Nähe teilen?</string>
 	<string name="error_bad_request">Deine Anfrage konnte nicht vom Server behandelt werden</string>
 	<string name="error_maintenance">Faceless ist für kurze Zeit außer Betrieb</string>
 	<string name="error_no_connection">Bitte überprüfe Deine Internet-Verbindung</string>

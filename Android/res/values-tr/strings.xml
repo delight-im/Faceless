@@ -39,6 +39,8 @@
 	<string name="degree_friend_of_friend">Arkadaşımın arkadaşı</string>
 	<string name="degree_self">Sen</string>
 	<string name="degree_worldwide">Dünya Çapında</string>
+	<string name="enable_location_caption">Share with people nearby</string>
+	<string name="enable_location_help">Do you want to share your message and the <b>approximate</b> location with people nearby?</string>
 	<string name="error_bad_request">İsteğiniz sunucuya ulaşmamıştır</string>
 	<string name="error_maintenance">Faceless kısa bir süreliğine hizmet verememektedir</string>
 	<string name="error_no_connection">Lütfen internet bağlantınızı kontrol edin</string>

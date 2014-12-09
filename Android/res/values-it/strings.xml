@@ -39,6 +39,8 @@
 	<string name="degree_friend_of_friend">Amico di un amico</string>
 	<string name="degree_self">Voi</string>
 	<string name="degree_worldwide">Mondiale</string>
+	<string name="enable_location_caption">Share with people nearby</string>
+	<string name="enable_location_help">Do you want to share your message and the <b>approximate</b> location with people nearby?</string>
 	<string name="error_bad_request">Your request could not be handled by the server</string>
 	<string name="error_maintenance">Faceless is out of service for a short time</string>
 	<string name="error_no_connection">Please check your internet connection</string>

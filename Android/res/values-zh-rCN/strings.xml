@@ -39,6 +39,8 @@
 	<string name="degree_friend_of_friend">朋友的朋友</string>
 	<string name="degree_self">你</string>
 	<string name="degree_worldwide">全球</string>
+	<string name="enable_location_caption">Share with people nearby</string>
+	<string name="enable_location_help">Do you want to share your message and the <b>approximate</b> location with people nearby?</string>
 	<string name="error_bad_request">服务器无法处理你的请求</string>
 	<string name="error_maintenance">无面者暂停服务</string>
 	<string name="error_no_connection">请检查你的网络连接</string>

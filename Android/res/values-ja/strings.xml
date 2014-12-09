@@ -39,6 +39,8 @@
 	<string name="degree_friend_of_friend">友達の友達</string>
 	<string name="degree_self">あなた</string>
 	<string name="degree_worldwide">世界中</string>
+	<string name="enable_location_caption">Share with people nearby</string>
+	<string name="enable_location_help">Do you want to share your message and the <b>approximate</b> location with people nearby?</string>
 	<string name="error_bad_request">あなたのリクエストはサーバで処理できませんでした</string>
 	<string name="error_maintenance">Facelessはただいまメンテナンス中です</string>
 	<string name="error_no_connection">インターネット接続を確認してください</string>
