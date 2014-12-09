@@ -65,6 +65,7 @@ CREATE TABLE `messages` (
   `time_active` int(10) unsigned NOT NULL DEFAULT '2147483647',
   `language_iso3` varchar(3) DEFAULT NULL,
   `country_iso3` varchar(3) DEFAULT NULL,
+  `location` point DEFAULT NULL,
   `topic` enum('','politics','art','business','work','culture','health','science','sports','technology','sex','dating','beauty','books','movies','music','family','food','life','love','confessions','dreams','fantasy','friendship','funny','games','hobbies','money','party','philosophy','quotes','school','stories','studies','travel','meta') NOT NULL DEFAULT '',
   `score` decimal(8,6) unsigned NOT NULL DEFAULT '0.000000',
   `dispatched` tinyint(1) unsigned NOT NULL DEFAULT '0',

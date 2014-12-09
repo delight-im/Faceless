@@ -62,6 +62,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $messageFields .= ", country_iso3";
                         $messageValues .= ", ".Database::escape($_POST['countryISO3']);
                     }
+                    if (isset($_POST['location'])) {
+                        if (isset($_POST['location']['lat']) && isset($_POST['location']['long'])) {
+                            $locationPointSql = "POINT(".floatval($_POST['location']['lat']).",".floatval($_POST['location']['long']).")";
+                            $messageFields .= ", location";
+                            $messageValues .= ", ".$locationPointSql;
+                        }
+                    }
 
                     if ($_POST['visibility'] == VISIBILITY_FRIENDS_AND_PUBLIC) {
                         // send the message to all friends' feeds
