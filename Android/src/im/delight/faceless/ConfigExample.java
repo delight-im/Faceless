@@ -2,17 +2,17 @@ package im.delight.faceless;
 
 /**
  * Copyright (C) 2014 www.delight.im <info@delight.im>
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
@@ -41,6 +41,8 @@ public class ConfigExample {
 	public static final int PASSWORD_LENGTH_FACTOR = 3;
 	public static final int UUID_LENGTH_IN_CHARS = 36;
 	public static final int CRYPTO_HASH_ITERATIONS = 4;
+	/** The radius that locations should be randomly blurred within for privacy reasons (in meters) */
+	public static final int LOCATION_BLUR_RADIUS = 25000;
 
 	/** This class may not be instantiated */
 	private ConfigExample() { }

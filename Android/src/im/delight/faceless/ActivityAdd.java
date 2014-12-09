@@ -281,6 +281,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 
 		// create the location provider
 		mSimpleLocation = new SimpleLocation(this);
+		mSimpleLocation.setBlurRadius(Config.LOCATION_BLUR_RADIUS);
 
 		// set up the location feature checkbox
 		mCheckBoxLocation = (CheckBox) findViewById(R.id.checkBoxLocation);
