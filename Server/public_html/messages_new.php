@@ -64,9 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                     if (isset($_POST['location'])) {
                         if (isset($_POST['location']['lat']) && isset($_POST['location']['long'])) {
-                            $locationPointSql = "POINT(".floatval($_POST['location']['lat']).",".floatval($_POST['location']['long']).")";
-                            $messageFields .= ", location";
-                            $messageValues .= ", ".$locationPointSql;
+                            $messageFields .= ", geo_lat, geo_long";
+                            $messageValues .= ", ".floatval($_POST['location']['lat']).", ".floatval($_POST['location']['long']);
                         }
                     }
 

@@ -52,19 +52,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         // get the messages either from the personal feed or from one's own favorites
         if ($_GET['mode'] == 'friends') {
-            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, X(b.location) AS location_lat, Y(b.location) AS location_long, b.time_published, b.user_id, b.topic, b.deleted FROM feeds AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." ORDER BY b.time_published DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM feeds AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." ORDER BY b.time_published DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else if ($_GET['mode'] == 'popular') {
-            $items = Database::select("SELECT a.id AS message_id, IF(b.degree IS NULL, 3, b.degree) AS degree, a.color_hex, a.pattern_id, a.text_encrypted, a.message_secret, a.favorites_count, a.comments_count, a.country_iso3, X(a.location) AS location_lat, Y(a.location) AS location_long, a.time_published, a.user_id, a.topic, a.deleted FROM messages AS a LEFT JOIN feeds AS b ON a.id = b.message_id AND b.user_id = ".intval($userID)." WHERE a.language_iso3 = ".Database::escape($_GET['languageISO3'])." ORDER BY a.score DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+            $items = Database::select("SELECT a.id AS message_id, IF(b.degree IS NULL, 3, b.degree) AS degree, a.color_hex, a.pattern_id, a.text_encrypted, a.message_secret, a.favorites_count, a.comments_count, a.country_iso3, a.geo_lat, a.geo_long, a.time_published, a.user_id, a.topic, a.deleted FROM messages AS a LEFT JOIN feeds AS b ON a.id = b.message_id AND b.user_id = ".intval($userID)." WHERE a.language_iso3 = ".Database::escape($_GET['languageISO3'])." ORDER BY a.score DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else if ($_GET['mode'] == 'latest') {
-            $items = Database::select("SELECT a.id AS message_id, IF(b.degree IS NULL, 3, b.degree) AS degree, a.color_hex, a.pattern_id, a.text_encrypted, a.message_secret, a.favorites_count, a.comments_count, a.country_iso3, X(a.location) AS location_lat, Y(a.location) AS location_long, a.time_published, a.user_id, a.topic, a.deleted FROM messages AS a LEFT JOIN feeds AS b ON a.id = b.message_id AND b.user_id = ".intval($userID)." WHERE a.language_iso3 = ".Database::escape($_GET['languageISO3'])." AND a.time_published < ".time()." ORDER BY a.time_published DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+            $items = Database::select("SELECT a.id AS message_id, IF(b.degree IS NULL, 3, b.degree) AS degree, a.color_hex, a.pattern_id, a.text_encrypted, a.message_secret, a.favorites_count, a.comments_count, a.country_iso3, a.geo_lat, a.geo_long, a.time_published, a.user_id, a.topic, a.deleted FROM messages AS a LEFT JOIN feeds AS b ON a.id = b.message_id AND b.user_id = ".intval($userID)." WHERE a.language_iso3 = ".Database::escape($_GET['languageISO3'])." AND a.time_published < ".time()." ORDER BY a.time_published DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else if ($_GET['mode'] == 'favorites') {
-            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, X(b.location) AS location_lat, Y(b.location) AS location_long, b.time_published, b.user_id, b.topic, b.deleted FROM favorites AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." ORDER BY a.time_added DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM favorites AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." ORDER BY a.time_added DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else if ($_GET['mode'] == 'subscriptions') {
-            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, X(b.location) AS location_lat, Y(b.location) AS location_long, b.time_published, b.user_id, b.topic, b.deleted FROM subscriptions AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." AND a.counter > 0 LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM subscriptions AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." AND a.counter > 0 LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else {
             respond(array('status' => 'bad_request'));
@@ -88,10 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
                     // if the content has just been successfully decrypted
                     if ($textDecrypted !== false) {
-                        if (isset($item['location_lat']) && isset($item['location_long'])) {
+                        if (isset($item['geo_lat']) && isset($item['geo_long'])) {
                             $location = array(
-                                'lat' => $item['location_lat'],
-                                'long' => $item['location_long']
+                                'lat' => $item['geo_lat'],
+                                'long' => $item['geo_long']
                             );
                         }
                         else {
