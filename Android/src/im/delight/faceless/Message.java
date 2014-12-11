@@ -131,7 +131,7 @@ public class Message extends Content implements Parcelable {
 		}
 		else {
 			if (currentLocation != null && mLocation != null) {
-				final double distanceKm = SimpleLocation.calculateDistance(currentLocation, mLocation);
+				final double distanceKm = SimpleLocation.calculateDistance(currentLocation, mLocation) / 1000;
 				return context.getString(R.string.about_x_kilometers, distanceKm);
 			}
 			else {
