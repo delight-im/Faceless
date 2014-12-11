@@ -319,3 +319,7 @@
  * You can now add your *approximate* location (blurred to protect your privacy) to messages and share them with people nearby.
  * See how close (or far) you are to the author of a message you're just reading. Again, the distance is a rough approximation only to protect the privacy -- both yours and the author's.
  * Multi-line comments are now possible and the input field expands seamlessly for your convenience.
+
+## Version 2.9.0
+
+ * "Nearby" messages have been added -- so that you can see what people around you are talking about.
