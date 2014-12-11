@@ -2,8 +2,8 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="im.delight.faceless"
-    android:versionCode="38"
-    android:versionName="2.8.0"
+    android:versionCode="39"
+    android:versionName="2.9.0"
     android:installLocation="internalOnly">
     <uses-sdk
         android:minSdkVersion="14"
