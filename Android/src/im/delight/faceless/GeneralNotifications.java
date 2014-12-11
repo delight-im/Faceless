@@ -89,7 +89,7 @@ public class GeneralNotifications extends AbstractNotificationSender {
 
 	private void sendMessagesNotification() {
 		final Set<String> topicsList = mPrefs.getStringSet(ActivitySettings.PREF_TOPICS_LIST, Global.getDefaultTopics(this));
-		final GetMessagesResponse messages = Server.getMessagesSync(this, Server.MODE_FRIENDS, 0, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
+		final GetMessagesResponse messages = Server.getMessagesSync(this, Server.MODE_FRIENDS, 0, null, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
 
 		if (messages != null) {
 			// get the ID of the latest message that has already been read

@@ -40,6 +40,7 @@ public class Server {
 	public static final int MODE_LATEST = 3;
 	public static final int MODE_FAVORITES = 4;
 	public static final int MODE_SUBSCRIPTIONS = 5;
+	public static final int MODE_NEARBY = 6;
 	public static final int STATUS_OK = 1;
 	public static final int STATUS_MAINTENANCE = 2;
 	public static final int STATUS_BAD_REQUEST = 3;
@@ -98,8 +99,8 @@ public class Server {
 		public int subscriptionUpdates;
 	}
 
-	public static GetMessagesResponse getMessagesSync(final Context context, final int mode, final int page, final Set<String> topicsList, final int friendsCount) {
-		WebRequest request = getMessagesRequest(context, mode, page, topicsList);
+	public static GetMessagesResponse getMessagesSync(final Context context, final int mode, final int page, final SimpleLocation.Point location, final Set<String> topicsList, final int friendsCount) {
+		WebRequest request = getMessagesRequest(context, mode, page, location, topicsList);
 		final String responseText = request.executeSync();
 		final int status = parseStatus(responseText);
 
@@ -112,8 +113,8 @@ public class Server {
 		}
 	}
 
-	public static void getMessagesAsync(final Context context, final int mode, final int page, final Set<String> topicsList, final int friendsCount, final Callback.MessageEvent callback) {
-		WebRequest request = getMessagesRequest(context, mode, page, topicsList);
+	public static void getMessagesAsync(final Context context, final int mode, final int page, final SimpleLocation.Point location, final Set<String> topicsList, final int friendsCount, final Callback.MessageEvent callback) {
+		WebRequest request = getMessagesRequest(context, mode, page, location, topicsList);
 		request.executeAsync(new WebRequest.Callback() {
 			@Override
 			public void onSuccess(String responseText) {
@@ -500,7 +501,7 @@ public class Server {
 		});
 	}
 
-	protected static WebRequest getMessagesRequest(final Context context, final int mode, final int page, final Set<String> topicsList) {
+	protected static WebRequest getMessagesRequest(final Context context, final int mode, final int page, final SimpleLocation.Point location, final Set<String> topicsList) {
 		// add meta category to list of topics as this should be visible to all users
 		topicsList.add("meta");
 
@@ -520,6 +521,16 @@ public class Server {
 		}
 		else if (mode == MODE_SUBSCRIPTIONS) {
 			request.addParam("mode", "subscriptions");
+		}
+		else if (mode == MODE_NEARBY) {
+			if (location != null) {
+				request.addParam("location[lat]", location.latitude);
+				request.addParam("location[long]", location.longitude);
+			}
+			else {
+				throw new RuntimeException("Location required for nearby mode");
+			}
+			request.addParam("mode", "nearby");
 		}
 		else {
 			throw new RuntimeException("Unknown mode: "+mode);

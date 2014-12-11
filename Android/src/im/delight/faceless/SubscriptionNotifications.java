@@ -93,7 +93,7 @@ public class SubscriptionNotifications extends AbstractNotificationSender {
 
 	private void sendSubscriptionNotification() {
 		final Set<String> topicsList = mPrefs.getStringSet(ActivitySettings.PREF_TOPICS_LIST, Global.getDefaultTopics(this));
-		final GetMessagesResponse subscriptionUpdates = Server.getMessagesSync(this, Server.MODE_SUBSCRIPTIONS, 0, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
+		final GetMessagesResponse subscriptionUpdates = Server.getMessagesSync(this, Server.MODE_SUBSCRIPTIONS, 0, null, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
 		final int subscriptionUpdateCount = subscriptionUpdates == null ? 0 : subscriptionUpdates.subscriptionUpdates;
 
 		if (subscriptionUpdateCount > 0) {

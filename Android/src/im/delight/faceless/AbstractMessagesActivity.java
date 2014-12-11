@@ -235,6 +235,29 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 	}
 
 	protected void reloadMessages(int mode, int page, boolean isInitial, boolean isPullToRefresh, boolean isInfiniteScrolling) {
+		// if the user has requested nearby messages (which requires location data)
+		if (mode == Server.MODE_NEARBY) {
+			// if we don't have location access on the device yet
+			if (!mSimpleLocation.hasLocationEnabled()) {
+				// ask the user to enable location access
+				SimpleLocation.openSettings(AbstractMessagesActivity.this);
+				// stop any loading indicators that may be active
+				mPullToRefreshLayout.setRefreshing(false);
+				// cancel the request
+				return;
+			}
+
+			// if the device's location is not available yet
+			if (mSimpleLocation.getPosition() == null) {
+				// ask the user to try again shortly
+				Toast.makeText(AbstractMessagesActivity.this, R.string.try_again_shortly, Toast.LENGTH_SHORT).show();
+				// stop any loading indicators that may be active
+				mPullToRefreshLayout.setRefreshing(false);
+				// cancel the request
+				return;
+			}
+		}
+
 		if (isInitial) {
 			mPullToRefreshLayout.setVisibility(View.GONE);
 			mProgressBarLoading.setVisibility(View.VISIBLE);
@@ -247,7 +270,7 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 		}
 
 		final Set<String> topicsList = mPrefs.getStringSet(ActivitySettings.PREF_TOPICS_LIST, Global.getDefaultTopics(this));
-		Server.getMessagesAsync(AbstractMessagesActivity.this, mode, page, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0), AbstractMessagesActivity.this);
+		Server.getMessagesAsync(AbstractMessagesActivity.this, mode, page, mSimpleLocation.getPosition(), topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0), AbstractMessagesActivity.this);
 	}
 
 	private static String getVerificationMessageText(String verificationCode) {
