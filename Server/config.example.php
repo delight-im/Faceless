@@ -13,6 +13,7 @@ define('CONFIG_CLIENT_HASH_SEED', 'REPLACE_THIS_WITH_VALUE'); // seed used on cl
 define('CONFIG_ENFORCE_SSL', false); // whether to require HTTPS (SSL/TLS) for all requests (should be set to <true> in production environments)
 
 // Configuration parameters that don't necessarily have to be changed (but may be for customization/tuning)
+
 define('CONFIG_API_CLIENTS', serialize(array('Android' => 21))); // a list of valid API clients with their respective minimum software version ID
 define('CONFIG_API_LIVE', true); // whether the service is live or down due to maintenance
 define('CONFIG_API_DEBUG', true); // whether the API is in debugging mode or not
@@ -29,5 +30,5 @@ define('CONFIG_THROTTLING_LOGIN_HOURS', 12); // the number of hours to throttle 
 define('CONFIG_HEADER_SIGNATURE', 'HTTP_X_METHOD_SIGNATURE'); // the HTTP header field that contains the API method signature (HMAC)
 define('CONFIG_HEADER_TIMESTAMP', 'HTTP_X_METHOD_TIMESTAMP'); // the HTTP header field that contains the API method timestamp
 define('CONFIG_ADMINS_READ_PRIVATE', false); // whether users with administrator privileges may read private conversations for support and anti-abuse purposes
-
-?>
+define('CONFIG_NEARBY_RADIUS_KM', 200); // the radius that local messages will be searched within (in kilometers)
+define('CONFIG_NEARBY_MAX_AGE', 3600 * 24 * 28); // the maximum age that local messages may have (in seconds) to optimize the range query

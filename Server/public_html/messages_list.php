@@ -24,6 +24,20 @@ function isTopicAccepted($actualTopic, $requestedTopics) {
     return is_null($requestedTopics) || in_array($actualTopic, $requestedTopics) || $actualTopic == '';
 }
 
+function createSqlGeoRange($latCol, $longCol, $posLat, $posLong, $radiusKm, $strict = false) {
+    $deltaLat = $radiusKm / 111.133;
+    $deltaLong = $radiusKm / 111.320 / cos(deg2rad($posLat));
+    if ($strict) {
+        $deltaLat = $deltaLat / sqrt(2);
+        $deltaLong = $deltaLong / sqrt(2);
+    }
+
+    $out = $latCol." BETWEEN ".($posLat - $deltaLat)." AND ".($posLat + $deltaLat);
+    $out .= " AND ".$longCol." BETWEEN ".($posLong - $deltaLong)." AND ".($posLong + $deltaLong);
+
+    return $out;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // initialization
     $user = init($_GET);
@@ -59,6 +73,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         }
         else if ($_GET['mode'] == 'latest') {
             $items = Database::select("SELECT a.id AS message_id, IF(b.degree IS NULL, 3, b.degree) AS degree, a.color_hex, a.pattern_id, a.text_encrypted, a.message_secret, a.favorites_count, a.comments_count, a.country_iso3, a.geo_lat, a.geo_long, a.time_published, a.user_id, a.topic, a.deleted FROM messages AS a LEFT JOIN feeds AS b ON a.id = b.message_id AND b.user_id = ".intval($userID)." WHERE a.language_iso3 = ".Database::escape($_GET['languageISO3'])." AND a.time_published < ".time()." ORDER BY a.time_published DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+        }
+        else if ($_GET['mode'] == 'nearby') {
+            if (isset($_GET['location'])) {
+                if (isset($_GET['location']['lat']) && isset($_GET['location']['long'])) {
+                    $items = Database::select("SELECT a.id AS message_id, IF(b.degree IS NULL, 3, b.degree) AS degree, a.color_hex, a.pattern_id, a.text_encrypted, a.message_secret, a.favorites_count, a.comments_count, a.country_iso3, a.geo_lat, a.geo_long, a.time_published, a.user_id, a.topic, a.deleted FROM messages AS a LEFT JOIN feeds AS b ON a.id = b.message_id AND b.user_id = ".intval($userID)." WHERE ".createSqlGeoRange('geo_lat', 'geo_long', floatval($_GET['location']['lat']), floatval($_GET['location']['long']), CONFIG_NEARBY_RADIUS_KM)." AND a.time_published > ".(time() - CONFIG_NEARBY_MAX_AGE)." ORDER BY a.time_published DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+                }
+                else {
+                    respond(array('status' => 'bad_request'));
+                    // prevent IDE warnings
+                    exit;
+                }
+            }
+            else {
+                respond(array('status' => 'bad_request'));
+                // prevent IDE warnings
+                exit;
+            }
         }
         else if ($_GET['mode'] == 'favorites') {
             $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM favorites AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." ORDER BY a.time_added DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
@@ -141,5 +172,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 else {
 	respond(array('status' => 'bad_request'));
 }
-
-?>

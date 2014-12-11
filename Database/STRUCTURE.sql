@@ -76,7 +76,8 @@ CREATE TABLE `messages` (
   KEY `dispatcher` (`dispatched`,`time_published`),
   KEY `popular_by_language` (`language_iso3`,`score`),
   KEY `latest_by_language` (`language_iso3`,`time_published`),
-  KEY `time_active` (`time_active`)
+  KEY `time_active` (`time_active`),
+  KEY `latest_by_location` (`geo_lat`,`geo_long`,`time_published`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- 
 CREATE TABLE `reports` (
