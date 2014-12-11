@@ -124,12 +124,11 @@
 		<item>+ Faceless is independent. There is no big company behind and we don\'t try to maximize profits.</item>
 	</string-array>
 	<string name="meta_security_title"><b>Is Faceless really secure?</b></string>
-	<string-array name="modes_human">
-		<item>Latest messages</item>
-		<item>Friends\' messages</item>
-		<item>Popular messages</item>
-		<item>Saved favorites</item>
-	</string-array>
+	<string name="mode_favorites">Saved favorites</string>
+	<string name="mode_friends">Friends\' messages</string>
+	<string name="mode_latest">Latest messages</string>
+	<string name="mode_nearby">Nearby</string>
+	<string name="mode_popular">Popular messages</string>
 	<string name="next">Prossimo</string>
 	<string name="ok">Bene</string>
 	<string name="please_choose_topic">Please choose a topic for your message</string>
@@ -212,6 +211,7 @@
 	<string name="topics_summary">Which topics do you want to see recent and popular messages for?</string>
 	<string name="translate">Tradurre</string>
 	<string name="translate_explanation">Do you want to help us translate Faceless to your language?\n\nPlease visit the following website on your computer:\nwww.localize.im/v/36\n\nThank you so much for your support!</string>
+	<string name="try_again_shortly">Please try again in a few minutes</string>
 	<string name="type_here">Condividi un pensiero &#8230;\n\nSii gentile e positivo.</string>
 	<string name="verify">Verificare</string>
 	<string name="verify_phone_number">Verificare il numero di telefono</string>

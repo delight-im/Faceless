@@ -160,4 +160,11 @@
 	    <item>friends_public</item>
 	    <item>public</item>
 	</string-array>
+	<string-array name="modes_human" translatable="false">
+	    <item>@string/mode_latest</item>
+	    <item>@string/mode_nearby</item>
+	    <item>@string/mode_friends</item>
+	    <item>@string/mode_popular</item>
+	    <item>@string/mode_favorites</item>
+	</string-array>
 </resources>

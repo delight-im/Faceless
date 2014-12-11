@@ -124,12 +124,11 @@
 		<item>+ 无面者是独立运营的。我们并不是某个大公司的下属机构，我们也不是以利润最大化为目的。</item>
 	</string-array>
 	<string name="meta_security_title"><b>无面者真的安全吗？</b></string>
-	<string-array name="modes_human">
-		<item>最新回复</item>
-		<item>朋友的消息</item>
-		<item>热门消息</item>
-		<item>我的收藏</item>
-	</string-array>
+	<string name="mode_favorites">我的收藏</string>
+	<string name="mode_friends">朋友的消息</string>
+	<string name="mode_latest">最新回复</string>
+	<string name="mode_nearby">靠近你</string>
+	<string name="mode_popular">热门消息</string>
 	<string name="next">下一条</string>
 	<string name="ok">确定</string>
 	<string name="please_choose_topic">请为这条信息选择主题</string>
@@ -212,6 +211,7 @@
 	<string name="topics_summary">你想在最新信息和最热信息中看到哪些主题呢？</string>
 	<string name="translate">翻译</string>
 	<string name="translate_explanation">你想帮我们翻译无面者？\n\n请访问使用您计算机访问这个网址：\nwww.localize.im/v/36\n\n非常感谢你的支持！</string>
+	<string name="try_again_shortly">Please try again in a few minutes</string>
 	<string name="type_here">分享一个想法 &#8230; \n\n友善而积极的。</string>
 	<string name="verify">验证</string>
 	<string name="verify_phone_number">验证你的手机号</string>

@@ -124,12 +124,11 @@
 		<item>+ Faceless bağımsızdır. Arkasında büyük bir şirket bulunmamaktadır ve biz kazancımızı arttırmak için uğraşmıyoruz.</item>
 	</string-array>
 	<string name="meta_security_title"><b>Faceless gerçekten güvenilir mi?</b></string>
-	<string-array name="modes_human">
-		<item>En son mesajlar</item>
-		<item>Arkadaşlarının mesajları</item>
-		<item>Popüler mesajlar</item>
-		<item>Kayıtlı favoriler</item>
-	</string-array>
+	<string name="mode_favorites">Kayıtlı favoriler</string>
+	<string name="mode_friends">Arkadaşlarının mesajları</string>
+	<string name="mode_latest">En son mesajlar</string>
+	<string name="mode_nearby">Size yakın</string>
+	<string name="mode_popular">Popüler mesajlar</string>
 	<string name="next">İleri</string>
 	<string name="ok">Tamam</string>
 	<string name="please_choose_topic">Lütfen mesajınız için bir konu seçin</string>
@@ -212,6 +211,7 @@
 	<string name="topics_summary">Hangi konular için yakın zamandaki ve popüler mesajları görmek istersiniz?</string>
 	<string name="translate">Çevir</string>
 	<string name="translate_explanation">Faceless uygulamasının çevirisini yapmak ister misiniz?\n\nBilgisayarınızdan sayfasınızı ziyaret ederek çeviri yapabilirsiniz:\nwww.localize.im/v/36\n\nDesteğini için çok teşekkürler!</string>
+	<string name="try_again_shortly">Please try again in a few minutes</string>
 	<string name="type_here">Ne düşünüyorsun &#8230;\n\nKibar ve olumlu ol.</string>
 	<string name="verify">Doğrula</string>
 	<string name="verify_phone_number">Telefon numarasını doğrula</string>
