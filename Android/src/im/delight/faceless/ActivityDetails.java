@@ -170,7 +170,12 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			mTextViewFavoritesOrTime.setText(mMessage.getFavorites() > 0 ? mResources.getQuantityString(R.plurals.x_favorites, mMessage.getFavorites(), mMessage.getFavorites()) : "");
 			mTextViewFavoritesOrTime.setVisibility(mMessage.getFavorites() > 0 ? View.VISIBLE : View.GONE);
 		}
-		mTextViewComments.setText(mResources.getQuantityString(R.plurals.x_comments, mMessage.getComments(), mMessage.getComments()));
+		if (mMessage.isReasonForBan()) {
+			mTextViewComments.setText(R.string.reason_for_ban);
+		}
+		else {
+			mTextViewComments.setText(mResources.getQuantityString(R.plurals.x_comments, mMessage.getComments(), mMessage.getComments()));
+		}
 	}
 
 	@Override

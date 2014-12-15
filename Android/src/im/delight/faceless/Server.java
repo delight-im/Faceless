@@ -572,7 +572,7 @@ public class Server {
 					messageDegree = responseMessage.getInt("degree");
 					messageType = Message.Type.fromProperties(messageDegree, friendsCount);
 					messageLocation = parseLocation(responseMessage, "location");
-					messages.add(new Message(responseMessage.getString("id"), messageDegree, responseMessage.getString("colorHex"), responseMessage.getInt("patternID"), responseMessage.getString("text"), responseMessage.getString("topic"), responseMessageTime, responseMessage.getInt("favoritesCount"), responseMessage.getInt("commentsCount"), responseMessage.getString("countryISO3"), messageType, messageLocation));
+					messages.add(new Message(responseMessage.getString("id"), messageDegree, responseMessage.getString("colorHex"), responseMessage.getInt("patternID"), responseMessage.getString("text"), responseMessage.getString("topic"), responseMessageTime, responseMessage.getInt("favoritesCount"), responseMessage.getInt("commentsCount"), responseMessage.getString("countryISO3"), messageType, messageLocation, responseMessage.isNull("reasonForBan") ? false : responseMessage.getBoolean("reasonForBan")));
 				}
 
 				subscriptionUpdates = responseData.getInt("subscriptionUpdates");

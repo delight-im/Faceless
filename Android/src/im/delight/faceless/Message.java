@@ -72,8 +72,13 @@ public class Message extends Content implements Parcelable {
 	private boolean mSubscribed;
 	private final int mType;
 	private final SimpleLocation.Point mLocation;
+	private final boolean mReasonForBan;
 
 	public Message(String id, int degree, String colorHex, int patternID, String text, String topic, long time, int favorites, int comments, String countryISO3, int type, SimpleLocation.Point location) {
+		this(id, degree, colorHex, patternID, text, topic, time, favorites, comments, countryISO3, type, location, false);
+	}
+
+	public Message(String id, int degree, String colorHex, int patternID, String text, String topic, long time, int favorites, int comments, String countryISO3, int type, SimpleLocation.Point location, boolean reasonForBan) {
 		mID = id;
 		mDegree = degree;
 		mColor = Color.parseColor(colorHex);
@@ -88,6 +93,11 @@ public class Message extends Content implements Parcelable {
 		mSubscribed = false;
 		mType = type;
 		mLocation = location;
+		mReasonForBan = reasonForBan;
+	}
+
+	public boolean isReasonForBan() {
+		return mReasonForBan;
 	}
 
 	public String getID() {
@@ -314,6 +324,7 @@ public class Message extends Content implements Parcelable {
 		out.writeByte((byte) (mSubscribed ? 1 : 0));
 		out.writeInt(mType);
 		out.writeParcelable(mLocation, flags);
+		out.writeByte((byte) (mReasonForBan ? 1 : 0));
 	}
 
 	private Message(Parcel in) {
@@ -331,6 +342,7 @@ public class Message extends Content implements Parcelable {
 		mSubscribed = in.readByte() == 1;
 		mType = in.readInt();
 		mLocation = (SimpleLocation.Point) in.<SimpleLocation.Point>readParcelable(SimpleLocation.Point.class.getClassLoader());
+		mReasonForBan = in.readByte() == 1;
 	}
 
 }

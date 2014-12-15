@@ -340,6 +340,9 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 				if (o.isAdminMessage()) {
 					holder.textViewComments.setText(R.string.learn_more);
 				}
+				else if (o.isReasonForBan()) {
+					holder.textViewComments.setText(R.string.reason_for_ban);
+				}
 				else {
 					holder.textViewComments.setText(mResources.getQuantityString(R.plurals.x_comments, o.getComments(), o.getComments()));
 				}
