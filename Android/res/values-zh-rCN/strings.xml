@@ -137,6 +137,7 @@
 	<string name="publish">发布</string>
 	<string name="rate_app">评价应用程序</string>
 	<string name="read_message">读消息</string>
+	<string name="reason_for_ban">Reason for ban</string>
 	<string name="reply_privately">私下回复</string>
 	<string name="report_comment">回复评论</string>
 	<string name="report_confirm_block">屏蔽</string>

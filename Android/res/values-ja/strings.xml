@@ -137,6 +137,7 @@
 	<string name="publish">公開する</string>
 	<string name="rate_app">アプリを評価する</string>
 	<string name="read_message">メッセージを読む</string>
+	<string name="reason_for_ban">Reason for ban</string>
 	<string name="reply_privately">プライベートで返信する</string>
 	<string name="report_comment">コメントをレポートする</string>
 	<string name="report_confirm_block">ブロックする</string>

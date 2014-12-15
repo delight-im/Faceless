@@ -137,6 +137,7 @@
 	<string name="publish">Pubblicare</string>
 	<string name="rate_app">Tasso app</string>
 	<string name="read_message">Leggi messaggio</string>
+	<string name="reason_for_ban">Reason for ban</string>
 	<string name="reply_privately">Reply privately</string>
 	<string name="report_comment">Segnala commento</string>
 	<string name="report_confirm_block">Bloccare</string>

@@ -137,6 +137,7 @@
 	<string name="publish">Yayınla</string>
 	<string name="rate_app">Uygulamaya değerlendir</string>
 	<string name="read_message">Mesajı Oku</string>
+	<string name="reason_for_ban">Reason for ban</string>
 	<string name="reply_privately">Özel olarak cevapla</string>
 	<string name="report_comment">Yorumu şikayet et</string>
 	<string name="report_confirm_block">Engelle</string>

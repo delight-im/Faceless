@@ -137,6 +137,7 @@
 	<string name="publish">Publicar</string>
 	<string name="rate_app">Comente aplicativo</string>
 	<string name="read_message">Ler mensagem</string>
+	<string name="reason_for_ban">Reason for ban</string>
 	<string name="reply_privately">Responder privadamente</string>
 	<string name="report_comment">Reportar comentário</string>
 	<string name="report_confirm_block">Bloquear</string>

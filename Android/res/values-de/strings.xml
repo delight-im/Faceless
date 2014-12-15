@@ -137,6 +137,7 @@
 	<string name="publish">Veröffentlichen</string>
 	<string name="rate_app">App bewerten</string>
 	<string name="read_message">Nachricht lesen</string>
+	<string name="reason_for_ban">Grund für Sperre</string>
 	<string name="reply_privately">Privat antworten</string>
 	<string name="report_comment">Kommentar melden</string>
 	<string name="report_confirm_block">Blockieren</string>
