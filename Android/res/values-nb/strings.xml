@@ -129,6 +129,7 @@
 	<string name="mode_latest">Latest messages</string>
 	<string name="mode_nearby">Nearby</string>
 	<string name="mode_popular">Popular messages</string>
+	<string name="more_options">More options</string>
 	<string name="next">Next</string>
 	<string name="ok">OK</string>
 	<string name="please_choose_topic">Please choose a topic for your message</string>
