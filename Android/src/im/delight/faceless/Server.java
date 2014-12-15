@@ -229,7 +229,7 @@ public class Server {
 				}
 				catch (Exception e) {
 					if (callback != null) {
-						callback.onSentMessage(STATUS_BAD_REQUEST, null, null, null, 0, null, 0, null);
+						callback.onSentMessage(parseStatus(responseText, true), null, null, null, 0, null, 0, null);
 					}
 				}
 			}
@@ -307,7 +307,7 @@ public class Server {
 				}
 				catch (Exception e) {
 					if (callback != null) {
-						callback.onSentComment(STATUS_BAD_REQUEST, null, null, 0, 0, 0);
+						callback.onSentComment(parseStatus(responseText, true), null, null, 0, 0, 0);
 					}
 				}
 			}
@@ -668,12 +668,21 @@ public class Server {
 		return Color.rgb((42 + ((n * 45) % 172)), (42 + ((n * 75) % 172)), (42 + ((n * 105) % 172)));
 	}
 
-	protected static int parseStatus(String responseText) {
+	protected static int parseStatus(final String responseText) {
+		return parseStatus(responseText, false);
+	}
+
+	protected static int parseStatus(final String responseText, final boolean requireError) {
 		try {
 			JSONObject json = new JSONObject(responseText);
 			final String status = json.getString("status");
 			if (status.equals("ok")) {
-				return STATUS_OK;
+				if (requireError) {
+					return STATUS_BAD_REQUEST;
+				}
+				else {
+					return STATUS_OK;
+				}
 			}
 			else if (status.equals("maintenance")) {
 				return STATUS_MAINTENANCE;
