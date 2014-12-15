@@ -53,6 +53,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	// TWO MAIN VIEW GROUPS END
 	private Button mButtonNext;
 	private Button mButtonPublish;
+	private Button mButtonExpandAdvancedOptions;
 	private EditText mEditTextMessage;
 	private TextView mTextViewDegree;
 	private TextView mTextViewCharsLeft;
@@ -207,6 +208,16 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 					Toast.makeText(ActivityAdd.this, getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
 				}
 			}
+		});
+		mButtonExpandAdvancedOptions = (Button) findViewById(R.id.buttonExpandAdvancedOptions);
+		mButtonExpandAdvancedOptions.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mButtonExpandAdvancedOptions.setVisibility(View.GONE);
+				findViewById(R.id.viewAdvancedOptions).setVisibility(View.VISIBLE);
+			}
+
 		});
 
 		// set up the EditText for the message text

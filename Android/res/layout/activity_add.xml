@@ -31,25 +31,41 @@
 				    android:id="@+id/spinnerTopic"
 				    android:layout_width="match_parent"
 				    style="@style/Spinner_Readable.Light" />
-			    <TextView
-			        android:layout_width="match_parent"
-			        android:text="@string/choose_visibility_help"
-			        android:textColor="#ffffff"
-			        style="@style/TextView_Readable" />
-				<im.delight.android.keyvaluespinner.KeyValueSpinner
-				    android:id="@+id/spinnerVisibility"
+				<Button
+				    android:id="@+id/buttonExpandAdvancedOptions"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_horizontal"
+				    android:layout_marginTop="24dp"
+				    android:text="@string/more_options"
+				    android:textSize="@dimen/fontsize_small"
+				    style="@style/Button_Inline" />
+				<LinearLayout
+				    android:id="@+id/viewAdvancedOptions"
+				    android:orientation="vertical"
 				    android:layout_width="match_parent"
-				    style="@style/Spinner_Readable.Light" />
-			    <TextView
-			        android:layout_width="match_parent"
-			        android:text="@string/enable_location_help"
-			        android:textColor="#ffffff"
-			        style="@style/TextView_Readable" />
-			    <CheckBox
-			        android:id="@+id/checkBoxLocation"
-			        android:layout_width="match_parent"
-			        android:text="@string/enable_location_caption"
-			        style="@style/CheckBox_Readable.Light" />
+				    android:layout_height="wrap_content"
+				    android:visibility="gone">
+				    <TextView
+				        android:layout_width="match_parent"
+				        android:text="@string/choose_visibility_help"
+				        android:textColor="#ffffff"
+				        style="@style/TextView_Readable" />
+					<im.delight.android.keyvaluespinner.KeyValueSpinner
+					    android:id="@+id/spinnerVisibility"
+					    android:layout_width="match_parent"
+					    style="@style/Spinner_Readable.Light" />
+				    <TextView
+				        android:layout_width="match_parent"
+				        android:text="@string/enable_location_help"
+				        android:textColor="#ffffff"
+				        style="@style/TextView_Readable" />
+				    <CheckBox
+				        android:id="@+id/checkBoxLocation"
+				        android:layout_width="match_parent"
+				        android:text="@string/enable_location_caption"
+				        style="@style/CheckBox_Readable.Light" />
+			    </LinearLayout>
 			</LinearLayout>
 		</ScrollView>
 	    <include layout="@layout/divider" />
