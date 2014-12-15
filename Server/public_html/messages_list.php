@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM favorites AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." ORDER BY a.time_added DESC LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else if ($_GET['mode'] == 'subscriptions') {
-            $items = Database::select("SELECT a.message_id, a.degree, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM subscriptions AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." AND a.counter > 0 LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
+            $items = Database::select("SELECT a.message_id, a.degree, a.reasonForBan, b.color_hex, b.pattern_id, b.text_encrypted, b.message_secret, b.favorites_count, b.comments_count, b.country_iso3, b.geo_lat, b.geo_long, b.time_published, b.user_id, b.topic, b.deleted FROM subscriptions AS a JOIN messages AS b ON a.message_id = b.id WHERE a.user_id = ".intval($userID)." AND a.counter > 0 LIMIT ".$startIndex.", ".CONFIG_MESSAGES_PER_PAGE);
         }
         else {
             respond(array('status' => 'bad_request'));
@@ -119,17 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
                     // if the content has just been successfully decrypted
                     if ($textDecrypted !== false) {
-                        if (isset($item['geo_lat']) && isset($item['geo_long'])) {
-                            $location = array(
-                                'lat' => $item['geo_lat'],
-                                'long' => $item['geo_long']
-                            );
-                        }
-                        else {
-                            $location = NULL;
-                        }
-
-                        $messages[] = array(
+                        // create the message data container
+                        $msg = array(
                             'id' => base64_encode($item['message_id']),
                             'degree' => $item['degree'],
                             'colorHex' => $item['color_hex'],
@@ -139,9 +130,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             'favoritesCount' => $item['favorites_count'],
                             'commentsCount' => $item['comments_count'],
                             'countryISO3' => $item['country_iso3'],
-                            'location' => $location,
                             'time' => $item['time_published']
                         );
+
+                        // if location data is available
+                        if (isset($item['geo_lat']) && isset($item['geo_long'])) {
+                            $msg['location'] = array(
+                                'lat' => $item['geo_lat'],
+                                'long' => $item['geo_long']
+                            );
+                        }
+
+                        // if in subscriptions mode return whether the author was banned for this message thread
+                        if ($_GET['mode'] == 'subscriptions') {
+                            $msg['reasonForBan'] = isset($item['reasonForBan']) && $item['reasonForBan'] == 1;
+                        }
+
+                        // add the message to the list
+                        $messages[] = $msg;
                     }
                 }
             }

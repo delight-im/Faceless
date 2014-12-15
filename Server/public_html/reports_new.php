@@ -38,9 +38,32 @@ function getReportPower($recentReports) {
 }
 
 function setUserReported($contentOriginTable, $contentID, $isAdmin) {
+    // get the ID of the user who was reported
+    $reportedUserID = Database::selectFirst("SELECT user_id FROM ".$contentOriginTable." WHERE id = ".intval($contentID));
+    $reportedUserID = $reportedUserID['user_id'];
+
+    // get the ID of the message thread that the user was reported in
+    if ($contentOriginTable == 'messages') {
+        $messageID = $contentID;
+    }
+    elseif ($contentOriginTable == 'comments') {
+        $messageID = Database::selectFirst("SELECT message_id FROM comments WHERE id = ".$contentID);
+        $messageID = $messageID['message_id'];
+    }
+    else {
+        // we can't handle this request
+        respond(array('status' => 'bad_request'));
+        // prevent IDE warnings
+        exit;
+    }
+
+    // mark the user as reported and possibly ban them temporarily
     $possibleWriteLockEnd = time()+3600*24*5;
     $timesReported = $isAdmin ? 2 : 1;
-    Database::update("UPDATE users SET reported_count = reported_count+".$timesReported.", write_lock_until = IF(reported_count >= 3, ".intval($possibleWriteLockEnd).", write_lock_until), reported_count = IF(reported_count >= 3, 1, reported_count) WHERE id = (SELECT user_id FROM ".$contentOriginTable." WHERE id = ".intval($contentID).")");
+    Database::update("UPDATE users SET reported_count = reported_count+".$timesReported.", write_lock_until = IF(reported_count >= 3, ".intval($possibleWriteLockEnd).", write_lock_until), reported_count = IF(reported_count >= 3, 1, reported_count) WHERE id = ".$reportedUserID);
+
+    // send a notice to the violating user
+    Database::insert("INSERT INTO subscriptions (message_id, user_id, degree, reasonForBan, counter) VALUES (".intval($messageID).", ".$reportedUserID.", 3, 1, 1) ON DUPLICATE KEY UPDATE reasonForBan = 1, counter = 1");
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

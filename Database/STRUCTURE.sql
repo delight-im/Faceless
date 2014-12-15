@@ -99,6 +99,7 @@ CREATE TABLE `subscriptions` (
   `message_id` int(10) unsigned NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `degree` int(10) unsigned NOT NULL DEFAULT '3',
+  `reasonForBan` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `counter` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `combination` (`message_id`,`user_id`),
