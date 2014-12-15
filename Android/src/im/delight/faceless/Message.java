@@ -59,6 +59,8 @@ public class Message extends Content implements Parcelable {
 	public static final int DEGREE_FRIEND_OF_FRIEND = 2;
 	/** The minimum number of friends required before the user can see messages from their (friends of) friends */
 	public static final int MIN_FRIENDS_COUNT = 3;
+	/** The maximum distance (in kilometers) that will be displayed as a special piece of information and indicator */
+	private static final int LOCATION_MAX_VISIBLE_DISTANCE = 100;
 	private final String mID;
 	private final int mDegree;
 	private final int mColor;
@@ -142,15 +144,16 @@ public class Message extends Content implements Parcelable {
 		else {
 			if (currentLocation != null && mLocation != null) {
 				final double distanceKm = SimpleLocation.calculateDistance(currentLocation, mLocation) / 1000;
-				return context.getString(R.string.about_x_kilometers, distanceKm);
+				if (distanceKm <= LOCATION_MAX_VISIBLE_DISTANCE) {
+					return context.getString(R.string.about_x_kilometers, distanceKm);
+				}
 			}
-			else {
-				try {
-					return getCountryName(context);
-				}
-				catch (Exception e) {
-					return context.getString(R.string.degree_worldwide);
-				}
+
+			try {
+				return getCountryName(context);
+			}
+			catch (Exception e) {
+				return context.getString(R.string.degree_worldwide);
 			}
 		}
 	}
