@@ -15,7 +15,6 @@
 	<string-array name="meta_open_source_body" translatable="false">
 		<item>+ libphonenumber (Google / Apache License 2.0)</item>
 		<item>+ ActionBar-PullToRefresh (Chris Banes / Apache License 2.0)</item>
-		<item>+ HoloColorPicker (Lars Werkman / Apache License 2.0)</item>
 		<item>+ AppRater (delight.im / Apache License 2.0)</item>
 		<item>+ Emoji (delight.im / Apache License 2.0)</item>
 		<item>+ Android-SimpleLocation (delight.im / Apache License 2.0)</item>

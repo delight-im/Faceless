@@ -6,7 +6,6 @@
 ## Dependencies
 
  * [ActionBar-PullToRefresh](https://github.com/chrisbanes/ActionBar-PullToRefresh) with [SmoothProgressBar](https://github.com/castorflex/SmoothProgressBar)
- * [HoloColorPicker](https://github.com/LarsWerkman/HoloColorPicker)
  * [AppRater](https://github.com/delight-im/AppRater)
  * [Emoji](https://github.com/delight-im/Emoji)
  * [Android-SimpleLocation](https://github.com/delight-im/Android-SimpleLocation)
