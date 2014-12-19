@@ -52,12 +52,6 @@
 			</intent-filter>
 		</activity>
         <activity
-            android:name=".ActivityCustomize"
-            android:label="@string/action_customize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            android:launchMode="singleTask" />
-        <activity
             android:name=".ActivitySetup"
             android:label="@string/setup"
             android:screenOrientation="portrait"

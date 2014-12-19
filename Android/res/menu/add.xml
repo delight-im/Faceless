@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 	<item
-	    android:id="@+id/action_customize"
+	    android:id="@+id/action_change_background"
 	    android:showAsAction="always"
-	    android:title="@string/action_customize"
-	    android:icon="@drawable/ic_ab_customize" />
+	    android:title="@string/change_background"
+	    android:icon="@drawable/ic_ab_shuffle" />
 </menu>

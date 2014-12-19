@@ -43,9 +43,6 @@ import android.graphics.Color;
 
 public class ActivityAdd extends Activity implements Server.Callback.MessageEvent {
 
-	public static final String EXTRA_COLOR = "color";
-	public static final String EXTRA_PATTERN_ID = "patternID";
-	public static final String EXTRA_TEXT = "text";
 	private static final int MAX_CHARS_MESSAGE = 240;
 	// TWO MAIN VIEW GROUPS BEGIN
 	private View mViewOptionsContainer;
@@ -88,28 +85,8 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 
 	};
 
-	private void updateTextAndColor(Intent intent) {
-		int color = 0;
-		int patternID = -1;
-		String text = null;
-		try {
-			color = intent.getIntExtra(EXTRA_COLOR, 0);
-			patternID = intent.getIntExtra(EXTRA_PATTERN_ID, -1);
-			text = intent.getStringExtra(EXTRA_TEXT);
-		}
-		catch (Exception e) { }
-
-		if (color != 0) {
-			mColor = color;
-		}
-		if (patternID != -1) {
-			mPatternID = patternID;
-		}
-		if (text != null) {
-			mText = text;
-		}
-
-		int textColor = UI.getTextColor(mColor);
+	private void updateTextAndColor() {
+		final int textColor = UI.getTextColor(mColor);
 
 		mBackgroundPatterns.setViewBackground(this, mEditTextMessage, mPatternID, mColor);
 		mEditTextMessage.setTypeface(FontProvider.getInstance(ActivityAdd.this).getFontRegular());
@@ -129,7 +106,7 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		updateTextAndColor(intent);
+		updateTextAndColor();
 	}
 
 	private void setActiveScreen(int index) {
@@ -268,8 +245,8 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			mText = "";
 		}
 
-		// get color and text that may have been previously defined
-		updateTextAndColor(getIntent());
+		// update colors and text in views
+		updateTextAndColor();
 
 		// set up the topic selection Spinner
 		mSpinnerTopic = (KeyValueSpinner<CharSequence>) findViewById(R.id.spinnerTopic);
@@ -365,12 +342,10 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-			case R.id.action_customize:
-				Intent intentCustomize = new Intent(ActivityAdd.this, ActivityCustomize.class);
-				intentCustomize.putExtra(ActivityCustomize.EXTRA_COLOR, mColor);
-				intentCustomize.putExtra(ActivityCustomize.EXTRA_PATTERN_ID, mPatternID);
-				intentCustomize.putExtra(ActivityCustomize.EXTRA_TEXT, mText);
-				startActivity(intentCustomize);
+			case R.id.action_change_background:
+				mColor = UI.getRandomColor();
+				mPatternID = mBackgroundPatterns.getRandomPatternID();
+				updateTextAndColor();
 				return true;
 			default:
 				finish(); // destroy this Activity to go back to the parent AbstractMessagesActivity
