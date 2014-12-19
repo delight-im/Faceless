@@ -192,7 +192,8 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			@Override
 			public void onClick(View v) {
 				mButtonExpandAdvancedOptions.setVisibility(View.GONE);
-				findViewById(R.id.viewAdvancedOptions).setVisibility(View.VISIBLE);
+				findViewById(R.id.viewLocation).setVisibility(View.VISIBLE);
+				findViewById(R.id.viewAudience).setVisibility(View.VISIBLE);
 			}
 
 		});
@@ -291,6 +292,12 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 			}
 
 		});
+
+		// if location access has not been enabled yet
+		if (!mSimpleLocation.hasLocationEnabled()) {
+			// show the location switch (which is normally hidden by default) to ask the user for access
+			findViewById(R.id.viewLocation).setVisibility(View.VISIBLE);
+		}
 
 		// set up the action bar
 		getActionBar().setDisplayHomeAsUpEnabled(true);
