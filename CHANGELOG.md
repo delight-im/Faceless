@@ -323,3 +323,10 @@
 ## Version 2.9.0
 
  * "Nearby" messages have been added -- so that you can see what people around you are talking about.
+
+## Version 2.9.1
+
+ * Notifications for banned users have been added so that you know what message or comment made other users report your content.
+ * (Location indicators are not shown anymore for distances greater than 100km so that you only see the location when it is meaningful.)
+ * (Secondary options in the message compose window (target audience and visibility) are now hidden by default.)
+ * (When authors have been banned due to multiple reports by other users, they are now correctly notified about this. Until now, that message wouldn't have been displayed in the client because it was handled as a server error.)
