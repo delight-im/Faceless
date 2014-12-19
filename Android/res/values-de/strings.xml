@@ -4,7 +4,6 @@
 	<string name="action_add">Nachricht schreiben</string>
 	<string name="action_add_favorite">Zu Favoriten hinzufügen</string>
 	<string name="action_add_subscription">Kommentare abonnieren</string>
-	<string name="action_customize">Anpassen</string>
 	<string name="action_help">Hilfe</string>
 	<string name="action_help_summary">Hast Du Fragen zu dieser App? Lies hier unsere ausführlichen Erklärungen.</string>
 	<string name="action_invite">Freunde einladen</string>
@@ -23,9 +22,9 @@
 	<string name="app_rater_never">Nein, danke</string>
 	<string name="app_rater_now">Jetzt bewerten</string>
 	<string name="app_rater_title">Diese App bewerten</string>
-	<string name="background">Hintergrund</string>
 	<string name="block_user_added">Du wirst keine Nachrichten mehr von diesem Nutzer erhalten</string>
 	<string name="cancel">Abbrechen</string>
+	<string name="change_background">Hintergrund ändern</string>
 	<string name="choose_topic_help">Über welches Thema möchtest Du etwas schreiben? Deine Auswahl hilft anderen, nur die Inhalte zu sehen, die sie interessieren.</string>
 	<string name="choose_visibility_help">Mit wem möchtest Du Deine Nachricht teilen? In keinem Fall wird jemand sehen können, wer Du bist. Nachrichten auf Faceless sind immer anonym.</string>
 	<string name="comment_add_hint">Dein Kommentar &#8230;</string>
@@ -157,7 +156,6 @@
 	<string name="report_sent">Dein Bericht wurde erfolgreich gesendet</string>
 	<string name="report_warning_block">Bist Du sicher, dass Du den Autor dieses Eintrags blockieren möchtest?\n\nDu wirst in Zukunft keine weiteren Nachrichten mehr von dieser Person erhalten.\n\nDie Aktion kann nicht rückgängig gemacht werden.</string>
 	<string name="report_warning_report">Bist Du sicher, dass Du diesen Eintrag als unangemessen melden möchtest?\n\nEin Bericht kann dazu führen, dass der Eintrag gelöscht wird und der Autor vorübergehend für Faceless gesperrt wird.\n\nWenn Du eine Nachricht meldest, wird sie sofort aus Deinem persönlichen Feed gelöscht.</string>
-	<string name="save">Speichern</string>
 	<string name="send">Senden</string>
 	<string name="setup">Einrichtung</string>
 	<string name="setup_intro">Bitte gib unten Deine Telefonnummer ein, um die Einrichtung abzuschließen.\n\nBeginne mit einem \"+\", gefolgt von Deinem Länder-Code (z.B. +41).\n\nDanach gibst Du einfach Deine örtliche Telefonnummer ein.\n\nBitte überprüfe noch einmal genau, ob die Nummer korrekt ist.\n\nWenn Du keine korrekte Nummer eingibst, werden wir Dich nicht mit Deinen Freunden verbinden können.\n\nNatürlich ist Deine Telefonnummer bei uns sicher. Wir respektieren Deine Privatsphäre!</string>
@@ -171,7 +169,6 @@
 		<item>Aus</item>
 	</string-array>
 	<string name="subscriptions">Ungelesene Kommentare</string>
-	<string name="tap_to_change_pattern">Tippen zum Ändern des Hintergrundmusters</string>
 	<string name="this_app">Diese App</string>
 	<string name="topic_art">Kunst</string>
 	<string name="topic_beauty">Beauty</string>

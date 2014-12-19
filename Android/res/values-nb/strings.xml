@@ -4,7 +4,6 @@
 	<string name="action_add">Write message</string>
 	<string name="action_add_favorite">Add to favorites</string>
 	<string name="action_add_subscription">Subscribe to comments</string>
-	<string name="action_customize">Customize</string>
 	<string name="action_help">Help</string>
 	<string name="action_help_summary">Do you have any questions about this app? Read our detailed explanations here.</string>
 	<string name="action_invite">Invite friends</string>
@@ -23,9 +22,9 @@
 	<string name="app_rater_never">No, thanks</string>
 	<string name="app_rater_now">Rate now</string>
 	<string name="app_rater_title">Rate this app</string>
-	<string name="background">Background</string>
 	<string name="block_user_added">You will no longer receive messages from this user</string>
 	<string name="cancel">Cancel</string>
+	<string name="change_background">Change background</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Your comment &#8230;</string>
@@ -157,7 +156,6 @@
 	<string name="report_sent">Rapporten din blitt sendt</string>
 	<string name="report_warning_block">Are you sure you want to block the author of this entry?\n\nYou will no longer receive any messages from that person in the future.\n\nThis action cannot be undone later.</string>
 	<string name="report_warning_report">Are you sure you want to report this entry as inappropriate?\n\nA report may cause the entry to be deleted and the author to be temporarily banned from Faceless.\n\nIf you are reporting a message, it will be removed from your personal feed immediately.</string>
-	<string name="save">Lagre</string>
 	<string name="send">Send</string>
 	<string name="setup">Setup</string>
 	<string name="setup_intro">Please enter your phone number below to finish setup.\n\nStart with a \"+\" followed by your country code (e.g. +41).\n\nAfter that, just enter your local phone number.\n\nPlease double-check that the number is correct!\n\nIf you don\'t enter your correct number, we won\'t be able to connect you to your friends.\n\nOf course, your phone number is secure with us. We respect your privacy!</string>
@@ -171,7 +169,6 @@
 		<item>Off</item>
 	</string-array>
 	<string name="subscriptions">Ikke leste kommentarer</string>
-	<string name="tap_to_change_pattern">Tap to switch the background pattern</string>
 	<string name="this_app">This app</string>
 	<string name="topic_art">Art</string>
 	<string name="topic_beauty">Beauty</string>

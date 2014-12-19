@@ -4,7 +4,6 @@
 	<string name="action_add">写一条信息</string>
 	<string name="action_add_favorite">添加到收藏</string>
 	<string name="action_add_subscription">评论订阅</string>
-	<string name="action_customize">自定义</string>
 	<string name="action_help">帮助</string>
 	<string name="action_help_summary">关于这个程序你有任何疑问？请在这里阅读我们的详细解释。</string>
 	<string name="action_invite">邀请朋友</string>
@@ -23,9 +22,9 @@
 	<string name="app_rater_never">不，谢谢</string>
 	<string name="app_rater_now">现在打分</string>
 	<string name="app_rater_title">给这个应用打分</string>
-	<string name="background">背景</string>
 	<string name="block_user_added">你不会再接受到这个用户的消息</string>
 	<string name="cancel">取消</string>
+	<string name="change_background">Change background</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">你的评论 &#8230;</string>
@@ -157,7 +156,6 @@
 	<string name="report_sent">你的反馈已成功发送</string>
 	<string name="report_warning_block">你确定要屏蔽这条内容的作者吗？\n\n你将来不会再收到来自这个作者的任何消息。\n\n此项操作不可逆。</string>
 	<string name="report_warning_report">你确定要举报这条不当内容？\n\n这可能会使得这条内容被删除，并且使内容的作者被 Faceless 禁言。\n\n如果你举报某一条消息，这么这条消息会立即从你的时间线移除。</string>
-	<string name="save">保存</string>
 	<string name="send">发送</string>
 	<string name="setup">设置</string>
 	<string name="setup_intro">请输入您的手机号以完成设置。\n\n先输入“+”号和国家代码（示例：+86）\n\n然后输入您的手机号。\n\n请确保您的手机号输入正确！\n\n如果手机号输入错误，我们就无法关联您和您的朋友们。\n\n当然，您的手机号不会被泄露。我们尊重您的隐私！</string>
@@ -171,7 +169,6 @@
 		<item>关闭</item>
 	</string-array>
 	<string name="subscriptions">未读评论</string>
-	<string name="tap_to_change_pattern">点触切换背景图样</string>
 	<string name="this_app">关于本应用程序</string>
 	<string name="topic_art">艺术</string>
 	<string name="topic_beauty">美女</string>

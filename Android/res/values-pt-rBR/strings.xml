@@ -4,7 +4,6 @@
 	<string name="action_add">Escrever mensagem</string>
 	<string name="action_add_favorite">Adicionar aos favoritos</string>
 	<string name="action_add_subscription">Subscrever aos comentários</string>
-	<string name="action_customize">Personalize</string>
 	<string name="action_help">Ajudar</string>
 	<string name="action_help_summary">Você possui alguma dúvida sobre este aplicativo? Leia explicações aqui.</string>
 	<string name="action_invite">Convide amigos</string>
@@ -23,9 +22,9 @@
 	<string name="app_rater_never">Não, obrigado</string>
 	<string name="app_rater_now">Comente agora</string>
 	<string name="app_rater_title">Comente este aplicativo</string>
-	<string name="background">Fundo</string>
 	<string name="block_user_added">Você não receberá mais mensagens deste usuário</string>
 	<string name="cancel">Cancelar</string>
+	<string name="change_background">Change background</string>
 	<string name="choose_topic_help">Sobre qual tópico deseja escrever? Sua escolha ajuda outros ver apenas os conteúdos em quais estão interessados.</string>
 	<string name="choose_visibility_help">Para quem você deseja compartilhar sua mensagem? De qualquer forma, ninguém poderá ver quem você é. Mensagens no Faceless são sempre anônimas.</string>
 	<string name="comment_add_hint">O seu comentário &#8230;</string>
@@ -157,7 +156,6 @@
 	<string name="report_sent">Seu relato foi enviado com sucesso</string>
 	<string name="report_warning_block">Tem certeza que você deseja bloquear o autor desse registro?\n\nVocê não irá receber mais mensagens dessa pessoa no futuro.\n\nO bloqueio não pode ser desfeito posteriormente.</string>
 	<string name="report_warning_report">Deseja mesmo relatar esse registro como inapropriado?\n\nUm relato pode causar com que um registro seja excluído e o autor seja temporariamente bloqueado do Faceless.\n\nAo relatar uma mensagem, ela será excluída da sua linha pessoal imediatamente.</string>
-	<string name="save">Guardar</string>
 	<string name="send">Enviar</string>
 	<string name="setup">Instalação</string>
 	<string name="setup_intro">Digite abaixo o número do seu celular para finalizar.\n\nComece com \"+\" seguido do código do país. (Ex.: +55).\n\nDepois disso, digite o número do seu celular, incluindo o DDD.\n\nVerifique se seu número está correto!\n\nSe não digitar o seu número corretamente, não poderemos conectá-lo aos seus amigos.\n\nLogicamente, seu número está seguro conosco. Respeitamos sua privacidade!</string>
@@ -171,7 +169,6 @@
 		<item>Nunca</item>
 	</string-array>
 	<string name="subscriptions">Comentários não lidas</string>
-	<string name="tap_to_change_pattern">Toque para mudar o padrão do fundo</string>
 	<string name="this_app">Este aplicativo</string>
 	<string name="topic_art">Arte</string>
 	<string name="topic_beauty">Beleza</string>

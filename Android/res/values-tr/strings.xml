@@ -4,7 +4,6 @@
 	<string name="action_add">Mesaj yaz</string>
 	<string name="action_add_favorite">Favorilerime ekle</string>
 	<string name="action_add_subscription">Yorumlara abone ol</string>
-	<string name="action_customize">Özelleştir</string>
 	<string name="action_help">Yardım</string>
 	<string name="action_help_summary">Uygulama hakkında sorularınız var mı? Buradan detaylı açıklamamızı okuyabilirsiniz.</string>
 	<string name="action_invite">Arkadaşlarını davet et</string>
@@ -23,9 +22,9 @@
 	<string name="app_rater_never">Hayır, Teşekkürler</string>
 	<string name="app_rater_now">Şimdi uygulamayı değerlendir</string>
 	<string name="app_rater_title">Bu uygulamayı değerlendir</string>
-	<string name="background">Arka plan</string>
 	<string name="block_user_added">Bu kullanıcından bir daha mesaj almayacaksınız</string>
 	<string name="cancel">İptal et</string>
+	<string name="change_background">Change background</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Yorumun &#8230;</string>
@@ -157,7 +156,6 @@
 	<string name="report_sent">Raporunuz başarılı şekilde gönderildi</string>
 	<string name="report_warning_block">Bu yazının yazarını engellemek istediğinize emin misiniz?\n\nBir daha bu kişiden herhangi bir mesaj almayacaksınız.\n\nBu işlem daha sonra değiştirilemez.</string>
 	<string name="report_warning_report">Bu yazıyı uygun olmayan içerik olarak şikayet edeceğinize emin misiniz?\n\nBir şikayet yazının silinmesine ve yazarın geçici bir süreliğine yasaklanmasına neden olabilir.\n\nEğer bir mesajı şikayet ederseniz, mesaj kişisel sayfanızdan kaldırılacaktır.</string>
-	<string name="save">Kaydet</string>
 	<string name="send">Gönder</string>
 	<string name="setup">Kurulum</string>
 	<string name="setup_intro">Kurulumun tamamlanabilmesi için telefon numaranızı giriniz.\n\nÜlkenizin kodunu yazarken \"+\" ile başlayın. ( Örnek : +90 )\n\nDaha sonra, sadece telefon numaranızı giriniz.\n\nTelefon numaranızın doğru olduğuna emin olunuz.\n\nEğer doğru telefon numarası girmezseniz, size ve arkadaşlarınıza ulaşamayız.\n\nTabii ki, telefon numaranız bizde güvenle korunacaktır. Özelinize saygı duyuyoruz!</string>
@@ -171,7 +169,6 @@
 		<item>Kapalı</item>
 	</string-array>
 	<string name="subscriptions">Okunmayan Yorumlar</string>
-	<string name="tap_to_change_pattern">Arka plan deseninin değiştirilmesi için dokunun</string>
 	<string name="this_app">Bu uygulama</string>
 	<string name="topic_art">Sanat</string>
 	<string name="topic_beauty">Güzellik</string>

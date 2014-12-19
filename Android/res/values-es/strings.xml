@@ -4,7 +4,6 @@
 	<string name="action_add">Escribir mensaje</string>
 	<string name="action_add_favorite">Añadir a favoritos</string>
 	<string name="action_add_subscription">Suscribirse a los comentarios</string>
-	<string name="action_customize">Personalizar</string>
 	<string name="action_help">Ayuda</string>
 	<string name="action_help_summary">¿Tienes alguna duda acerca de esta aplicación? Lee nuestras detalladas explicaciones aquí.</string>
 	<string name="action_invite">Invita a tus amigos</string>
@@ -23,9 +22,9 @@
 	<string name="app_rater_never">No, gracias</string>
 	<string name="app_rater_now">Evaluar ahora</string>
 	<string name="app_rater_title">Calificar esta aplicación</string>
-	<string name="background">Fondo</string>
 	<string name="block_user_added">Nunca más recibirás mensajes de este usuario</string>
 	<string name="cancel">Cancelar</string>
+	<string name="change_background">Change background</string>
 	<string name="choose_topic_help">What topic do you want to write something about? Your choice helps others to see only the content they\'re interested in.</string>
 	<string name="choose_visibility_help">Who do you want to share your message with? In any case, nobody will be able to see who you are. Messages on Faceless are always anonymous.</string>
 	<string name="comment_add_hint">Tu comentario &#8230;</string>
@@ -157,7 +156,6 @@
 	<string name="report_sent">Tu denuncia fue enviada satisfactoriamente</string>
 	<string name="report_warning_block">¿Estás seguro/a que deseas bloquar al autor de esta entrada?\n\nYa no podrás recibir mas mensajes de esta persona en un futuro.\n\nEsta acción no se podrá deshacer.</string>
 	<string name="report_warning_report">¿Estas seguro/a que deseas reportar esto como inapropiado?\n\nUna denuncia puede causar que la entrada sea eliminada y el autor suspendido temporalmente de Faceless.\n\nSi decides reportar un mensaje, este será removido inmediatamente.</string>
-	<string name="save">Guardar</string>
 	<string name="send">Enviar</string>
 	<string name="setup">Disposición</string>
 	<string name="setup_intro">Por favor ingrasa tu número telefónico para finalizar la instalación\n\nComienza con un \"+\" seguido del código de tu país (e.j. +41).\n\nDespués de eso, solo ingresa tu número local.\n\n¡Por favor, revisa que tu número sea el correcto!\n\nSi no entras tu número correcto, no podrás conectarte con tus amigos.\n\nPor supuesto, tu número esta seguro con nosotros. ¡Nosotros respetamos tu privacidad!</string>
@@ -171,7 +169,6 @@
 		<item>Desactivar</item>
 	</string-array>
 	<string name="subscriptions">Comentarios no leídos</string>
-	<string name="tap_to_change_pattern">Pulsa para cambiar el fondo</string>
 	<string name="this_app">Esta aplicación</string>
 	<string name="topic_art">Arte</string>
 	<string name="topic_beauty">Belleza</string>
