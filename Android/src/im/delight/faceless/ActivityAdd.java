@@ -50,7 +50,6 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 	// TWO MAIN VIEW GROUPS END
 	private Button mButtonNext;
 	private Button mButtonPublish;
-	private Button mButtonExpandAdvancedOptions;
 	private EditText mEditTextMessage;
 	private TextView mTextViewDegree;
 	private TextView mTextViewCharsLeft;
@@ -124,6 +123,8 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		else {
 			throw new RuntimeException("Unknown screen index: "+index);
 		}
+
+		// update the options menu to show the correct controls for the current screen
 		invalidateOptionsMenu();
 	}
 
@@ -185,17 +186,6 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 					Toast.makeText(ActivityAdd.this, getString(R.string.please_enter_message), Toast.LENGTH_SHORT).show();
 				}
 			}
-		});
-		mButtonExpandAdvancedOptions = (Button) findViewById(R.id.buttonExpandAdvancedOptions);
-		mButtonExpandAdvancedOptions.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				mButtonExpandAdvancedOptions.setVisibility(View.GONE);
-				findViewById(R.id.viewLocation).setVisibility(View.VISIBLE);
-				findViewById(R.id.viewAudience).setVisibility(View.VISIBLE);
-			}
-
 		});
 
 		// set up the EditText for the message text
@@ -334,15 +324,21 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.add, menu);
-
+		// on the message compose screen
 		if (mViewMessageContainer.getVisibility() == View.VISIBLE) {
-			// show the menu
+			getMenuInflater().inflate(R.menu.add_write, menu);
 			return true;
 		}
+		// on the message options screen
 		else {
-			// hide the menu
-			return false;
+			getMenuInflater().inflate(R.menu.add_options, menu);
+
+			// if the advanced options are visible
+			if (findViewById(R.id.viewAudience).getVisibility() == View.VISIBLE) {
+				menu.findItem(R.id.action_more_options).setVisible(false);
+			}
+
+			return true;
 		}
 	}
 
@@ -353,6 +349,15 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 				mColor = UI.getRandomColor();
 				mPatternID = mBackgroundPatterns.getRandomPatternID();
 				updateTextAndColor();
+				return true;
+			case R.id.action_more_options:
+				// display the advanced options
+				findViewById(R.id.viewLocation).setVisibility(View.VISIBLE);
+				findViewById(R.id.viewAudience).setVisibility(View.VISIBLE);
+
+				// update the menu to hide the expand button
+				invalidateOptionsMenu();
+
 				return true;
 			default:
 				finish(); // destroy this Activity to go back to the parent AbstractMessagesActivity
