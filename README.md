@@ -14,6 +14,11 @@ Main screen | Message details | Adding messages
 
 ## Installation
 
+### Android
+
+ 1. Rename `Android/src/im/delight/faceless/ConfigExample.java` to `Android/src/im/delight/faceless/Config.java` and replace all occurrences of `REPLACE_THIS_WITH_VALUE` with a proper configuration value for your setup
+ 2. Import all [dependencies](Android/README.md#dependencies) for the Android project
+
 ### Server
 
  1. Set up a web server with Apache + PHP + MySQL
@@ -21,11 +26,6 @@ Main screen | Message details | Adding messages
  3. Rename `Server/config.example.php` to `Server/config.php` and replace all occurrences of `REPLACE_THIS_WITH_VALUE` with a proper configuration value for your setup
  4. Set up cron jobs for `htdocs/workers/dispatcher.php`, `htdocs/workers/score_updater.php` and `htdocs/workers/cleaner.php`
  5. Enable `mod_rewrite` for the Apache web server
-
-### Android
-
- 1. Rename `Android/src/im/delight/faceless/ConfigExample.java` to `Android/src/im/delight/faceless/Config.java` and replace all occurrences of `REPLACE_THIS_WITH_VALUE` with a proper configuration value for your setup
- 2. Import all [dependencies](Android/README.md#dependencies) for the Android project
 
 ## Security
 
