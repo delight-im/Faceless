@@ -19,7 +19,6 @@ Main screen | Message details | Adding messages
  1. Rename `Android/src/im/delight/faceless/ConfigExample.java` to `Android/src/im/delight/faceless/Config.java` and replace all occurrences of `REPLACE_THIS_WITH_VALUE` with a proper configuration value for your setup
  2. Add the following dependencies as library projects:
     * [Android-Countries](https://github.com/delight-im/Android-Countries)
-	* [Android-Progress](https://github.com/delight-im/Android-Progress)
 	* [Android-Time](https://github.com/delight-im/Android-Time)
 	* [ActionBar-PullToRefresh](https://github.com/chrisbanes/ActionBar-PullToRefresh) with [SmoothProgressBar](https://github.com/castorflex/SmoothProgressBar)
 
