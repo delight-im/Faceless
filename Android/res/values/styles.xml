@@ -45,6 +45,9 @@
         <item name="android:paddingRight">6dp</item>
         <item name="android:paddingBottom">2dp</item>
     </style>
+    <style name="Button_ButtonBar.Transparent">
+        <item name="android:background">@drawable/transparent_button</item>
+    </style>
     
     <style name="TextView_Message">
         <item name="android:textSize">@dimen/fontsize_large</item>

@@ -3,10 +3,10 @@
     <dimen name="fontsize_small">12sp</dimen>
     <dimen name="fontsize_normal">16sp</dimen>
     <dimen name="fontsize_large">20sp</dimen>
-    <color name="background_darkest">#07182a</color>
-    <color name="background_dark">#3a4b5d</color>
+    <color name="background_darkest">#000000</color>
+    <color name="background_dark">#444444</color>
     <color name="background_medium">#1f8dd6</color>
-    <color name="background_light">#8697a9</color>
+    <color name="background_light">#888888</color>
     <color name="white_dark">#bbbbbb</color>
     <color name="white_medium">#dddddd</color>
     <color name="white_light">#f3f3f3</color>
