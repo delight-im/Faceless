@@ -543,6 +543,23 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 	}
 
 	@Override
+	protected void onStart() {
+		super.onStart();
+		// if location access is enabled
+		if (mSimpleLocation.hasLocationEnabled()) {
+			// ask the device to update the location
+			mSimpleLocation.beginUpdates();
+		}
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		// stop requesting and receiving updates for the location
+		mSimpleLocation.endUpdates();
+	}
+
+	@Override
 	public void onDestroy() {
 		super.onDestroy();
 		if (mAlertDialog != null) {
