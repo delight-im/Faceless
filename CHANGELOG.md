@@ -335,3 +335,8 @@
 
  * You can now switch background colors and patterns for your messages with a single click. On the compose screen, just tap the button in the top-right corner to generate a new random combination. This replaces the old color picker and customization screen.
  * (When location access has not been granted yet, display the location switch in the advanced options section of the compose screen. This is to prompt users to enable location access. Otherwise, this switch would be hidden by default.)
+
+## Version 2.9.3
+
+ * Updated color scheme to feature more black and less blue
+ * Improved location updates in the background
