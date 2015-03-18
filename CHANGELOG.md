@@ -339,4 +339,9 @@
 ## Version 2.9.3
 
  * Updated color scheme to feature more black and less blue
- * Improved location updates in the background
+ * (Improved location updates in the background)
+
+## Version 2.9.4
+
+ * (Updated ProGuard configuration to give more meaningful stack traces)
+ * (Fixed crash that was caused by location library)
