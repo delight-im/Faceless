@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.faceless.exceptions.SetupNotCompletedException;
 import java.util.Set;
 import im.delight.faceless.Server.GetMessagesResponse;
 import android.content.Intent;
@@ -70,79 +71,85 @@ public class GeneralNotifications extends AbstractNotificationSender {
 	}
 
 	private void sendFriendsNotification() {
-		final int friendsCount = Server.getFriendsCountSync(this);
-		int oldFriendsCount = mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0);
+		try {
+			final int friendsCount = Server.getFriendsCountSync(this);
+			int oldFriendsCount = mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0);
 
-		if (friendsCount > oldFriendsCount) {
-			// update the friends count in the preferences
-			SharedPreferences.Editor editor = mPrefs.edit();
-			editor.putInt(Global.Preferences.FRIENDS_COUNT, friendsCount);
-			editor.apply();
+			if (friendsCount > oldFriendsCount) {
+				// update the friends count in the preferences
+				SharedPreferences.Editor editor = mPrefs.edit();
+				editor.putInt(Global.Preferences.FRIENDS_COUNT, friendsCount);
+				editor.apply();
 
-			// build the text for the notification
-			String notificationText = getResources().getQuantityString(R.plurals.x_friends_using_app, friendsCount, friendsCount);
+				// build the text for the notification
+				String notificationText = getResources().getQuantityString(R.plurals.x_friends_using_app, friendsCount, friendsCount);
 
-			// set up the notification informing the user about their new friend count
-			sendNotification(ActivityMain.class, App.NOTIFICATION_ID_FRIENDS, getString(R.string.app_name), notificationText, R.drawable.ic_notification_small, R.drawable.ic_launcher);
+				// set up the notification informing the user about their new friend count
+				sendNotification(ActivityMain.class, App.NOTIFICATION_ID_FRIENDS, getString(R.string.app_name), notificationText, R.drawable.ic_notification_small, R.drawable.ic_launcher);
+			}
 		}
+		catch (SetupNotCompletedException e) { }
 	}
 
 	private void sendMessagesNotification() {
-		final Set<String> topicsList = mPrefs.getStringSet(ActivitySettings.PREF_TOPICS_LIST, Global.getDefaultTopics(this));
-		final GetMessagesResponse messages = Server.getMessagesSync(this, Server.MODE_FRIENDS, 0, null, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
+		try {
+			final Set<String> topicsList = mPrefs.getStringSet(ActivitySettings.PREF_TOPICS_LIST, Global.getDefaultTopics(this));
+			final GetMessagesResponse messages = Server.getMessagesSync(this, Server.MODE_FRIENDS, 0, null, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
 
-		if (messages != null) {
-			// get the ID of the latest message that has already been read
-			final long latestMessageRead = mPrefs.getLong(Global.Preferences.LATEST_MESSAGE_READ, 0);
+			if (messages != null) {
+				// get the ID of the latest message that has already been read
+				final long latestMessageRead = mPrefs.getLong(Global.Preferences.LATEST_MESSAGE_READ, 0);
 
-			// prepare a variable holding the new ID of the latest message read
-			long newLatestMessageRead = 0;
+				// prepare a variable holding the new ID of the latest message read
+				long newLatestMessageRead = 0;
 
-			// set up the counter for the number of unread messages
-			int unreadMessagesFromFriends = 0;
+				// set up the counter for the number of unread messages
+				int unreadMessagesFromFriends = 0;
 
-			// set up a temporary variable that will hold the message ID
-			long messageID;
+				// set up a temporary variable that will hold the message ID
+				long messageID;
 
-			// iterate over all messages
-			for (Message message : messages.messages) {
-				if (message != null) {
-					// if the message is from a friend or friend of a friend
-					if (message.getDegree() == 1 || message.getDegree() == 2) {
-						try {
-							messageID = message.getIDNumber();
+				// iterate over all messages
+				for (Message message : messages.messages) {
+					if (message != null) {
+						// if the message is from a friend or friend of a friend
+						if (message.getDegree() == 1 || message.getDegree() == 2) {
+							try {
+								messageID = message.getIDNumber();
 
-							if (messageID > latestMessageRead) {
-								// increase the counter of unread messages by one
-								unreadMessagesFromFriends++;
+								if (messageID > latestMessageRead) {
+									// increase the counter of unread messages by one
+									unreadMessagesFromFriends++;
 
-								// remember the new ID of the latest message read
-								if (messageID > newLatestMessageRead) {
-									newLatestMessageRead = messageID;
+									// remember the new ID of the latest message read
+									if (messageID > newLatestMessageRead) {
+										newLatestMessageRead = messageID;
+									}
 								}
 							}
+							catch (Exception e) { }
 						}
-						catch (Exception e) { }
 					}
 				}
-			}
 
-			// update the ID of the latest message read in the preferences
-			if (newLatestMessageRead > latestMessageRead) {
-				SharedPreferences.Editor editor = mPrefs.edit();
-				editor.putLong(Global.Preferences.LATEST_MESSAGE_READ, newLatestMessageRead);
-				editor.apply();
-			}
+				// update the ID of the latest message read in the preferences
+				if (newLatestMessageRead > latestMessageRead) {
+					SharedPreferences.Editor editor = mPrefs.edit();
+					editor.putLong(Global.Preferences.LATEST_MESSAGE_READ, newLatestMessageRead);
+					editor.apply();
+				}
 
-			// if we have some unread messages from friends
-			if (unreadMessagesFromFriends > 0) {
-				// build the text for the notification
-				String notificationText = getResources().getQuantityString(R.plurals.x_unread_messages, unreadMessagesFromFriends, unreadMessagesFromFriends);
+				// if we have some unread messages from friends
+				if (unreadMessagesFromFriends > 0) {
+					// build the text for the notification
+					String notificationText = getResources().getQuantityString(R.plurals.x_unread_messages, unreadMessagesFromFriends, unreadMessagesFromFriends);
 
-				// set up the notification informing the user about their new friend count
-				sendNotification(ActivityMain.class, App.NOTIFICATION_ID_MESSAGES, getString(R.string.app_name), notificationText, R.drawable.ic_notification_small, R.drawable.ic_launcher);
+					// set up the notification informing the user about their new friend count
+					sendNotification(ActivityMain.class, App.NOTIFICATION_ID_MESSAGES, getString(R.string.app_name), notificationText, R.drawable.ic_notification_small, R.drawable.ic_launcher);
+				}
 			}
 		}
+		catch (SetupNotCompletedException e) { }
 	}
 
 }

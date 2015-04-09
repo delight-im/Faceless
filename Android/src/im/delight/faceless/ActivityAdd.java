@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import android.content.SharedPreferences;
 import im.delight.android.location.SimpleLocation;
 import android.widget.CheckBox;
 import java.util.List;
@@ -145,7 +146,8 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		setContentView(R.layout.activity_add);
 
 		// set up resources
-		Global.Setup.load(PreferenceManager.getDefaultSharedPreferences(ActivityAdd.this));
+		final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ActivityAdd.this);
+		Global.Setup.load(prefs);
 		mResources = getResources();
 		mBackgroundPatterns = BackgroundPatterns.getInstance(this);
 
@@ -291,6 +293,20 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 
 		// set up the action bar
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		// check if setup has been completed
+		if (!Global.Setup.isComplete()) {
+			// try to run automatic setup
+			if (!Global.Setup.runAuto(this, prefs)) {
+				// if automatic setup did not succeed
+				// switch to manual setup
+				startActivity(new Intent(this, ActivitySetup.class));
+				// prevent any window animation because the user is to be redirected immediately
+				overridePendingTransition(0, 0);
+				finish();
+				return;
+			}
+		}
 	}
 
 	@Override

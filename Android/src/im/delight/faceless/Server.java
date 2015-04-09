@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.faceless.exceptions.SetupNotCompletedException;
 import im.delight.android.location.SimpleLocation;
 import im.delight.android.baselib.Collections;
 import im.delight.android.baselib.Data;
@@ -141,6 +142,10 @@ public class Server {
 	}
 
 	public static void getMessageDetails(final Context context, final String messageID, final Callback.MessageEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).get().to("/messages/details");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("messageID", messageID);
@@ -179,6 +184,10 @@ public class Server {
 	}
 
 	public static void saveMessage(final Context context, final String colorHex, final int patternID, final String text, final String topic, final String visibility, final SimpleLocation.Point location, final Callback.MessageEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/messages/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("colorHex", colorHex);
@@ -243,6 +252,10 @@ public class Server {
 	}
 
 	public static void getComments(final Context context, final String messageID, final Callback.CommentEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).get().to("/comments/list");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("messageID", messageID);
@@ -288,6 +301,10 @@ public class Server {
 	}
 
 	public static void addComment(final Context context, final String messageID, final String privateReplyToCommentID, final String text, final Callback.CommentEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/comments/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("messageID", messageID);
@@ -321,6 +338,10 @@ public class Server {
 	}
 
 	public static void setFavorited(final Context context, final String messageID, final boolean favorited, final Callback.FavoriteEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/favorites/set");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("messageID", messageID);
@@ -342,6 +363,10 @@ public class Server {
 	}
 
 	public static void setSubscribed(final Context context, final String messageID, final boolean subscribed, final Callback.SubscriptionEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/subscriptions/set");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("messageID", messageID);
@@ -363,6 +388,10 @@ public class Server {
 	}
 
 	public static void clearSubscriptions(final Context context, final Callback.SubscriptionEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/subscriptions/clear");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.executeAsync(new WebRequest.Callback() {
@@ -382,6 +411,10 @@ public class Server {
 	}
 
 	public static void setFriends(final Context context, final String usernamesCSV, final Callback.ConnectionEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/connections/friend");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("userList", usernamesCSV);
@@ -402,6 +435,10 @@ public class Server {
 	}
 
 	public static int getFriendsCountSync(final Context context) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).get().to("/connections/friend/count");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		final String responseText = request.executeSync();
@@ -422,6 +459,10 @@ public class Server {
 	}
 
 	public static void setBlocked(final Context context, final String contentType, final String contentID, final Callback.ConnectionEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/connections/block");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("contentType", contentType);
@@ -443,6 +484,10 @@ public class Server {
 	}
 
 	public static void sendReport(final Context context, final String contentType, final String contentID, final int reason, final Callback.ReportEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/reports/new");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.addParam("contentType", contentType);
@@ -465,6 +510,10 @@ public class Server {
 	}
 
 	public static void prepareVerification(final Context context, final Callback.VerificationEvent callback) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		WebRequest request = new APIRequest(context).post().to("/verifications/prepare");
 		request.auth(Global.Setup.getUsername(), Global.Setup.getPassword());
 		request.executeAsync(new WebRequest.Callback() {
@@ -502,6 +551,10 @@ public class Server {
 	}
 
 	protected static WebRequest getMessagesRequest(final Context context, final int mode, final int page, final SimpleLocation.Point location, final Set<String> topicsList) {
+		if (!Global.Setup.isComplete()) {
+			throw new SetupNotCompletedException();
+		}
+
 		// add meta category to list of topics as this should be visible to all users
 		topicsList.add("meta");
 

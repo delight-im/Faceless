@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.faceless.exceptions.SetupNotCompletedException;
 import java.util.Set;
 import im.delight.faceless.Server.GetMessagesResponse;
 import android.content.Intent;
@@ -93,16 +94,19 @@ public class SubscriptionNotifications extends AbstractNotificationSender {
 
 	private void sendSubscriptionNotification() {
 		final Set<String> topicsList = mPrefs.getStringSet(ActivitySettings.PREF_TOPICS_LIST, Global.getDefaultTopics(this));
-		final GetMessagesResponse subscriptionUpdates = Server.getMessagesSync(this, Server.MODE_SUBSCRIPTIONS, 0, null, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
-		final int subscriptionUpdateCount = subscriptionUpdates == null ? 0 : subscriptionUpdates.subscriptionUpdates;
+		try {
+			final GetMessagesResponse subscriptionUpdates = Server.getMessagesSync(this, Server.MODE_SUBSCRIPTIONS, 0, null, topicsList, mPrefs.getInt(Global.Preferences.FRIENDS_COUNT, 0));
+			final int subscriptionUpdateCount = subscriptionUpdates == null ? 0 : subscriptionUpdates.subscriptionUpdates;
 
-		if (subscriptionUpdateCount > 0) {
-			// build the text for the notification
-			String notificationText = getResources().getQuantityString(R.plurals.x_subscription_updates, subscriptionUpdateCount, subscriptionUpdateCount);
+			if (subscriptionUpdateCount > 0) {
+				// build the text for the notification
+				String notificationText = getResources().getQuantityString(R.plurals.x_subscription_updates, subscriptionUpdateCount, subscriptionUpdateCount);
 
-			// set up the notification informing the user about their new friend count
-			sendNotification(ActivityMain.class, App.NOTIFICATION_ID_SUBSCRIPTIONS, getString(R.string.app_name), notificationText, R.drawable.ic_notification_small, R.drawable.ic_launcher);
+				// set up the notification informing the user about their new friend count
+				sendNotification(ActivityMain.class, App.NOTIFICATION_ID_SUBSCRIPTIONS, getString(R.string.app_name), notificationText, R.drawable.ic_notification_small, R.drawable.ic_launcher);
+			}
 		}
+		catch (SetupNotCompletedException e) { }
 	}
 
 }
