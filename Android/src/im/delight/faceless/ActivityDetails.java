@@ -17,6 +17,7 @@ package im.delight.faceless;
  * along with this program.  If not, see {http://www.gnu.org/licenses/}.
  */
 
+import im.delight.java.emoji.Emoji;
 import im.delight.android.location.SimpleLocation;
 import im.delight.android.baselib.Social;
 import im.delight.android.baselib.UI;
