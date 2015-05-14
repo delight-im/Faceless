@@ -90,7 +90,6 @@ public class ActivityAdd extends Activity implements Server.Callback.MessageEven
 		final int textColor = UI.getTextColor(mColor);
 
 		mBackgroundPatterns.setViewBackground(this, mEditTextMessage, mPatternID, mColor);
-		mEditTextMessage.setTypeface(FontProvider.getInstance(ActivityAdd.this).getFontRegular());
 		mEditTextMessage.setTextColor(textColor);
 		mEditTextMessage.setLinkTextColor(textColor);
 		mEditTextMessage.setHintTextColor(textColor);

@@ -315,7 +315,6 @@ public abstract class AbstractMessagesActivity extends Activity implements OnRef
 				holder = new MessagesAdapterViews();
 				holder.viewMessageContainer = v.findViewById(R.id.viewMessageContainer);
 				holder.textViewMessage = (TextView) v.findViewById(R.id.textViewMessage);
-				holder.textViewMessage.setTypeface(FontProvider.getInstance(AbstractMessagesActivity.this).getFontRegular());
 				holder.textViewDegree = (TextView) v.findViewById(R.id.textViewDegree);
 				holder.textViewComments = (TextView) v.findViewById(R.id.textViewComments);
 				v.setTag(holder);

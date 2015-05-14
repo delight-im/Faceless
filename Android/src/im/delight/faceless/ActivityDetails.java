@@ -155,7 +155,6 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 			// set background texture
 			BackgroundPatterns backgroundPatterns = BackgroundPatterns.getInstance(this);
 			backgroundPatterns.setViewBackground(this, mViewScreenshotContainer, mMessage.getPatternID(), mMessage.getColor());
-			mTextViewMessage.setTypeface(FontProvider.getInstance(ActivityDetails.this).getFontRegular());
 
 			// load the message's details before we let the user interact with the message
 			mMessageDetailsStatus = 0;
@@ -606,7 +605,6 @@ public class ActivityDetails extends Activity implements OnRefreshListener, Serv
 				holder.identiconPrivateRecipient = (ImageView) v.findViewById(R.id.identiconPrivateRecipient);
 				holder.viewCommentContainer = v.findViewById(R.id.viewCommentContainer);
 				holder.textViewComment = (TextView) v.findViewById(R.id.textViewComment);
-				holder.textViewComment.setTypeface(FontProvider.getInstance(ActivityDetails.this).getFontRegular());
 				holder.textViewTime = (TextView) v.findViewById(R.id.textViewTime);
 				v.setTag(holder);
 			}
