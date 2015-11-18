@@ -2,15 +2,11 @@
 
 Faceless is where you can talk freely. Share messages with your friends and the whole world.
 
-## Preview ([Android](https://www.delight.im/get/faceless))
+## Preview
 
 Main screen | Message details | Adding messages
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="Graphics/Screenshots/Version 2.9.0/01 Main.png?raw=true" alt="01 Main" width="200" /> | <img src="Graphics/Screenshots/Version 2.9.0/02 Details.png?raw=true" alt="02 Details" width="200" /> | <img src="Graphics/Screenshots/Version 2.9.0/03 Add.png?raw=true" alt="03 Add" width="200" />
-
-## Download
-
- * Android: [Google Play](https://www.delight.im/get/faceless) or [GitHub](Releases/Android/Latest.apk?raw=true)
 
 ## Installation
 
@@ -52,10 +48,6 @@ Main screen | Message details | Adding messages
    * Search for the method `protected static int parseStatus(final String responseText, final boolean requireError)`
    * Add something like `System.out.println(responseText);` as the first line inside that method
    * All your server responses will now be logged to your console by the Android app
-
-## Security
-
- * [Disclose bugs and vulnerabilities](https://www.delight.im/security/faceless) or read more about [security](SECURITY.md).
 
 ## Translations
 

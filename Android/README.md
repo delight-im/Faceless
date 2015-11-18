@@ -1,7 +1,6 @@
 # Android
 
- * Live: http://www.delight.im/get/faceless
- * Android >= 4.0
+ * OS version >= 4.0
 
 ## Dependencies
 

@@ -91,7 +91,7 @@
 ## Version 1.5.1
 
  * In the comments, emoticons such as ":-)" are now automatically replaced with their corresponding graphical smileys.
- * For Java/Android and PHP developers: The app is now open-source under the GNU GPL v3 license: http://www.delight.im/dev/faceless
+ * For Java/Android and PHP developers: The app is now open-source under the GNU GPL v3 license.
  * (The title of the window that appears after choosing "Invite friends" has been adjusted. Before, it was just "Invite friends" as well. But users have struggled to understand that they can choose from the variety of apps on their phone and pick one option that they prefer for sending an invitation to their friends. Thus, the window title is now "Invite friends via ...".)
  * (The input type "short message" has been added as a recommendation to software keyboards for the EditText views at "Write message" and "Write comment".)
  * (The launcher icon (and small notification icon) have been slightly adjusted again.)
@@ -123,7 +123,7 @@
  * The height of the age level selection on the "Add" page has been sligthly increased, so that it is a little bit more conspicuous.
  * A bug with the user icons in a message's comments thread (identicons) where they won't show up on certain devices has been fixed. Thanks, Gareth!
  * (The introduction that is shown to new users has been shortened from 7 steps to 5 steps.)
- * (The app is now open-source in all parts, finally, i.e. not only the server-side code, but also the client-side code. It's available under the GNU GPL v3 license: http://www.delight.im/dev/faceless)
+ * (The app is now open-source in all parts, finally, i.e. not only the server-side code, but also the client-side code. It's available under the GNU GPL v3 license.)
 
 ## Version 1.8.0
 

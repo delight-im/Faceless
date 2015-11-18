@@ -5,7 +5,7 @@ require_once(__DIR__.'/public_html/classes/Database.php');
 
 // SERVER AND PAGE CONFIGURATION BEGIN
 header('Content-type: application/json; charset=utf-8');
-header('X-Bug-Bounty: https://www.delight.im/security/faceless');
+header('X-Bug-Bounty: https://github.com/delight-im/Faceless');
 if (CONFIG_API_DEBUG) {
     error_reporting(E_ALL);
     ini_set('display_errors', 'stdout');

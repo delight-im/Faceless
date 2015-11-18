@@ -2,7 +2,7 @@
 
 ## Vulnerability disclosure
 
-[Disclose bugs and vulnerabilities for Faceless](http://www.delight.im/security/faceless)
+Disclose bugs and vulnerabilities for Faceless
 
 ## Project description
 
@@ -11,7 +11,7 @@
 
 We believe that anonymous messaging should be an integral part of our communication tools. Powerful frameworks and applications must guarantee that people's experience with anonymity is as positive as possible.
 
-Faceless is [available via Google Play](http://www.delight.im/get/faceless) as an Android application.
+Faceless is available as an Android application.
 
 # Scope of bugs
 
